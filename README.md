@@ -1,4 +1,4 @@
-# TW-PINT AsciiDoc Repository v0.3
+# TW-PINT AsciiDoc Repository v0.1
 
 Taiwan jurisdiction draft package for Peppol International Invoice Transaction.
 
