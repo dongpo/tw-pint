@@ -1,17 +1,16 @@
 site:
   title: TW-PINT
-  url: https://dongpo.github.io/tw-pint
   start_page: tw-pint::index.adoc
 
 content:
   sources:
     - url: .
       branches: HEAD
-      start_path: .
+      start_path: docs
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/default-ui/-/raw/master/build/ui-bundle.zip
+    url: ./ui-bundle.zip
     snapshot: true
 
 output:
