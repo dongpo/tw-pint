@@ -1,0 +1,7 @@
+{
+  "file": "tests/invalid/invalid-customization-id.xml",
+  "expected": "fail",
+  "expected_rule_ids": [
+    "TW-IBR-002"
+  ]
+}

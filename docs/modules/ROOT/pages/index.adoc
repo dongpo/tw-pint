@@ -1,0 +1,18 @@
+= TW-PINT Billing Specification v0.1
+
+Taiwan Jurisdiction Extension of Peppol International Invoice Transaction (PINT).
+
+[NOTE]
+====
+This is a non-official working draft for review. It is not an OpenPeppol publication.
+====
+
+== Main artifacts
+
+* xref:semantic-model.adoc[Semantic Model]
+* xref:syntax-binding.adoc[Syntax Binding]
+* xref:codelists.adoc[Code Lists]
+* xref:rules.adoc[Business Rules]
+* xref:schematron.adoc[Schematron]
+* xref:examples.adoc[Examples]
+* xref:conformance.adoc[Conformance]

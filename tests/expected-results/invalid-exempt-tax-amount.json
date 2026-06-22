@@ -1,0 +1,7 @@
+{
+  "file": "tests/invalid/invalid-exempt-tax-amount.xml",
+  "expected": "fail",
+  "expected_rule_ids": [
+    "TW-IBR-031"
+  ]
+}

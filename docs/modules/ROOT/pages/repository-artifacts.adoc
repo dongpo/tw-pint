@@ -1,0 +1,14 @@
+= Repository Artifacts
+
+[cols="1,3", options="header"]
+|===
+|Folder |Purpose
+|docs |Antora documentation source.
+|semantic-model |TW core business terms.
+|syntax-binding |TW-BT / PINT-BT / UBL XPath mapping.
+|codelists |Genericode code lists.
+|rules |TW-IBR rules catalogue.
+|schematron |Schematron validation.
+|examples |Example XML instances.
+|tests |Validation test cases.
+|===

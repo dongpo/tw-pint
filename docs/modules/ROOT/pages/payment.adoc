@@ -1,0 +1,7 @@
+= Payment
+
+TW-PINT inherits payment means structures from PINT and UBL 2.1.
+
+Payment details may be represented through `cac:PaymentMeans`, `cbc:PaymentMeansCode`, and `cac:PayeeFinancialAccount`.
+
+Taiwan-specific payment extensions are reserved for future versions.

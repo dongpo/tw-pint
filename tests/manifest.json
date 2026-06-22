@@ -1,0 +1,84 @@
+{
+  "name": "TW-PINT Validation Test Suite",
+  "version": "0.1",
+  "status": "non-official working draft for review",
+  "generated": "2026-06-16",
+  "validation_layers": [
+    "UBL 2.1 XML Schema validation",
+    "PINT International shared rules",
+    "TW-PINT Schematron",
+    "TW-PINT Genericode code-list validation"
+  ],
+  "valid_cases": [
+    {
+      "file": "tests/valid/valid-taxable-domestic-invoice.xml",
+      "expected": "pass"
+    },
+    {
+      "file": "tests/valid/valid-zero-rated-export-invoice.xml",
+      "expected": "pass"
+    },
+    {
+      "file": "tests/valid/valid-exempt-invoice.xml",
+      "expected": "pass"
+    }
+  ],
+  "invalid_cases": [
+    {
+      "file": "tests/invalid/invalid-customization-id.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-002"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-invoice-number.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-007"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-seller-ubn-format.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-013"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-missing-buyer-ubn.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-017"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-tax-category.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-027"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-tax-rate.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-028"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-exempt-tax-amount.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-031"
+      ]
+    },
+    {
+      "file": "tests/invalid/invalid-missing-invoice-line.xml",
+      "expected": "fail",
+      "expected_rule_ids": [
+        "TW-IBR-041"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "file": "tests/invalid/invalid-tax-category.xml",
+  "expected": "fail",
+  "expected_rule_ids": [
+    "TW-IBR-027"
+  ]
+}

@@ -1,0 +1,29 @@
+= Code Lists
+
+== TW-TaxCategoryCode
+
+[cols="1,3", options="header"]
+|===
+|Code |Description
+|S |Taxable
+|Z |Zero Rated
+|E |Exempt
+|===
+
+== TW-InvoiceTypeCode
+
+[cols="1,3", options="header"]
+|===
+|Code |Description
+|01 |Domestic B2B Invoice
+|02 |Export Invoice
+|===
+
+== TW-PartyIdentifierScheme
+
+[cols="1,3", options="header"]
+|===
+|Code |Description
+|TWUBN |Taiwan Unified Business Number
+|0088 |GS1 GLN
+|===

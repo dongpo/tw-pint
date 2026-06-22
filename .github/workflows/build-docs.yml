@@ -1,0 +1,13 @@
+name: Build TW-PINT docs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder
+        run: echo "Add Antora build and Schematron validation pipeline here."

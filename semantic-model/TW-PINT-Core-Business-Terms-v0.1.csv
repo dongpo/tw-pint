@@ -1,0 +1,12 @@
+ID,Name,Description,Cardinality,Data Type,Mapped PINT BT,UBL XPath,Rule Reference
+TW-BT-001,Seller Unified Business Number,Taiwan business number assigned to the seller,1..1,Identifier,BT-31,/ubl:Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID,TW-IBR-012;TW-IBR-013
+TW-BT-002,Buyer Unified Business Number,Taiwan business number assigned to the buyer,0..1,Identifier,BT-48,/ubl:Invoice/cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID,TW-IBR-017;TW-IBR-018
+TW-BT-003,Taiwan Invoice Number,Taiwan invoice identifier,1..1,Identifier,BT-1,/ubl:Invoice/cbc:ID,TW-IBR-006;TW-IBR-007
+TW-BT-004,Taiwan Invoice Type,Domestic B2B or export invoice classification,1..1,Code,BT-3,/ubl:Invoice/cbc:InvoiceTypeCode,TW-IBR-010
+TW-BT-005,Taiwan Tax Category,Taiwan tax category used at invoice line,1..1,Code,BT-151,/ubl:Invoice/cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID,TW-IBR-026;TW-IBR-027
+TW-BT-006,Taiwan Tax Rate,Tax rate applicable to Taiwan tax category,1..1,Percentage,BT-152,/ubl:Invoice/cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:Percent,TW-IBR-028;TW-IBR-029;TW-IBR-030
+TW-BT-007,Business Tax Amount,Taiwan Business Tax amount,1..1,Amount,BT-110,/ubl:Invoice/cac:TaxTotal/cbc:TaxAmount,TW-IBR-031;TW-IBR-033
+TW-BT-008,Invoice Currency,Invoice currency code,1..1,Code,BT-5,/ubl:Invoice/cbc:DocumentCurrencyCode,TW-IBR-021;TW-IBR-022
+TW-BT-009,Tax Currency,Tax currency code,0..1,Code,BT-6,/ubl:Invoice/cbc:TaxCurrencyCode,TW-IBR-023;TW-IBR-024
+TW-BT-010,Seller Endpoint Identifier,Peppol seller endpoint identifier,1..1,Identifier,BT-34,/ubl:Invoice/cac:AccountingSupplierParty/cac:Party/cbc:EndpointID,TW-IBR-014
+TW-BT-011,Buyer Endpoint Identifier,Peppol buyer endpoint identifier,0..1,Identifier,BT-49,/ubl:Invoice/cac:AccountingCustomerParty/cac:Party/cbc:EndpointID,TW-IBR-020

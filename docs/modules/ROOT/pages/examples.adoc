@@ -1,0 +1,8 @@
+= Examples
+
+== Taxable Domestic Invoice
+
+[source,xml]
+----
+include::example$01-taxable-domestic-invoice.xml[]
+----

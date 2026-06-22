@@ -1,0 +1,12 @@
+TW-BT,PINT BT,UBL Element,XPath,Cardinality,Notes
+TW-BT-001,BT-31,Seller Unified Business Number,/ubl:Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID,1..1,Initial v0.1 binding
+TW-BT-002,BT-48,Buyer Unified Business Number,/ubl:Invoice/cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID,0..1,Initial v0.1 binding
+TW-BT-003,BT-1,Taiwan Invoice Number,/ubl:Invoice/cbc:ID,1..1,Initial v0.1 binding
+TW-BT-004,BT-3,Taiwan Invoice Type,/ubl:Invoice/cbc:InvoiceTypeCode,1..1,Initial v0.1 binding
+TW-BT-005,BT-151,Taiwan Tax Category,/ubl:Invoice/cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID,1..1,Initial v0.1 binding
+TW-BT-006,BT-152,Taiwan Tax Rate,/ubl:Invoice/cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:Percent,1..1,Initial v0.1 binding
+TW-BT-007,BT-110,Business Tax Amount,/ubl:Invoice/cac:TaxTotal/cbc:TaxAmount,1..1,Initial v0.1 binding
+TW-BT-008,BT-5,Invoice Currency,/ubl:Invoice/cbc:DocumentCurrencyCode,1..1,Initial v0.1 binding
+TW-BT-009,BT-6,Tax Currency,/ubl:Invoice/cbc:TaxCurrencyCode,0..1,Initial v0.1 binding
+TW-BT-010,BT-34,Seller Endpoint Identifier,/ubl:Invoice/cac:AccountingSupplierParty/cac:Party/cbc:EndpointID,1..1,Initial v0.1 binding
+TW-BT-011,BT-49,Buyer Endpoint Identifier,/ubl:Invoice/cac:AccountingCustomerParty/cac:Party/cbc:EndpointID,0..1,Initial v0.1 binding

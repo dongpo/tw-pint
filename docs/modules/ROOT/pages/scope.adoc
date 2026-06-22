@@ -1,0 +1,18 @@
+= Scope
+
+== In scope
+
+* UBL 2.1 Invoice
+* B2B domestic invoice
+* B2B export invoice
+* Taiwan Business Tax mainstream scenarios
+* Seller and buyer business identifiers
+* TW jurisdiction validation rules
+
+== Out of scope
+
+* B2C carrier handling
+* Donation code
+* Lottery handling
+* Real-time clearance
+* Complete replacement of Taiwan eGUI MIG specifications

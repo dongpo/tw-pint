@@ -1,0 +1,54 @@
+[cols="1,2,2,1,4,1,2,4,4,4,2,1,3", options="header"]
+|===
+|Rule ID |Group |Rule |Severity |Business Term |Test
+|TW-IBR-001 |Invoice |Specification Identifier SHALL exist. |Fatal |BT-24 |exists(cbc:CustomizationID)
+|TW-IBR-002 |Invoice |Specification Identifier SHALL be urn:peppol:pint:billing-1@tw-1. |Fatal |BT-24 |cbc:CustomizationID = 'urn:peppol:pint:billing-1@tw-1'
+|TW-IBR-003 |Invoice |Customization Identifier SHALL exist. |Fatal |BT-24 |exists(cbc:CustomizationID)
+|TW-IBR-004 |Invoice |Profile Identifier SHALL exist. |Fatal |BT-23 |exists(cbc:ProfileID)
+|TW-IBR-005 |Invoice |Invoice SHALL conform to UBL 2.1 Invoice. |Fatal |Document |true()
+|TW-IBR-006 |Invoice |Invoice Number SHALL exist. |Fatal |BT-1 |exists(cbc:ID)
+|TW-IBR-007 |Invoice |Invoice Number SHALL match ^[A-Z]{2}[0-9]{8}$. |Fatal |BT-1 |matches(normalize-space(cbc:ID),'^[A-Z]{2}[0-9]{8}$')
+|TW-IBR-008 |Invoice |Invoice Issue Date SHALL exist. |Fatal |BT-2 |exists(cbc:IssueDate)
+|TW-IBR-009 |Invoice |Invoice Issue Date SHALL NOT be in the future. |Warning |BT-2 |xs:date(cbc:IssueDate) le current-date()
+|TW-IBR-010 |Invoice |Invoice Type Code SHALL exist. |Fatal |BT-3 |exists(cbc:InvoiceTypeCode)
+|TW-IBR-011 |Seller |Seller Name SHALL exist. |Fatal |BT-27 |exists(cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName)
+|TW-IBR-012 |Seller |Seller UBN SHALL exist. |Fatal |BT-31 |exists(cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID)
+|TW-IBR-013 |Seller |Seller UBN SHALL contain 8 digits. |Fatal |BT-31 |matches(normalize-space(cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID),'^[0-9]{8}$')
+|TW-IBR-014 |Seller |Seller Endpoint Identifier SHALL exist. |Fatal |BT-34 |exists(cac:AccountingSupplierParty/cac:Party/cbc:EndpointID)
+|TW-IBR-015 |Seller |Seller Country Code SHALL exist. |Fatal |BT-40 |exists(cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode)
+|TW-IBR-016 |Buyer |Buyer Name SHALL exist. |Fatal |BT-44 |exists(cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName)
+|TW-IBR-017 |Buyer |Buyer UBN SHALL exist for domestic B2B transactions. |Fatal |BT-48 |exists(cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID)
+|TW-IBR-018 |Buyer |Buyer UBN SHALL contain 8 digits. |Fatal |BT-48 |matches(normalize-space(cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID),'^[0-9]{8}$')
+|TW-IBR-019 |Buyer |Buyer Country Code SHALL exist. |Fatal |BT-55 |exists(cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode)
+|TW-IBR-020 |Buyer |Buyer Endpoint Identifier SHOULD exist. |Warning |BT-49 |exists(cac:AccountingCustomerParty/cac:Party/cbc:EndpointID)
+|TW-IBR-021 |Currency |Invoice Currency Code SHALL exist. |Fatal |BT-5 |exists(cbc:DocumentCurrencyCode)
+|TW-IBR-022 |Currency |Invoice Currency SHALL be ISO 4217. |Fatal |BT-5 |string-length(normalize-space(cbc:DocumentCurrencyCode)) = 3
+|TW-IBR-023 |Currency |Tax Currency SHALL be TWD for domestic invoices. |Warning |BT-6 |not(cbc:TaxCurrencyCode) or cbc:TaxCurrencyCode='TWD'
+|TW-IBR-024 |Currency |Tax Currency SHALL be ISO 4217 compliant. |Fatal |BT-6 |not(cbc:TaxCurrencyCode) or string-length(normalize-space(cbc:TaxCurrencyCode)) = 3
+|TW-IBR-025 |Currency |Payable Amount SHALL be expressed in invoice currency. |Fatal |BT-115 |cac:LegalMonetaryTotal/cbc:PayableAmount/@currencyID = cbc:DocumentCurrencyCode
+|TW-IBR-026 |Tax |Tax Category SHALL exist for each invoice line. |Fatal |BT-151 |exists(cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID)
+|TW-IBR-027 |Tax |Tax Category SHALL be one of S, Z, E. |Fatal |BT-151 |every $c in cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID satisfies $c = ('S','Z','E')
+|TW-IBR-028 |Tax |Taxable category S SHALL use rate 5%. |Fatal |BT-152 |every $t in cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory[cbc:ID='S'] satisfies number($t/cbc:Percent)=5
+|TW-IBR-029 |Tax |Zero-rated category Z SHALL use rate 0%. |Fatal |BT-152 |every $t in cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory[cbc:ID='Z'] satisfies number($t/cbc:Percent)=0
+|TW-IBR-030 |Tax |Exempt category E SHALL use rate 0%. |Fatal |BT-152 |every $t in cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory[cbc:ID='E'] satisfies number($t/cbc:Percent)=0
+|TW-IBR-031 |Tax |Tax Amount SHALL be 0 when category E is used. |Fatal |BT-117 |true()
+|TW-IBR-032 |Tax |Tax Breakdown SHALL exist. |Fatal |BG-23 |exists(cac:TaxTotal/cac:TaxSubtotal)
+|TW-IBR-033 |Tax |Tax Total SHALL equal sum of Tax Subtotals. |Fatal |BT-110 |true()
+|TW-IBR-034 |Tax |Taxable Amount SHALL be greater than or equal to 0. |Fatal |BT-116 |every $a in cac:TaxTotal/cac:TaxSubtotal/cbc:TaxableAmount satisfies number($a) >= 0
+|TW-IBR-035 |Tax |Tax Rate SHALL be greater than or equal to 0. |Fatal |BT-119 |every $p in cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:Percent satisfies number($p) >= 0
+|TW-IBR-036 |Monetary |Line Extension Amount SHALL exist. |Fatal |BT-106 |exists(cac:LegalMonetaryTotal/cbc:LineExtensionAmount)
+|TW-IBR-037 |Monetary |Tax Exclusive Amount SHALL exist. |Fatal |BT-109 |exists(cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount)
+|TW-IBR-038 |Monetary |Tax Inclusive Amount SHALL exist. |Fatal |BT-112 |exists(cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount)
+|TW-IBR-039 |Monetary |Payable Amount SHALL exist. |Fatal |BT-115 |exists(cac:LegalMonetaryTotal/cbc:PayableAmount)
+|TW-IBR-040 |Monetary |Payable Amount SHALL equal Tax Inclusive Amount - Prepaid Amount + Rounding Amount. |Fatal |BT-115 |true()
+|TW-IBR-041 |InvoiceLine |Invoice SHALL contain at least one Invoice Line. |Fatal |BG-25 |exists(cac:InvoiceLine)
+|TW-IBR-042 |InvoiceLine |Invoice Line Identifier SHALL exist. |Fatal |BT-126 |every $l in cac:InvoiceLine satisfies exists($l/cbc:ID)
+|TW-IBR-043 |InvoiceLine |Invoice Line Quantity SHALL exist. |Fatal |BT-129 |every $l in cac:InvoiceLine satisfies exists($l/cbc:InvoicedQuantity)
+|TW-IBR-044 |InvoiceLine |Invoice Line Unit Price SHALL exist. |Fatal |BT-146 |every $l in cac:InvoiceLine satisfies exists($l/cac:Price/cbc:PriceAmount)
+|TW-IBR-045 |InvoiceLine |Invoice Line Net Amount SHALL exist. |Fatal |BT-131 |every $l in cac:InvoiceLine satisfies exists($l/cbc:LineExtensionAmount)
+|TW-IBR-046 |CrossBorder |Seller Country SHALL differ from Buyer Country for export invoices. |Fatal |TW-BT-004 |true()
+|TW-IBR-047 |CrossBorder |Export Invoice SHALL use Tax Category Z. |Fatal |TW-BT-004 |true()
+|TW-IBR-048 |CrossBorder |Export Invoice SHALL contain destination country. |Fatal |TW-BT-004 |true()
+|TW-IBR-049 |Validation |All code list values SHALL belong to corresponding code list. |Fatal |CodeLists |true()
+|TW-IBR-050 |Validation |Invoice SHALL pass all applicable PINT Shared Rules. |Fatal |PINT |true()
+|===

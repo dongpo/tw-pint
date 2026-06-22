@@ -1,0 +1,8 @@
+= Business Rules
+
+The authoritative rules catalogue source is:
+
+* `rules/TW-PINT-Rules-Catalogue-v0.1.csv`
+* `rules/TW-PINT-Rules-Catalogue-v0.1.xlsx` when included
+
+include::partial$rules-table.adoc[]

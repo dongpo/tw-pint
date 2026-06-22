@@ -1,0 +1,7 @@
+{
+  "file": "tests/invalid/invalid-seller-ubn-format.xml",
+  "expected": "fail",
+  "expected_rule_ids": [
+    "TW-IBR-013"
+  ]
+}

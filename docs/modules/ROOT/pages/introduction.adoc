@@ -1,0 +1,7 @@
+= Introduction
+
+TW-PINT is a Taiwan specialization draft of the Peppol International Invoice Transaction.
+
+It preserves PINT interoperability while adding Taiwan jurisdiction terms such as Taiwan Unified Business Number, Taiwan Business Tax categories, and Taiwan invoice number format.
+
+TW-PINT does not change Peppol AS4 transport, SMP, SML, or UBL syntax.

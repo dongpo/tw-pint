@@ -1,0 +1,9 @@
+= Business Process
+
+TW-PINT follows the PINT billing process for issuing an invoice from a seller to a buyer through Peppol-compatible exchange.
+
+. Seller creates a UBL 2.1 Invoice.
+. Sender validates the document against UBL, PINT shared rules, and TW-PINT rules.
+. Sender Access Point transmits the document through the Peppol network.
+. Receiver validates and processes the invoice.
+. If required, a local gateway maps the invoice to Taiwan eGUI-related processes.

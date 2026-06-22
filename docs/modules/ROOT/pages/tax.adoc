@@ -1,0 +1,13 @@
+= Taiwan Business Tax
+
+TW-PINT v0.1 supports three mainstream Taiwan Business Tax categories:
+
+[cols="1,2,1", options="header"]
+|===
+|Code |Description |Rate
+|S |Taxable |5%
+|Z |Zero Rated |0%
+|E |Exempt |0%
+|===
+
+Mixed tax is not represented as a separate tax category in v0.1. It should be expressed through multiple tax subtotals when applicable.

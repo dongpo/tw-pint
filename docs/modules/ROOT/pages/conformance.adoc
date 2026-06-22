@@ -1,0 +1,11 @@
+= Conformance
+
+A conformant TW-PINT Invoice SHALL:
+
+. conform to UBL 2.1 Invoice;
+. conform to applicable PINT International shared rules;
+. satisfy applicable TW-IBR rules;
+. pass TW-PINT Schematron validation;
+. use TW-PINT code lists where required.
+
+This draft is not yet an official conformance source.
