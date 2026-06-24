@@ -1,7 +1,3 @@
 = Semantic Model
 
-The authoritative semantic model source is:
-
-`semantic-model/TW-PINT-Core-Business-Terms-v0.1.csv`
-
-include::partial$semantic-table.adoc[]
+This page has moved. Use the navigation menu to access the corresponding Documentation or Transaction page.

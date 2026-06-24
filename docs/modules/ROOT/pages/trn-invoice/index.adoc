@@ -1,0 +1,24 @@
+= Invoice Transaction
+
+This section contains the transaction-level artefacts for TW-PINT Invoice.
+
+[cols="1,3", options="header"]
+|===
+|Artefact |Description
+
+|xref:trn-invoice/semantic-model/index.adoc[Semantic model]
+|Taiwan business terms and their PINT/UBL mapping.
+
+|xref:trn-invoice/syntax/index.adoc[Syntax binding]
+|UBL Invoice syntax mapping.
+
+|xref:trn-invoice/codelist/index.adoc[Code lists]
+|TW-PINT codelists and inherited PINT codelists.
+
+|xref:trn-invoice/businessrule/index.adoc[Business rules]
+|TW-IBR business rules.
+
+|xref:trn-invoice/rule/index.adoc[Schematrons]
+|Schematron rule files and validation layers.
+
+|===

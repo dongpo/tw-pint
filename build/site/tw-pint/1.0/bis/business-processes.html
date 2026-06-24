@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. Business Processes :: TW-PINT Candidate Specification</title>
+    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/business-processes.html">
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<meta property="og:image" content="../../../_/img/iconx128.png">
+<meta property="og:description" content="1. Business Processes">
+<meta property="og:title" content="TW-PINT Candidate Specification">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="tw-topbar">
+  <div class="tw-topbar-inner">
+    <div class="tw-brand">
+      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
+        <span class="tw-brand-mark">TW</span>
+        <span class="tw-brand-text">
+          <span class="tw-brand-title">TW-PINT</span>
+          <span class="tw-brand-subtitle">Candidate Specification</span>
+        </span>
+      </a>
+    </div>
+    <nav class="tw-topnav" aria-label="Top navigation">
+      <a href="https://dongpo.github.io/tw-pint">Home</a>
+      <a href="../scope.html">Scope</a>
+      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
+      <a href="../conformance.html">Conformance</a>
+      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
+    </nav>
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="tw-pint" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">TW-PINT Home</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Document body</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="business-processes.html">1. Business processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="business-information.html">2. Business information</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tax-information.html">3. Tax information</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rules.html">4. Rules</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="technical-details.html">5. Technical details</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="international-trade.html">International trade context</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Transaction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Download resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../downloads/index.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">TW-PINT Candidate Specification</span>
+    <span class="version">1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">TW-PINT Candidate Specification</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
+    <li><a href="../index.html">TW-PINT Home</a></li>
+    <li>Documentation</li>
+    <li><a href="index.html">Document body</a></li>
+    <li><a href="business-processes.html">1. Business processes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/business-processes.adoc">Edit this page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">1. Business Processes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_1_1_parties_and_roles">1.1. Parties and roles</a></li>
+<li><a href="#_1_2_pint_billing_process">1.2. PINT Billing process</a></li>
+<li><a href="#_1_3_invoice_functionality">1.3. Invoice functionality</a></li>
+<li><a href="#_1_4_credit_notes_and_negative_invoices">1.4. Credit notes and negative invoices</a></li>
+<li><a href="#_1_5_local_business_process_in_taiwan">1.5. Local business process in Taiwan</a>
+<ul class="sectlevel2">
+<li><a href="#_1_5_1_egui_bridge_process">1.5.1. eGUI bridge process</a></li>
+<li><a href="#_1_5_2_negative_invoices_and_credit_notes_in_taiwan">1.5.2. Negative invoices and credit notes in Taiwan</a></li>
+<li><a href="#_1_5_3_taiwan_domestic_b2b_invoice_process">1.5.3. Taiwan domestic B2B invoice process</a></li>
+<li><a href="#_1_5_4_export_invoice_process_using_tw_pint">1.5.4. Export invoice process using TW-PINT</a></li>
+<li><a href="#_1_5_5_import_inbound_invoice_process_using_pint_specializations">1.5.5. Import / inbound invoice process using PINT specializations</a></li>
+</ul>
+</li>
+<li><a href="#_1_6_international_trade_scenarios">1.6. International trade scenarios</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_1_parties_and_roles"><a class="anchor" href="#_1_1_parties_and_roles"></a>1.1. Parties and roles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The core parties are seller and buyer. Optional parties include payment receiver, delivery party, seller tax representative, and other parties inherited from PINT and UBL.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_2_pint_billing_process"><a class="anchor" href="#_1_2_pint_billing_process"></a>1.2. PINT Billing process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT follows the PINT billing process: seller creates invoice data, the invoice is represented as UBL 2.1, the sender validates UBL, PINT shared rules and TW-PINT rules, the invoice is exchanged through Peppol, and the receiver validates and processes the invoice.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_3_invoice_functionality"><a class="anchor" href="#_1_3_invoice_functionality"></a>1.3. Invoice functionality</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT supports accounting, invoice verification, auditing, tax reporting, and payment.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_4_credit_notes_and_negative_invoices"><a class="anchor" href="#_1_4_credit_notes_and_negative_invoices"></a>1.4. Credit notes and negative invoices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Credit notes should be used when a correction semantically reverses or adjusts a previous invoice. Negative invoices should not be used as a substitute for credit notes where a credit note is required by business process or local Taiwan reporting requirements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_5_local_business_process_in_taiwan"><a class="anchor" href="#_1_5_local_business_process_in_taiwan"></a>1.5. Local business process in Taiwan</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_5_1_egui_bridge_process"><a class="anchor" href="#_1_5_1_egui_bridge_process"></a>1.5.1. eGUI bridge process</h3>
+<div class="paragraph">
+<p>The eGUI bridge process maps TW-PINT invoice information to domestic Taiwan eGUI-related requirements when needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_2_negative_invoices_and_credit_notes_in_taiwan"><a class="anchor" href="#_1_5_2_negative_invoices_and_credit_notes_in_taiwan"></a>1.5.2. Negative invoices and credit notes in Taiwan</h3>
+<div class="paragraph">
+<p>Where Taiwan practice requires linkage to an original invoice for allowance, return, or correction, the standard PINT preceding invoice reference structure should be used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_3_taiwan_domestic_b2b_invoice_process"><a class="anchor" href="#_1_5_3_taiwan_domestic_b2b_invoice_process"></a>1.5.3. Taiwan domestic B2B invoice process</h3>
+<div class="paragraph">
+<p>A domestic B2B invoice may be exchanged through Peppol using TW-PINT while the domestic tax reporting obligation is fulfilled through Taiwan eGUI processes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_4_export_invoice_process_using_tw_pint"><a class="anchor" href="#_1_5_4_export_invoice_process_using_tw_pint"></a>1.5.4. Export invoice process using TW-PINT</h3>
+<div class="paragraph">
+<p>For export, TW-PINT supports foreign buyer identification, zero-rated tax treatment, foreign currency, destination country, and supporting trade references.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_5_import_inbound_invoice_process_using_pint_specializations"><a class="anchor" href="#_1_5_5_import_inbound_invoice_process_using_pint_specializations"></a>1.5.5. Import / inbound invoice process using PINT specializations</h3>
+<div class="paragraph">
+<p>A Taiwan buyer may receive invoices from foreign sellers using JP-PINT, SG-PINT, or other PINT specializations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_6_international_trade_scenarios"><a class="anchor" href="#_1_6_international_trade_scenarios"></a>1.6. International trade scenarios</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT supports Taiwan seller to foreign buyer, foreign seller to Taiwan buyer, cross-border zero-rated transactions, foreign currency invoicing, and interoperability with JP-PINT, SG-PINT and other PINT jurisdictions.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="tw-footer">
+  <div class="tw-footer-inner">
+    <div>
+      <strong>TW-PINT Candidate Specification</strong><br>
+      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
+    </div>
+    <div class="tw-footer-note">
+      Community review draft. Not an official OpenPeppol publication.
+    </div>
+  </div>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

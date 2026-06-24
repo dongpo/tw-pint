@@ -1,0 +1,8 @@
+= Invoice Transaction Business Rules
+
+The authoritative rules catalogue is maintained in:
+
+* `rules/TW-PINT-Rules-Catalogue-v0.1.csv`
+* `rules/TW-PINT-Rules-Catalogue-v0.1.xlsx` when included
+
+NOTE: The full TW-IBR rules catalogue is maintained in `rules/TW-PINT-Rules-Catalogue-v0.1.csv` and `rules/TW-PINT-Rules-Catalogue-v0.1.xlsx`.

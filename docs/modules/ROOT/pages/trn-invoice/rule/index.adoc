@@ -1,0 +1,17 @@
+= Invoice Transaction Schematrons
+
+TW-PINT Schematron artefacts are maintained in:
+
+* `schematron/TW-PINT-v0.1.sch`
+
+== Validation layers
+
+. UBL 2.1 XML Schema validation
+. PINT International shared rules
+. TW-PINT Schematron
+. TW-PINT Genericode code-list validation
+. TW-PINT validation test suite
+
+== Reserved rules
+
+Some export, foreign-party, and CreditNote rules are reserved for later refinement.

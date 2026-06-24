@@ -1,0 +1,45 @@
+= TW-PINT Candidate Specification Body
+:toc: macro
+:toclevels: 3
+
+toc::[]
+
+== Introduction
+
+TW-PINT defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.
+
+== Statement of status
+
+This specification is a candidate version prepared for community review. It is not an official legal, tax, or Peppol conformance source.
+
+== Scope
+
+TW-PINT v1.0 covers UBL 2.1 Invoice, UBL 2.1 CreditNote as a correction document, Taiwan domestic B2B exchange, export invoice exchange, inbound PINT-compatible invoice processing, Taiwan Business Tax mainstream cases, Taiwan UBN usage, and eGUI gateway mapping considerations.
+
+== Audience
+
+The intended audience includes Access Point providers, ERP vendors, e-invoicing service providers, Taiwan eGUI service providers, government agencies, enterprise sellers and buyers, and international trading partners.
+
+== Benefits
+
+TW-PINT provides a common invoice semantic model for Taiwan B2B trade, interoperability with PINT jurisdictions, and a path to connect Taiwan eGUI with international Peppol invoice exchange.
+
+== 1. Business processes
+
+See xref:business-processes.adoc[Business processes].
+
+== 2. Business information
+
+See xref:business-information.adoc[Business information].
+
+== 3. Tax information
+
+See xref:tax-information.adoc[Tax information].
+
+== 4. Rules
+
+See xref:rules.adoc[Rules].
+
+== 5. Technical details
+
+See xref:technical-details.adoc[Technical details].

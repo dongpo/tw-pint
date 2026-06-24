@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4. Rules :: TW-PINT Candidate Specification</title>
+    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/rules.html">
+    <meta name="generator" content="Antora 3.1.15">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<meta property="og:image" content="../../../_/img/iconx128.png">
+<meta property="og:description" content="4. Rules">
+<meta property="og:title" content="TW-PINT Candidate Specification">
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="tw-topbar">
+  <div class="tw-topbar-inner">
+    <div class="tw-brand">
+      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
+        <span class="tw-brand-mark">TW</span>
+        <span class="tw-brand-text">
+          <span class="tw-brand-title">TW-PINT</span>
+          <span class="tw-brand-subtitle">Candidate Specification</span>
+        </span>
+      </a>
+    </div>
+    <nav class="tw-topnav" aria-label="Top navigation">
+      <a href="https://dongpo.github.io/tw-pint">Home</a>
+      <a href="../scope.html">Scope</a>
+      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
+      <a href="../conformance.html">Conformance</a>
+      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
+    </nav>
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="tw-pint" data-version="1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Project links</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">TW-PINT Home</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Document body</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="business-processes.html">1. Business processes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="business-information.html">2. Business information</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tax-information.html">3. Tax information</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="rules.html">4. Rules</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="technical-details.html">5. Technical details</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="international-trade.html">International trade context</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Transaction</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Download resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../downloads/index.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">TW-PINT Candidate Specification</span>
+    <span class="version">1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">TW-PINT Candidate Specification</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle-label">Project links</span>
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
+    <li><a href="../index.html">TW-PINT Home</a></li>
+    <li>Documentation</li>
+    <li><a href="index.html">Document body</a></li>
+    <li><a href="rules.html">4. Rules</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/rules.adoc">Edit this page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">4. Rules</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_4_1_calculations">4.1. Calculations</a></li>
+<li><a href="#_4_2_rounding">4.2. Rounding</a></li>
+<li><a href="#_4_3_taiwan_aligned_calculations">4.3. Taiwan aligned calculations</a></li>
+<li><a href="#_4_4_taiwan_specific_business_rules">4.4. Taiwan-specific business rules</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_1_calculations"><a class="anchor" href="#_4_1_calculations"></a>4.1. Calculations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT inherits PINT calculation principles and adds Taiwan-aligned tax calculation guidance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_2_rounding"><a class="anchor" href="#_4_2_rounding"></a>4.2. Rounding</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rounding should follow PINT shared rules unless Taiwan reporting alignment requires more specific guidance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_3_taiwan_aligned_calculations"><a class="anchor" href="#_4_3_taiwan_aligned_calculations"></a>4.3. Taiwan aligned calculations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Taiwan-aligned calculations include Business Tax calculation, tax subtotal alignment, foreign currency and tax-currency handling, and export invoice totals.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_4_taiwan_specific_business_rules"><a class="anchor" href="#_4_4_taiwan_specific_business_rules"></a>4.4. Taiwan-specific business rules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Taiwan-specific rules cover domestic seller and buyer identification, conditional handling for foreign parties, eGUI bridge data, credit notes, invoice number, tax category, and tax totals.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Page contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="tw-footer">
+  <div class="tw-footer-inner">
+    <div>
+      <strong>TW-PINT Candidate Specification</strong><br>
+      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
+    </div>
+    <div class="tw-footer-note">
+      Community review draft. Not an official OpenPeppol publication.
+    </div>
+  </div>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

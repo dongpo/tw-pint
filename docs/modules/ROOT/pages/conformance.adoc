@@ -1,20 +1,3 @@
 = Conformance
 
-== Conformance levels
-
-[cols="1,3", options="header"]
-|===
-|Level |Description
-|TW-PINT Core |Conformance to PINT shared invoice semantics and TW-PINT core rules.
-|TW-PINT Domestic B2B |Domestic Taiwan B2B invoice exchange with Taiwan identifiers and Business Tax rules.
-|TW-PINT Export |Export invoice exchange with foreign buyer handling, zero-rated treatment and foreign currency support.
-|TW-PINT eGUI Bridge |Implementation guidance for mapping TW-PINT data to local eGUI-related processes.
-|===
-
-== Validation order
-
-. UBL 2.1 XML Schema validation
-. PINT International shared rules
-. TW-PINT Schematron
-. TW-PINT code-list validation
-. TW-PINT test package validation
+This page has moved. Use the navigation menu to access the corresponding Documentation or Transaction page.

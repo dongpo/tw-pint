@@ -4,3 +4,8 @@
 !function(){"use strict";var t,e=document.querySelector(".page-versions .version-menu-toggle");e&&(t=document.querySelector(".page-versions"),e.addEventListener("click",function(e){t.classList.toggle("is-active"),e.stopPropagation()}),document.documentElement.addEventListener("click",function(){t.classList.remove("is-active")}))}();
 document.addEventListener("DOMContentLoaded",function(){var t=Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0);0!==t.length&&t.forEach(function(e){e.addEventListener("click",function(t){t.stopPropagation(),e.classList.toggle("is-active"),document.getElementById(e.dataset.target).classList.toggle("is-active"),document.documentElement.classList.toggle("is-clipped--navbar")})})});
 var currentTheme=window.localStorage.getItem("theme");function setTheme(e){document.documentElement.setAttribute("data-theme",e),window.localStorage.setItem("theme",e)}setTheme(currentTheme||"light");
+
+/* TW-PINT UI helper */
+;(function () {
+  document.documentElement.classList.add('tw-pint-ui')
+})()

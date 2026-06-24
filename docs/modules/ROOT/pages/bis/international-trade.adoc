@@ -1,0 +1,25 @@
+= International Trade Context
+:toc: macro
+:toclevels: 3
+
+toc::[]
+
+== Taiwan exporter to foreign buyer
+
+A Taiwan exporter issues a TW-PINT invoice. The foreign buyer receives it through the Peppol network and processes it according to its local PINT environment.
+
+== Foreign seller to Taiwan buyer
+
+A Taiwan buyer may receive a PINT-compatible invoice from a foreign seller. The Taiwan buyer maps received invoice data into Taiwan accounting and tax reporting requirements.
+
+== Cross-border zero-rated transactions
+
+TW-PINT should support zero-rated export tax treatment when applicable.
+
+== Foreign currency invoices
+
+Foreign currency invoices should identify invoice currency and may require tax currency representation for Taiwan reporting alignment.
+
+== Interoperability with JP-PINT and SG-PINT
+
+TW-PINT should avoid unnecessary divergence from PINT to preserve interoperability with JP-PINT, SG-PINT, and other PINT specializations.

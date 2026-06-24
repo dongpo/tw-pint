@@ -1,21 +1,20 @@
-* xref:index.adoc[TW-PINT Candidate Specification v1.0]
-** Front Matter
-*** xref:status.adoc[Statement of Status]
-*** xref:document-structure.adoc[Document Structure]
-*** xref:scope.adoc[Scope]
-*** xref:audience-benefits.adoc[Audience and Benefits]
-** Taiwan Context and Positioning
-*** xref:taiwan-context.adoc[Taiwan Context]
-*** xref:peppol-egui-relationship.adoc[Peppol and Taiwan eGUI]
-** Specification Body
-*** xref:business-processes.adoc[1. Business Processes]
-*** xref:business-information.adoc[2. Business Information]
-*** xref:tax-information.adoc[3. Tax Information]
-*** xref:rules.adoc[4. Rules]
-*** xref:technical-details.adoc[5. Technical Details]
-*** xref:conformance.adoc[Conformance]
-** Annexes
-*** xref:annex-pint-jp-sg.adoc[Annex A: PINT, JP-PINT and SG-PINT]
-*** xref:annex-egui.adoc[Annex B: Taiwan eGUI]
-*** xref:annex-international-trade.adoc[Annex C: International Trade]
-*** xref:annex-artifacts.adoc[Annex D: Technical Artefacts]
+* xref:index.adoc[TW-PINT Home]
+** Documentation
+*** xref:bis/index.adoc[Document body]
+**** xref:bis/business-processes.adoc[1. Business processes]
+**** xref:bis/business-information.adoc[2. Business information]
+**** xref:bis/tax-information.adoc[3. Tax information]
+**** xref:bis/rules.adoc[4. Rules]
+**** xref:bis/technical-details.adoc[5. Technical details]
+*** xref:bis/peppol-egui-relationship.adoc[Peppol and Taiwan eGUI]
+*** xref:bis/international-trade.adoc[International trade context]
+** Transaction
+*** xref:trn-invoice/index.adoc[Invoice Transaction]
+**** xref:trn-invoice/semantic-model/index.adoc[Semantic model]
+**** xref:trn-invoice/syntax/index.adoc[Syntax binding]
+**** xref:trn-invoice/codelist/index.adoc[Code lists]
+**** xref:trn-invoice/businessrule/index.adoc[Rules]
+**** xref:trn-invoice/rule/index.adoc[Schematrons]
+** Download resources
+*** xref:downloads/index.adoc[Resources]
+*** xref:downloads/release-package.adoc[Release package]

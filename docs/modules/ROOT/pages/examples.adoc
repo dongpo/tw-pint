@@ -1,8 +1,3 @@
 = Examples
 
-== Taxable Domestic Invoice
-
-[source,xml]
-----
-include::example$01-taxable-domestic-invoice.xml[]
-----
+This page has moved. Use the navigation menu to access the corresponding Documentation or Transaction page.

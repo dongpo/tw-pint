@@ -1,5 +1,5 @@
 name: tw-pint
-title: TW-PINT
-version: '0.1'
+title: TW-PINT Candidate Specification
+version: '1.0'
 nav:
 - modules/ROOT/nav.adoc

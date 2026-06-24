@@ -1,13 +1,3 @@
 = Schematron
 
-The TW-PINT Schematron draft is stored at:
-
-`schematron/TW-PINT-v0.1.sch`
-
-== Validation layers
-
-. UBL 2.1 XML Schema validation
-. PINT International shared rules
-. TW-PINT Schematron
-. TW-PINT Genericode code-list validation
-. TW-PINT validation test suite
+This page has moved. Use the navigation menu to access the corresponding Documentation or Transaction page.

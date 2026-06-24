@@ -1,0 +1,10 @@
+= Invoice Transaction Syntax Binding
+
+TW-PINT uses OASIS UBL 2.1 Invoice syntax. Taiwan-specific requirements are mapped onto existing PINT/UBL structures.
+
+The source files are maintained in:
+
+* `syntax-binding/TW-PINT-UBL-SyntaxBinding-v0.1.csv`
+* `syntax-binding/TW-PINT-UBL-SyntaxBinding-v0.1.xlsx`
+
+The current candidate version does not define a new XML syntax.

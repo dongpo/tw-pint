@@ -1,0 +1,5 @@
+= Invoice Transaction Semantic Model
+
+The semantic model identifies the Taiwan business terms used by TW-PINT and maps them to PINT business terms and UBL syntax paths.
+
+include::partial$semantic-table.adoc[]

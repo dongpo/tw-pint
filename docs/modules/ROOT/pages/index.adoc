@@ -1,16 +1,65 @@
-= TW-PINT Candidate Specification v1.0
+= TW-PINT Candidate Specification
+:page-toclevels: 2
 
-Taiwan Jurisdiction Extension Candidate of the Peppol International Invoice Transaction (PINT).
+Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction (PINT).
 
 [IMPORTANT]
 ====
-This is a candidate specification prepared for community review. It is not an official OpenPeppol publication and has not been approved by an OpenPeppol authority or a Taiwan Peppol Authority.
+This is a candidate specification prepared for community review. It is not an official OpenPeppol publication and has not been approved by OpenPeppol or a Taiwan Peppol Authority.
 ====
 
-== Purpose
+TW-PINT uses Peppol PINT as the international invoice exchange layer and Taiwan eGUI as the domestic tax reporting layer. TW-PINT acts as the interoperability bridge between the two.
 
-TW-PINT defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.
+== Documentation
 
-== Core proposition
+[cols="1,3", options="header"]
+|===
+|Document |Description
 
-TW-PINT is not a replacement of Taiwan eGUI. It is an interoperability layer that enables Taiwan businesses to exchange invoices through the Peppol network while preserving the ability to map invoice data to Taiwan tax reporting processes.
+|xref:bis/index.adoc[TW-PINT Candidate Specification Body]
+|Business process, business information, Taiwan Business Tax, Peppol-eGUI relationship, international trade scenarios, rules and technical details.
+
+|xref:bis/peppol-egui-relationship.adoc[Relationship between Peppol and Taiwan eGUI]
+|Explains how Peppol, TW-PINT and Taiwan eGUI should be separated and integrated.
+
+|xref:bis/international-trade.adoc[International Trade Context]
+|Explains export, import, zero-rated, foreign currency and cross-border interoperability scenarios.
+|===
+
+== Transaction
+
+[cols="1,3", options="header"]
+|===
+|Transaction page |Description
+
+|xref:trn-invoice/index.adoc[Invoice Transaction]
+|Entry page for TW-PINT Invoice Transaction.
+
+|xref:trn-invoice/semantic-model/index.adoc[Semantic model]
+|Taiwan business terms mapped to PINT/UBL.
+
+|xref:trn-invoice/syntax/index.adoc[Syntax binding]
+|UBL Invoice syntax mapping.
+
+|xref:trn-invoice/codelist/index.adoc[Code lists]
+|Taiwan jurisdiction code lists and inherited PINT code lists.
+
+|xref:trn-invoice/businessrule/index.adoc[Business rules]
+|TW-IBR rules catalogue.
+
+|xref:trn-invoice/rule/index.adoc[Schematrons]
+|Schematron validation artefacts.
+|===
+
+== Download resources
+
+[cols="1,3", options="header"]
+|===
+|Resource |Description
+
+|xref:downloads/index.adoc[Download resources]
+|Links to semantic model, syntax binding, codelists, rules, schematron, XML examples and validation package.
+
+|xref:downloads/release-package.adoc[Release package]
+|Candidate release artefacts for review and implementation.
+|===

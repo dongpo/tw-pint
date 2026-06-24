@@ -1,0 +1,15 @@
+= Release Package
+
+The candidate release package consists of:
+
+* documentation source;
+* semantic model;
+* syntax binding;
+* code lists;
+* business rules;
+* Schematron validation artefacts;
+* XML examples;
+* validation test package;
+* release notes.
+
+This package is prepared for community review and should not be treated as an official publication.

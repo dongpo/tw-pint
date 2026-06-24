@@ -12,36 +12,25 @@
 <link rel="icon" href="/tw-pint/_/img/favicon.ico" type="image/x-icon">
   </head>
   <body class="status-404">
-<header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://dongpo.github.io/tw-pint">
-        <img alt="" src="/tw-pint/_/img/iconx128.png" width="32" type="image/x-icon" style="margin-right:16px">
-        TW-PINT Candidate Specification
+<header class="tw-topbar">
+  <div class="tw-topbar-inner">
+    <div class="tw-brand">
+      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
+        <span class="tw-brand-mark">TW</span>
+        <span class="tw-brand-text">
+          <span class="tw-brand-title">TW-PINT</span>
+          <span class="tw-brand-subtitle">Candidate Specification</span>
+        </span>
       </a>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Color themes</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" onclick="setTheme('canyon')">Canyon</a>
-            <a class="navbar-item" onclick="setTheme('dark')">Dark</a>
-            <a class="navbar-item" onclick="setTheme('jungle')">Jungle</a>
-            <a class="navbar-item" onclick="setTheme('light')">Light</a>
-            <a class="navbar-item" onclick="setTheme('pastel')">Pastel</a>
-            <a class="navbar-item" onclick="setTheme('phosphor')">Phosphor<a>
-            <a class="navbar-item" style="padding-top: 5px;padding-left: 1px;padding-right: 1px;"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+    <nav class="tw-topnav" aria-label="Top navigation">
+      <a href="https://dongpo.github.io/tw-pint">Home</a>
+      <a href="/tw-pint/tw-pint/1.0/scope.html">Scope</a>
+      <a href="/tw-pint/tw-pint/1.0/peppol-egui-relationship.html">Peppol + eGUI</a>
+      <a href="/tw-pint/tw-pint/1.0/conformance.html">Conformance</a>
+      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
+    </nav>
+  </div>
 </header>
 <div class="body">
 <div class="nav-container">
@@ -50,10 +39,10 @@
 <div class="nav-panel-explore is-active" data-panel="explore">
   <ul class="components">
     <li class="component">
-      <span class="title">TW-PINT</span>
+      <span class="title">TW-PINT Candidate Specification</span>
       <ul class="versions">
         <li class="version">
-          <a href="/tw-pint/tw-pint/0.1/index.html">0.1</a>
+          <a href="/tw-pint/tw-pint/1.0/index.html">1.0</a>
         </li>
       </ul>
     </li>
@@ -86,8 +75,16 @@ If you typed the URL of this page manually, please double check that you entered
   </div>
 </main>
 </div>
-<footer class="footer">
-  <p>Copyright &copy; 2020&ndash;2026 by Stephen Gold</p>
+<footer class="tw-footer">
+  <div class="tw-footer-inner">
+    <div>
+      <strong>TW-PINT Candidate Specification</strong><br>
+      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
+    </div>
+    <div class="tw-footer-note">
+      Community review draft. Not an official OpenPeppol publication.
+    </div>
+  </div>
 </footer>
 <script src="/tw-pint/_/js/site.js"></script>
 <script async src="/tw-pint/_/js/vendor/highlight.js"></script>

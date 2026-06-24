@@ -1,17 +1,30 @@
-# TW-PINT Candidate Specification v1.0
+# TW-PINT PINT-style Candidate Specification
 
-Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction (PINT).
+This repository is structured to follow the same high-level publication pattern as PINT specializations:
 
-Status: **candidate specification prepared for community review**. This is not an official OpenPeppol publication and has not been approved by a Taiwan Peppol Authority.
+```text
+Home
+├── Documentation
+│   └── PINT / BIS document body
+├── Transaction
+│   └── Invoice Transaction
+│       ├── Semantic model
+│       ├── Syntax binding
+│       ├── Code lists
+│       ├── Business rules
+│       └── Schematrons
+└── Download resources
+```
 
-## Purpose
-
-TW-PINT defines how Taiwan can use Peppol PINT as the international invoice exchange layer while preserving Taiwan eGUI as the domestic tax reporting layer.
+Status: candidate specification for community review. Not an official OpenPeppol publication.
 
 ## Local build
 
 ```bash
 python3 tools/generate_adoc_tables.py
-npm install -g @antora/cli @antora/site-generator
 antora playbook.yml
 ```
+
+## GitHub Pages
+
+Use GitHub Actions as the Pages source.

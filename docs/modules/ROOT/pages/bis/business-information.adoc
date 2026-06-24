@@ -1,0 +1,45 @@
+= 2. Business Information
+:toc: macro
+:toclevels: 3
+
+toc::[]
+
+== 2.1. Parties
+
+The seller is represented using `cac:AccountingSupplierParty`. The buyer is represented using `cac:AccountingCustomerParty`.
+
+== 2.2. Delivery Details
+
+Delivery details may be used when relevant for invoice verification, trade documentation, or tax treatment.
+
+== 2.3. References and attachments
+
+References should use existing PINT/UBL structures before introducing Taiwan-specific extensions. These include purchase order, sales order, buyer reference, contract reference, despatch advice, receipt advice, tender reference, project reference, preceding invoice reference, attachments, and delivery note reference.
+
+== 2.4. Allowances and Charges
+
+Allowances and charges are inherited from PINT and UBL.
+
+== 2.5. Payment means information
+
+TW-PINT inherits credit transfer and card payment structures from PINT. Taiwan-specific payment practices may be documented as implementation guidance but should not break PINT interoperability.
+
+== 2.6. Item information
+
+Item identifiers and classifications may support invoice verification, trade documentation, and future digital product passport integration.
+
+== 2.7. Price information
+
+Price information follows PINT and UBL.
+
+== 2.8. Unit of measure
+
+Unit codes should follow inherited PINT unit code lists.
+
+== 2.9. Taiwan business identifiers and trade identifiers
+
+The seller UBN identifies a Taiwan seller in domestic transactions. The buyer UBN identifies a Taiwan buyer in domestic B2B transactions. Foreign buyers and foreign sellers may not have Taiwan UBNs, so rules must distinguish domestic Taiwan B2B from cross-border cases.
+
+== 2.10. Additional information for Taiwan eGUI bridge
+
+The eGUI gateway should preserve the original Peppol invoice identifier and maintain traceability between TW-PINT and local eGUI records.
