@@ -1,0 +1,27 @@
+= 5. Technical Details
+
+== 5.1. BIS Identifiers
+
+The TW-PINT `CustomizationID` is a candidate value and must be finalized through governance and community review.
+
+== 5.2. Datatypes
+
+TW-PINT inherits PINT semantic datatypes and adds Taiwan-specific identifier usage.
+
+== 5.3. UBL schemas and namespaces
+
+TW-PINT uses OASIS UBL 2.1 Invoice and CreditNote syntax.
+
+== 5.4. Glossary
+
+The glossary should include PINT, TW-PINT, eGUI, UBN, Business Tax, Access Point, SMP, SML and Peppol Authority.
+
+== 5.5. TW-PINT specialization architecture
+
+TW-PINT inherits shared content from PINT, adds Taiwan aligned restrictions for tax and identifiers, and defines Taiwan distinct content such as UBN usage and eGUI bridge mapping guidance.
+
+== 5.6. Semantic model, syntax binding and validation artefacts
+
+include::partial$semantic-table.adoc[]
+
+Syntax binding is maintained in `syntax-binding/`. Code lists are maintained in `codelists/`. Rules are maintained in `rules/`. Schematron is maintained in `schematron/`. Examples and test cases are maintained in `examples/` and `tests/`.

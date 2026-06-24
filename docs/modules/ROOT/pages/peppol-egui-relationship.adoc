@@ -1,0 +1,54 @@
+= Relationship between Peppol and Taiwan eGUI
+
+== Architectural distinction
+
+[cols="1,2,2", options="header"]
+|===
+|Layer |Peppol / TW-PINT |Taiwan eGUI
+
+|Primary role
+|Business document exchange
+|Domestic tax reporting and invoice compliance
+
+|Network role
+|Interoperable international exchange
+|Domestic government reporting platform
+
+|Core object
+|PINT invoice / UBL invoice
+|Government Uniform Invoice record
+
+|Scope
+|B2B exchange and interoperability
+|Tax reporting, archival, and domestic compliance
+|===
+
+== TW-PINT as the interoperability bridge
+
+[source,text]
+----
+Seller ERP
+   ↓
+TW-PINT Invoice
+   ↓
+Peppol Access Point
+   ↓
+Foreign or domestic trading partner
+
+Optional local path:
+TW-PINT Invoice
+   ↓
+eGUI Gateway
+   ↓
+Taiwan eGUI / tax reporting process
+----
+
+TW-PINT provides the semantic and validation layer that enables invoice data to be exchanged internationally while preserving information needed for Taiwan local mapping.
+
+== What TW-PINT does not replace
+
+TW-PINT does not replace Taiwan eGUI legal reporting obligations, MOF platform processes, domestic consumer eGUI functions, carrier/donation/lottery functions, or legal tax determination.
+
+== eGUI bridge principle
+
+The eGUI bridge should map TW-PINT invoice information into local eGUI-related processes where required. The bridge should not create new Peppol semantics when existing PINT/UBL structures are sufficient.

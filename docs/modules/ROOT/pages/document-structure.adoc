@@ -1,0 +1,13 @@
+= Document Structure
+
+This specification is organized as follows:
+
+* Taiwan Context and Positioning
+* Relationship between Peppol and Taiwan eGUI
+* Business Processes
+* Business Information
+* Tax Information
+* Rules
+* Technical Details
+* Conformance
+* Annexes for PINT comparison, eGUI mapping, international trade, and technical artefacts

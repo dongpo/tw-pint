@@ -1,5 +1,6 @@
 site:
-  title: TW-PINT
+  title: TW-PINT Candidate Specification
+  url: https://dongpo.github.io/tw-pint
   start_page: tw-pint::index.adoc
 
 content:

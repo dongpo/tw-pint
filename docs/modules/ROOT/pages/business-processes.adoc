@@ -1,0 +1,43 @@
+= 1. Business Processes
+
+== 1.1. Parties and roles
+
+The core parties are seller and buyer. Optional parties include payment receiver, delivery party, seller tax representative, and other parties inherited from PINT and UBL.
+
+== 1.2. PINT Billing process
+
+TW-PINT follows the PINT billing process: seller creates invoice data, the invoice is represented as UBL 2.1, the sender validates UBL, PINT shared rules and TW-PINT rules, the invoice is exchanged through Peppol, and the receiver validates and processes the invoice.
+
+== 1.3. Invoice functionality
+
+TW-PINT supports accounting, invoice verification, auditing, tax reporting, and payment.
+
+== 1.4. Credit notes and negative invoices
+
+Credit notes should be used when a correction semantically reverses or adjusts a previous invoice. Negative invoices should not be used as a substitute for credit notes where a credit note is required by business process or local Taiwan reporting requirements.
+
+== 1.5. Local business process in Taiwan
+
+=== 1.5.1. eGUI bridge process
+
+The eGUI bridge process maps TW-PINT invoice information to domestic Taiwan eGUI-related requirements when needed.
+
+=== 1.5.2. Negative invoices and credit notes in Taiwan
+
+Where Taiwan practice requires linkage to an original invoice for allowance, return, or correction, the standard PINT preceding invoice reference structure should be used.
+
+=== 1.5.3. Taiwan domestic B2B invoice process
+
+A domestic B2B invoice may be exchanged through Peppol using TW-PINT while the domestic tax reporting obligation is fulfilled through Taiwan eGUI processes.
+
+=== 1.5.4. Export invoice process using TW-PINT
+
+For export, TW-PINT supports foreign buyer identification, zero-rated tax treatment, foreign currency, destination country, and supporting trade references.
+
+=== 1.5.5. Import / inbound invoice process using PINT specializations
+
+A Taiwan buyer may receive invoices from foreign sellers using JP-PINT, SG-PINT, or other PINT specializations.
+
+== 1.6. International trade scenarios
+
+TW-PINT supports Taiwan seller to foreign buyer, foreign seller to Taiwan buyer, cross-border zero-rated transactions, foreign currency invoicing, and interoperability with JP-PINT, SG-PINT and other PINT jurisdictions.

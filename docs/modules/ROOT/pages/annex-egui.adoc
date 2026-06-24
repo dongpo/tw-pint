@@ -1,0 +1,24 @@
+= Annex B. Relationship of TW-PINT to Taiwan eGUI
+
+== Conceptual mapping
+
+[source,text]
+----
+Peppol / TW-PINT
+        ↓
+eGUI Gateway
+        ↓
+Taiwan eGUI / tax reporting
+----
+
+== Data that can be exchanged directly in TW-PINT
+
+Seller and buyer identifiers, invoice number, invoice date, invoice line details, tax category, tax amount, monetary totals and supporting references.
+
+== Data that may require downstream eGUI bridge processing
+
+eGUI platform-specific status, consumer-facing carrier data, donation and lottery-related data, and local archival workflow data.
+
+== Known gaps
+
+Further analysis is required to produce an authoritative mapping between TW-PINT and Taiwan eGUI MIG.

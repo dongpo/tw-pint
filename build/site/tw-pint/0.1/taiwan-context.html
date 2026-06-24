@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Business Process :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/0.1/business-process.html">
+    <title>Taiwan Context and Positioning :: TW-PINT Candidate Specification</title>
+    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/0.1/taiwan-context.html">
     <meta name="generator" content="Antora 3.1.15">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="Business Process">
+<meta property="og:description" content="Taiwan Context and Positioning">
 <meta property="og:title" content="TW-PINT Candidate Specification">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -80,7 +80,7 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Taiwan Context and Positioning</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="taiwan-context.html">Taiwan Context</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -163,35 +163,58 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TW-PINT</a></li>
-    <li><a href="business-process.html">Business Process</a></li>
+    <li><a href="index.html">TW-PINT Candidate Specification v1.0</a></li>
+    <li>Taiwan Context and Positioning</li>
+    <li><a href="taiwan-context.html">Taiwan Context</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/business-process.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/taiwan-context.adoc">Edit this page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Business Process</h1>
+<h1 class="page">Taiwan Context and Positioning</h1>
+<div class="sect1">
+<h2 id="_taiwan_electronic_invoicing_landscape"><a class="anchor" href="#_taiwan_electronic_invoicing_landscape"></a>Taiwan electronic invoicing landscape</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT follows the PINT billing process for issuing an invoice from a seller to a buyer through Peppol-compatible exchange.</p>
+<p>Taiwan has a mature electronic Government Uniform Invoice environment. eGUI supports domestic tax reporting, invoice issuance, archival, and downstream compliance processes. However, eGUI is primarily a domestic tax and reporting infrastructure, while Peppol is an international business document exchange infrastructure.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Seller creates a UBL 2.1 Invoice.</p>
-</li>
-<li>
-<p>Sender validates the document against UBL, PINT shared rules, and TW-PINT rules.</p>
-</li>
-<li>
-<p>Sender Access Point transmits the document through the Peppol network.</p>
-</li>
-<li>
-<p>Receiver validates and processes the invoice.</p>
-</li>
-<li>
-<p>If required, a local gateway maps the invoice to Taiwan eGUI-related processes.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>TW-PINT is designed to connect these two layers without forcing either layer to replace the other.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_taiwan_b2b_e_invoicing_environment"><a class="anchor" href="#_taiwan_b2b_e_invoicing_environment"></a>Taiwan B2B e-invoicing environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Taiwan businesses already produce electronic invoice data for domestic compliance. For international trade, buyers and sellers increasingly require interoperable invoice data exchanged through international networks and aligned with globally recognized semantics.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_taiwan_business_tax_environment"><a class="anchor" href="#_taiwan_business_tax_environment"></a>Taiwan Business Tax environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT profiles the PINT tax model to express mainstream Taiwan tax categories: taxable, zero-rated, and exempt.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_international_trade_context_for_taiwan"><a class="anchor" href="#_international_trade_context_for_taiwan"></a>International trade context for Taiwan</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Taiwan is deeply integrated into international supply chains. For exporters, invoice information must support foreign buyers, foreign currency, zero-rated transactions, and trade-related references. For importers, Taiwan buyers need a way to receive structured invoice data from foreign PINT jurisdictions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_tw_pint_is_needed"><a class="anchor" href="#_why_tw_pint_is_needed"></a>Why TW-PINT is needed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TW-PINT is needed because Taiwan requires a PINT-compatible invoice model for cross-border exchange, a Taiwan-specific identifier and tax profile, and a bridge between Peppol invoice exchange and Taiwan eGUI reporting.</p>
+</div>
+</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">

@@ -1,0 +1,3 @@
+= Annex D. Code Lists, Rules and Technical Artefacts
+
+TW-PINT code lists are stored in `codelists/`. Business rules are stored in `rules/`. Schematron is stored in `schematron/`. Validation examples and test cases are stored in `examples/` and `tests/`.

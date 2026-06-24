@@ -1,8 +1,19 @@
-= Business Rules
+= 4. Rules
 
-The authoritative rules catalogue source is:
+== 4.1. Calculations
 
-* `rules/TW-PINT-Rules-Catalogue-v0.1.csv`
-* `rules/TW-PINT-Rules-Catalogue-v0.1.xlsx` when included
+TW-PINT inherits PINT calculation principles and adds Taiwan-aligned tax calculation guidance.
 
-include::partial$rules-table.adoc[]
+== 4.2. Rounding
+
+Rounding should follow PINT shared rules unless Taiwan reporting alignment requires more specific guidance.
+
+== 4.3. Taiwan aligned calculations
+
+Taiwan-aligned calculations include Business Tax calculation, tax subtotal alignment, foreign currency and tax-currency handling, and export invoice totals.
+
+== 4.4. Taiwan-specific business rules
+
+Taiwan-specific rules cover domestic seller and buyer identification, conditional handling for foreign parties, eGUI bridge data, credit notes, invoice number, tax category, and tax totals.
+
+NOTE: The full TW-IBR rules catalogue is maintained in `rules/TW-PINT-Rules-Catalogue-v0.1.csv` and `rules/TW-PINT-Rules-Catalogue-v0.1.xlsx`.

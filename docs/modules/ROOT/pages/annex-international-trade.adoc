@@ -1,0 +1,17 @@
+= Annex C. International Trade Implementation Scenarios
+
+== Taiwan exporter to Singapore buyer
+
+A Taiwan exporter issues a TW-PINT invoice. The buyer receives it through the Peppol network and processes it according to local Singapore requirements.
+
+== Taiwan exporter to Japan buyer
+
+A Taiwan exporter issues a TW-PINT invoice to a Japanese buyer. The document should remain interoperable with JP-PINT receiving practices where possible.
+
+== Foreign supplier to Taiwan buyer
+
+A Taiwan buyer receives an invoice from a foreign PINT jurisdiction. The invoice is mapped to Taiwan accounting and tax reporting requirements.
+
+== Cross-border credit note handling
+
+Credit notes should use standard PINT preceding invoice references and preserve traceability to the original invoice.

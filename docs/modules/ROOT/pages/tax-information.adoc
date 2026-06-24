@@ -1,0 +1,21 @@
+= 3. Tax Information
+
+== 3.1. Taiwan Business Tax
+
+TW-PINT represents Taiwan Business Tax information needed for invoice exchange and downstream reporting.
+
+[cols="1,2,1", options="header"]
+|===
+|Code |Description |Rate
+|S |Taxable |5%
+|Z |Zero Rated |0%
+|E |Exempt |0%
+|===
+
+== 3.2. Peppol, TW-PINT and eGUI tax reporting relationship
+
+TW-PINT carries the tax information needed for buyer-seller exchange and validation. Local Taiwan reporting may require additional processing through an eGUI gateway. Consumer-facing eGUI details, donation, lottery and clearance workflows remain outside TW-PINT v1.0.
+
+== 3.3. International trade and Taiwan tax handling
+
+Export invoices may use zero-rated tax treatment. Foreign buyers should not be forced to provide Taiwan UBN. Inbound invoices may follow another PINT specialization and be mapped to Taiwan accounting and tax reporting requirements. Foreign currency invoices should identify invoice currency and may require tax currency representation for Taiwan reporting alignment.

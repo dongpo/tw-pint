@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Business Process :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/0.1/business-process.html">
+    <title>Annex B. Relationship of TW-PINT to Taiwan eGUI :: TW-PINT Candidate Specification</title>
+    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/0.1/annex-egui.html">
     <meta name="generator" content="Antora 3.1.15">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="../../_/img/iconx128.png">
-<meta property="og:description" content="Business Process">
+<meta property="og:description" content="Annex B. Relationship of TW-PINT to Taiwan eGUI">
 <meta property="og:title" content="TW-PINT Candidate Specification">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
@@ -119,7 +119,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="annex-pint-jp-sg.html">Annex A: PINT, JP-PINT and SG-PINT</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="annex-egui.html">Annex B: Taiwan eGUI</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -163,35 +163,53 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TW-PINT</a></li>
-    <li><a href="business-process.html">Business Process</a></li>
+    <li><a href="index.html">TW-PINT Candidate Specification v1.0</a></li>
+    <li>Annexes</li>
+    <li><a href="annex-egui.html">Annex B: Taiwan eGUI</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/business-process.adoc">Edit this page</a></div>
+  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/annex-egui.adoc">Edit this page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Business Process</h1>
-<div class="paragraph">
-<p>TW-PINT follows the PINT billing process for issuing an invoice from a seller to a buyer through Peppol-compatible exchange.</p>
+<h1 class="page">Annex B. Relationship of TW-PINT to Taiwan eGUI</h1>
+<div class="sect1">
+<h2 id="_conceptual_mapping"><a class="anchor" href="#_conceptual_mapping"></a>Conceptual mapping</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Peppol / TW-PINT
+        ↓
+eGUI Gateway
+        ↓
+Taiwan eGUI / tax reporting</code></pre>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Seller creates a UBL 2.1 Invoice.</p>
-</li>
-<li>
-<p>Sender validates the document against UBL, PINT shared rules, and TW-PINT rules.</p>
-</li>
-<li>
-<p>Sender Access Point transmits the document through the Peppol network.</p>
-</li>
-<li>
-<p>Receiver validates and processes the invoice.</p>
-</li>
-<li>
-<p>If required, a local gateway maps the invoice to Taiwan eGUI-related processes.</p>
-</li>
-</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_that_can_be_exchanged_directly_in_tw_pint"><a class="anchor" href="#_data_that_can_be_exchanged_directly_in_tw_pint"></a>Data that can be exchanged directly in TW-PINT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Seller and buyer identifiers, invoice number, invoice date, invoice line details, tax category, tax amount, monetary totals and supporting references.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_that_may_require_downstream_egui_bridge_processing"><a class="anchor" href="#_data_that_may_require_downstream_egui_bridge_processing"></a>Data that may require downstream eGUI bridge processing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>eGUI platform-specific status, consumer-facing carrier data, donation and lottery-related data, and local archival workflow data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_gaps"><a class="anchor" href="#_known_gaps"></a>Known gaps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Further analysis is required to produce an authoritative mapping between TW-PINT and Taiwan eGUI MIG.</p>
+</div>
+</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Page contents" data-levels="2">

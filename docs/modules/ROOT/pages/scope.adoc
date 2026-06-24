@@ -3,16 +3,26 @@
 == In scope
 
 * UBL 2.1 Invoice
-* B2B domestic invoice
-* B2B export invoice
-* Taiwan Business Tax mainstream scenarios
-* Seller and buyer business identifiers
-* TW jurisdiction validation rules
+* UBL 2.1 CreditNote as a related correction document
+* B2B domestic invoice exchange in Taiwan
+* B2B export invoice exchange from Taiwan to foreign buyers
+* inbound invoice exchange from foreign sellers to Taiwan buyers
+* Taiwan Business Tax mainstream cases
+* standard-rated, zero-rated, and exempt tax categories
+* Taiwan Unified Business Number (UBN)
+* Peppol endpoint identification
+* eGUI gateway mapping considerations
 
 == Out of scope
 
 * B2C carrier handling
-* Donation code
-* Lottery handling
-* Real-time clearance
-* Complete replacement of Taiwan eGUI MIG specifications
+* donation code and lottery handling
+* real-time tax clearance
+* complete replacement of Taiwan eGUI MIG specifications
+* consumer-facing eGUI functions
+* sector-specific special tax regimes
+* legal determination of tax liability
+
+== Boundary principle
+
+TW-PINT SHALL NOT redefine the Taiwan eGUI legal reporting system. TW-PINT defines how invoice information may be exchanged using Peppol and how such information may be bridged into Taiwan eGUI-related processes by local service providers.

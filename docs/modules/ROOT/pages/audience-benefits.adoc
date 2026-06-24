@@ -1,0 +1,9 @@
+= Audience and Benefits
+
+== Audience
+
+This specification is intended for Access Point providers, ERP vendors, e-invoicing service providers, Taiwan eGUI service providers, tax reporting gateway operators, government agencies, enterprise buyers and sellers, and international trading partners.
+
+== Benefits
+
+TW-PINT provides a common invoice semantic model for Taiwan B2B trade, interoperability with PINT-based jurisdictions such as Japan and Singapore, a path to connect Taiwan eGUI with international Peppol invoice exchange, and a foundation for cross-border digital trade.

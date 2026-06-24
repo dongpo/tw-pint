@@ -1,0 +1,7 @@
+= Annex A. Relationship of TW-PINT to PINT, JP-PINT and SG-PINT
+
+TW-PINT inherits the PINT core invoice model, including seller, buyer, invoice line, monetary total, tax total, payment means and document references.
+
+TW-PINT aligns PINT with Taiwan Business Tax by profiling tax categories and rates. Distinct Taiwan content includes UBN usage, Taiwan invoice number considerations and eGUI bridge guidance.
+
+TW-PINT should avoid unnecessary divergence so that Taiwan systems can exchange invoices with JP-PINT, SG-PINT and other PINT jurisdictions.

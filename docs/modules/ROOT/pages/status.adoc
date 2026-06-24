@@ -1,0 +1,7 @@
+= Statement of Status
+
+This specification is a candidate version of TW-PINT prepared for public and community review.
+
+It is intended to support discussion among Taiwan government agencies, prospective Taiwan Peppol Authority stakeholders, Access Point providers, ERP and e-invoicing service providers, Taiwan eGUI service providers, international trading partners, and the OpenPeppol community.
+
+This document is not an official legal, tax, or Peppol conformance source.

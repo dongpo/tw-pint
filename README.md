@@ -1,8 +1,12 @@
-# TW-PINT AsciiDoc Repository v0.1
+# TW-PINT Candidate Specification v1.0
 
-Taiwan jurisdiction draft package for Peppol International Invoice Transaction.
+Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction (PINT).
 
-Status: **non-official working repository for review**. Not an OpenPeppol publication.
+Status: **candidate specification prepared for community review**. This is not an official OpenPeppol publication and has not been approved by a Taiwan Peppol Authority.
+
+## Purpose
+
+TW-PINT defines how Taiwan can use Peppol PINT as the international invoice exchange layer while preserving Taiwan eGUI as the domestic tax reporting layer.
 
 ## Local build
 
@@ -11,17 +15,3 @@ python3 tools/generate_adoc_tables.py
 npm install -g @antora/cli @antora/site-generator
 antora playbook.yml
 ```
-
-Output:
-
-```text
-build/site/
-```
-
-## GitHub Pages
-
-1. Push this repository to GitHub.
-2. Go to **Settings → Pages**.
-3. Choose **GitHub Actions** as the source.
-4. Push to `main`.
-5. The site will be deployed by `.github/workflows/pages.yml`.

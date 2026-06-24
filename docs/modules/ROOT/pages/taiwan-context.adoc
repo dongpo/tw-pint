@@ -1,0 +1,23 @@
+= Taiwan Context and Positioning
+
+== Taiwan electronic invoicing landscape
+
+Taiwan has a mature electronic Government Uniform Invoice environment. eGUI supports domestic tax reporting, invoice issuance, archival, and downstream compliance processes. However, eGUI is primarily a domestic tax and reporting infrastructure, while Peppol is an international business document exchange infrastructure.
+
+TW-PINT is designed to connect these two layers without forcing either layer to replace the other.
+
+== Taiwan B2B e-invoicing environment
+
+Taiwan businesses already produce electronic invoice data for domestic compliance. For international trade, buyers and sellers increasingly require interoperable invoice data exchanged through international networks and aligned with globally recognized semantics.
+
+== Taiwan Business Tax environment
+
+TW-PINT profiles the PINT tax model to express mainstream Taiwan tax categories: taxable, zero-rated, and exempt.
+
+== International trade context for Taiwan
+
+Taiwan is deeply integrated into international supply chains. For exporters, invoice information must support foreign buyers, foreign currency, zero-rated transactions, and trade-related references. For importers, Taiwan buyers need a way to receive structured invoice data from foreign PINT jurisdictions.
+
+== Why TW-PINT is needed
+
+TW-PINT is needed because Taiwan requires a PINT-compatible invoice model for cross-border exchange, a Taiwan-specific identifier and tax profile, and a bridge between Peppol invoice exchange and Taiwan eGUI reporting.

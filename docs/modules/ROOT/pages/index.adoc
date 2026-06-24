@@ -1,18 +1,16 @@
-= TW-PINT Billing Specification v0.1
+= TW-PINT Candidate Specification v1.0
 
-Taiwan Jurisdiction Extension of Peppol International Invoice Transaction (PINT).
+Taiwan Jurisdiction Extension Candidate of the Peppol International Invoice Transaction (PINT).
 
-[NOTE]
+[IMPORTANT]
 ====
-This is a non-official working draft for review. It is not an OpenPeppol publication.
+This is a candidate specification prepared for community review. It is not an official OpenPeppol publication and has not been approved by an OpenPeppol authority or a Taiwan Peppol Authority.
 ====
 
-== Main artifacts
+== Purpose
 
-* xref:semantic-model.adoc[Semantic Model]
-* xref:syntax-binding.adoc[Syntax Binding]
-* xref:codelists.adoc[Code Lists]
-* xref:rules.adoc[Business Rules]
-* xref:schematron.adoc[Schematron]
-* xref:examples.adoc[Examples]
-* xref:conformance.adoc[Conformance]
+TW-PINT defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.
+
+== Core proposition
+
+TW-PINT is not a replacement of Taiwan eGUI. It is an interoperability layer that enables Taiwan businesses to exchange invoices through the Peppol network while preserving the ability to map invoice data to Taiwan tax reporting processes.
