@@ -6,23 +6,64 @@ toc::[]
 
 == Introduction
 
-TW-PINT defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.
+This specification is a Taiwan specialization of the general Peppol International (PINT) model for Billing, which defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. TW-PINT uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer. The main requirement for a Taiwan country specification comes from the need to support Taiwan Business Tax and the operational relationship with Taiwan electronic Government Uniform Invoice (eGUI) processes while preserving PINT interoperability. This draft therefore avoids creating a new invoice syntax and focuses on a conservative Core Invoice Usage Specification profile: localized terminology, restricted party identification, tax-category alignment, calculation guidance, and minimal eGUI bridge information where unavoidable.
+On the syntactical level, TW-PINT uses OASIS UBL 2.1 XML for Invoice and CreditNote documents. It does not change AS4, SMP, SML, document routing, or Peppol network transport.
+
 
 == Statement of status
 
-This specification is a candidate version prepared for community review. It is not an official legal, tax, or Peppol conformance source.
+This is a non-official working draft prepared for review. It is not a final OpenPeppol document and should not be used as a production conformance source until approved by the relevant Taiwan Peppol Authority or competent body and aligned with OpenPeppol publication procedures.
+
+== Document Structure
+•	Chapter 1 gives general information on the business processes, roles, requirements, and functionalities supported by TW-PINT.
+•	Chapter 2 provides guidance on business information supported by the invoice and credit note.
+•	Chapter 3 provides Taiwan tax-related guidance, especially Business Tax and eGUI bridge considerations.
+•	Chapter 4 provides calculation, rounding, and Taiwan-aligned calculation rules.
+•	Chapter 5 describes BIS identifiers, semantic data types, UBL schemas, namespaces, and glossary terms.
+•	Appendix A summarizes Taiwan restrictions against the PINT baseline.
+•	Appendix B lists resources used and limitations that prevent this draft from being a final authoritative BIS.
+
 
 == Scope
 
-TW-PINT v1.0 covers UBL 2.1 Invoice, UBL 2.1 CreditNote as a correction document, Taiwan domestic B2B exchange, export invoice exchange, inbound PINT-compatible invoice processing, Taiwan Business Tax mainstream cases, Taiwan UBN usage, and eGUI gateway mapping considerations.
+This document provides implementation guidance for invoice and credit note transactions in Taiwan under a PINT-based profile. TW-PINT v0.1 is scoped to B2B billing. The document clarifies interoperability requirements, Taiwan localization constraints, and the use of UBL 2.1 Invoice and CreditNote syntax.
+The following are in scope for v0.1:
+•	Invoice and CreditNote documents.
+•	B2B transactions where seller and buyer are identifiable business entities.
+•	Taiwan Business Tax mainstream scenarios, including standard-rated and zero-rated transactions.
+•	Use of Taiwan business number as party identifier in B2B scenarios.
+•	Basic references needed to connect a Peppol invoice with an eGUI process without changing PINT core semantics.
+The following are out of scope for v0.1:
+•	B2C carrier, donation, and lottery handling.
+•	Real-time tax clearance or centralized transaction control implementation.
+•	Transport-layer changes to Peppol AS4/SMP/SML.
+•	Complete replacement of Taiwan eGUI MIG specifications.
+•	Advanced sector-specific tax exceptions, special taxes, and compound tax treatments.
+
 
 == Audience
 
-The intended audience includes Access Point providers, ERP vendors, e-invoicing service providers, Taiwan eGUI service providers, government agencies, enterprise sellers and buyers, and international trading partners.
+The audience for this specification is organizations expecting to use Peppol for exchanging electroic invoices, and/or their ICT-suppliers. These organizations that need to send, receive, validate, map, or archive Taiwan PINT invoices and credit notes. They include: 
+•	Service providers
+•	Contracting Authorities (CA) 
+•	Economic Operators (EO)
+•	Software Developers
+More specifically, roles addressed are the following:
+•	ICT Architects
+•	ICT Developers
+•	Business Experts
+For further information on Peppol/OpenPEPPOL see http://peppol.org
 
 == Benefits
 
-TW-PINT provides a common invoice semantic model for Taiwan B2B trade, interoperability with PINT jurisdictions, and a path to connect Taiwan eGUI with international Peppol invoice exchange.
+The invoice and credit note provides simple support for invoicing where there is a need for credit note in addition to an invoice. Other potential benefits are, among others:
+•	Can be mandated as a basis for national or regional eInvoicing initiatives.
+•	Procurement agencies can use them as basis for moving all invoices into electronic form. The flexibility of the specifications allows the buyers to automate processing of invoices gradually, based on different sets of identifiers or references, based on a cost/benefit approach.
+•	SME can offer their trading partners the option of exchanging standardised documents in a uniform way and thereby move all invoices/credit notes into electronic form.
+•	Large companies can implement these transactions as standardised documents for general operations and implement custom designed bi-lateral connections for large trading partners.
+•	Supports customers with need for more complex interactions.
+•	Can be used as basis for restructuring of in-house processes of invoices.
+•	Significant saving can be realised by the procuring agency by automating and streamlining in-house processing. The accounting can be automated significantly, approval processes simplified and streamlined, payment scheduled timely and auditing automated.
 
 == 1. Business processes
 
