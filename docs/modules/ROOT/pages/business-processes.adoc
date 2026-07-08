@@ -6,6 +6,7 @@ TW-PINT follows the PINT billing process for issuing an invoice or credit note f
 
 The diagram below shows the roles involved in the invoice and credit note transactions. The customer and invoice receiver is the same entity, as is the supplier and the invoice sender.
 TW-PINT follows the PINT billing process: seller creates invoice data, the invoice is represented as UBL 2.1, the sender validates UBL, PINT shared rules and TW-PINT rules, the invoice is exchanged through Peppol, and the receiver validates and processes the invoice.
+image::shared-functionality-and-roles.png[]
 
 == 1.3. Invoice functionality
 
