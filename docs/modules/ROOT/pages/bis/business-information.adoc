@@ -27,7 +27,6 @@ include::example$sellerInformation.xml[]
 
 
 * ① Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
-
 <2> Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
 
 Sellers trading name (ibt-028).
