@@ -15,7 +15,7 @@ Further details on the roles/actors can be found in the section Roles.
 
 Seller is mandatory information and provided in element `cac:AccountingSupplierParty`
 
-[red]_UBL example of seller information_
+[.red]#_UBL example of seller information_#
 
 [source,xml]
 
