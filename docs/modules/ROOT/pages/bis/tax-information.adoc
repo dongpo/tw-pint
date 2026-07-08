@@ -4,23 +4,159 @@
 
 toc::[]
 
+Taiwan imposes Business Tax under the Value-added and Non-value-added Business Tax Act. For most B2B transactions covered by TW-PINT, Business Tax is collected through the Uniform Invoice (GUI/eGUI) system and is represented as a consumption tax applied to the sale of goods and services.
+
+TW-PINT does not redefine Taiwan tax legislation. Instead, it provides a mapping between Taiwan Business Tax information and the tax structures defined by PINT and UBL. The objective is to support cross-border interoperability while maintaining compatibility with Taiwan electronic invoice requirements.
+
 == 3.1. Taiwan Business Tax
 
-TW-PINT represents Taiwan Business Tax information needed for invoice exchange and downstream reporting.
+Business Tax is the principal indirect tax represented in TW-PINT. For the purposes of TW-PINT v0.1, only mainstream invoice scenarios supported by Taiwan electronic invoices are considered.
 
-[cols="1,2,1", options="header"]
+The legal basis for Business Tax (BT) reporting remains Value-added and Non-value-added Business Tax Act and Regulations Governing the Use of Uniform Invoices. TW-PINT is an interoperability specification and does not replace statutory reporting obligations.
+
+=== 3.1.1. Overview of Taiwan Business Tax
+
+Taiwan Business Tax distinguishes several taxation categories. The most common categories are:
+
+
+[cols="1,2,1,1", options="header"]
 |===
-|Code |Description |Rate
+|Taiwan Tax Category|Tax Percentage |Description |Code
 
-|S |Taxable |5%
-|Z |Zero Rated |0%
-|E |Exempt |0%
+|Taxable (應稅) |5% |Taxable transactions refers to supplies of goods or services that are subject to Taiwan Business Tax at the applicable statutory rate. For standard taxable transactions, the supplier is required to calculate, charge, and report Business Tax on the taxable amount in accordance with Taiwan tax regulations. Businesses making taxable supplies may generally deduct eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations. | S
+|Zero-tax-rate (零稅率) |0% |Zero-rated transactions refers to supplies that are subject to Taiwan Business Tax but are taxed at a rate of zero percent (0%). Common examples include qualifying export goods and services as specified by Taiwan tax regulations.
+Unlike exempt transactions, zero-rated transactions remain taxable supplies under the Business Tax system. Businesses making zero-rated supplies may be entitled to deduct or claim refunds of eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations. |Z
+|Tax-exempt (免稅) |0% |Tax-exempt transactions refer  to supplies of goods or services that are exempt from Taiwan Business Tax under applicable laws and regulations. For exempt transactions, no Business Tax is charged on the sale. In general, businesses making exempt supplies are not entitled to deduct the input Business Tax incurred on related purchases and expenses, except where otherwise provided by law. |E 
 |===
 
-== 3.2. Peppol, TW-PINT and eGUI tax reporting relationship
+TW-PINT v0.1 supports standard taxable transactions and zero-rated transactions. Exempt and special tax scenarios are outside the scope of this version.
 
-TW-PINT carries the tax information needed for buyer-seller exchange and validation. Local Taiwan reporting may require additional processing through an eGUI gateway. Consumer-facing eGUI details, donation, lottery and clearance workflows remain outside TW-PINT v1.0.
+=== 3.1.2. Business Tax rates
+The standard Taiwan Business Tax rate is currently five percent (5%).
 
-== 3.3. International trade and Taiwan tax handling
+[cols="1,1", options="header"]
+|===
+|Tax Category |	Tax Percentage
 
-Export invoices may use zero-rated tax treatment. Foreign buyers should not be forced to provide Taiwan UBN. Inbound invoices may follow another PINT specialization and be mapped to Taiwan accounting and tax reporting requirements.
+|S	
+|5%
+
+=== 3.1.3. Taxable and Zero-Rated Transactions
+
+Taxable transactions are represented using category S and are subject to Business Tax at the applicable rate.
+
+Zero-rated transactions are represented using category Z and include transactions that remain taxable under Taiwan law but are subject to a zero-percent rate, such as qualifying export transactions.
+
+The distinction between zero-rated and exempt transactions is important because only zero-rated transactions remain taxable under Taiwan Business Tax legislation.
+
+=== 3.1.4. Relationship with Uniform Invoices
+
+For B2B transactions, Business Tax information is normally supported by a Uniform Invoice or electronic Uniform Invoice (eGUI).
+
+TW-PINT supports the exchange of invoice data required to bridge to Taiwan eGUI systems, as follow tables.
+
+1. Party / Identification Layer
+
+[cols="1,1,1,1,1", options="header"]
+|===
+|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+
+|Seller identification | SellerParty / PartyIdentification / ID + schemeID | Seller Uniform Business Number(賣方統一編號) | Common | Use Party ID scheme whitelist (e.g. TW:VAT, ISO6523:0195)
+|Buyer identification (B2B) |	Buyer Party ID (often mandatory in CIUS) | Buyer Uniform Business Number – mandatory for B2B 買方統一編號（B2B 必填）| Common | Mandatory in TW-PINT B2B
+|Party name |	PartyName / Name	Company name (公司名稱) | Common	Direct mapping
+|Party address |Structured address | Address information not always complete (地址資訊不一定完整) | Different |Optional; do not over-constrain
+
+2. Document Identity & Lifecycle
+
+[cols="1,1,1,1,1", options="header"]
+|===
+|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+
+|Invoice ID	| Invoice/ID (business document ID)	 | Government-issued eGUI invoice number (發票字軌號碼) |	Different |	Keep separate; must not overload
+|Legal invoice number	| Business-level identifier |	Legally assigned invoice number (法定發票號碼) | Different	| Carried out-of-band or via Extension reference
+|Document type	| Invoice / Credit Note	| Invoice / Allowance or Credit Note (發票 / 折讓單) | Common	 | Map to 380 / 381*
+|Issue date | IssueDate | Issue dat (開立日期) |	Common| Direct mapping
+|Lifecycle status |	Not in core PINT | System processing status (系統處理狀態) | Different | TW-PINT Extension: LifecycleStatus
+
+
+TW-PINT does not itself constitute the legal eGUI record unless explicitly recognized by future Taiwan regulations.
+
+=== 3.1.5. Required Tax Information
+For tax calculation and eGUI bridgeability, TW-PINT v0.1 requires at minimum:
+
+1. Monetary & Tax Layer
+
+[cols="1,1,1,1,1", options="header"]
+|===
+|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+
+|Currency	| DocumentCurrencyCode | Currency, usually TWD (幣別（通常為新台幣）)	| Common | Allow multi-currency
+|Line amount | LineExtensionAmount |Sales amount (銷售額)	Common	Direct mapping
+|Tax category | VAT category codes | Taxable / Zero-rated / Exempt (應稅 / 零稅 / 免稅) |	Common (semantic) | CIUS mapping table
+|Tax rate	Percent |	Tax rate (稅率) | Common | Direct mapping
+|Tax total | TaxTotal | Total tax amount (稅額) | Common | Cross-check only
+
+
+2. Line Item / Business Semantics
+
+[cols="1,1,1,1,1", options="header"]
+|===
+|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+
+|Line item |	InvoiceLine | Invoice line item (明細項目) | Common | Direct mapping
+|Item description |	Item/Name | Item description (品名) | Common | Direct mapping
+|Quantity / unit | UNECE unit codes |	Simplified unit representation (單位簡化) | Different | Relax validation
+|Price | PriceAmount | Unit price (單價) | Common | Direct mapping
+
+
+Where multiple tax categories are used, each category shall be represented separately in the tax breakdown.
+
+=== 3.1.6. Calculation of Business Tax
+
+The tax amount shall be calculated from the taxable amount and the applicable tax percentage.
+
+For standard taxable transactions: Tax Amount = Taxable Amount × 5%
+
+The sum of tax category amounts shall equal the document-level tax total.
+
+The sum of taxable amount and tax amount shall equal the tax-inclusive total amount, subject to the rounding rules specified in Chapter 4.
+
+=== 3.1.7.Foreign Currency Invoices
+
+TW-PINT permits invoices issued in currencies other than Taiwanese dollar (TWD).
+
+Where Taiwan tax reporting requires amounts to be expressed in TWD, conversion and reporting requirements remain governed by Taiwan tax regulations and eGUI implementation rules.
+
+TW-PINT does not prescribe a mandatory foreign-exchange conversion methodology in v0.1.
+
+When the Invoice currency (IBT-005) is not TWD the seller may be required to Buinese Tax (BT) related amounts in TWD. This can be provided in the following way.
+The tax currency code (IBT-006) shall be given as TWD. The required amounts are given as shown in the following XML.
+
+[.red]#_UBL example showing BT in TWD when invoice currency is EUR_#
+
+----
+
+include::example$currency.xml[]
+
+----
+
+① Invoice currency as EUR (IBT-005)
+
+② Tax currency as TWD (IBT-006)
+
+③ Invoice total without BT in tax currency being BT (IBT-SG-001)
+
+④ Invoice total with BT in tax currency being BT (IBT-SG-002)
+
+⑤ BT total amount in invoice currency (IBT-110)
+
+⑥ BT total amount in tax currency being BT (IBT-111)
+
+
+=== 3.1.8. Credit Notes and Tax Corrections
+
+Tax adjustments shall be represented using Credit Notes and shall reference the original invoice.
+
+The processing of invoice cancellation, allowance, correction, or other eGUI-specific procedures remains the responsibility of Taiwan eGUI systems and associated gateway implementations.
+
+TW-PINT does not introduce Taiwan-specific tax correction document types.
