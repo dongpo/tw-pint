@@ -26,31 +26,106 @@ include::example$sellerInformation.xml[]
 ----
 
 
-* ① Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
-<2> Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+① Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
 
-Sellers trading name (ibt-028).
+② Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
 
-Sellers country code (ibt-040).
+③ Sellers trading name (ibt-028).
 
-Seller tax registration ID (ibt-031).
+④ Sellers country code (ibt-040).
 
-Tax scheme for the sellers tax registration. Use the appropriate code for the sellers jurisdiction, such as VAT or GST.
+⑤ Seller tax registration ID (ibt-031).
 
-Seller legal registrated name (ibt-027).
+⑥ Tax scheme for the sellers tax registration. Use the appropriate code for the sellers jurisdiction, such as VAT or GST.
 
-Seller legal registration identifier (ibt-030), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+⑦ Seller legal registrated name (ibt-027).
 
-Seller contact (ibg-06).
+⑧ Seller legal registration identifier (ibt-030), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+
+⑨ Seller contact (ibg-06).
 
 
-== 2.2. Delivery Details
+=== 2.1.2. Buyer (AccountingCustomerParty)
 
-Delivery details may be used when relevant for invoice verification, trade documentation, or tax treatment.
+Buyer is mandatory information and provided in element `cac:AccountingCustomerParty`
+
+[.red]#_UBL example of buyer information_#
+
+----
+
+include::example$buyererInformation.xml[]
+
+----
+
+① Buyer electronic address (ibt-049), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
+② Buyer identifier (ibt-046), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+③ Buyer trading name (ibt-045).
+④ Buyer country code (ibt-055), mandatory.
+⑤ Buyer tax registration ID (ibt-048).
+⑥ Tax scheme for the buyer tax registration. Use the appropriate code for the buyers jurisdiction, such as VAT or GST.
+⑦ Buyer legal registered name (ibt-044).
+⑧ Buyer legal registration identifier (ibt-047), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+⑨ Buyer contact (ibg-09).
+
+=== 2.1.3. Payment receiver (PayeeParty)
+Payment receiver is optional information. If this information is not supplied, the seller is the payment receiver. When payee information is sent this is indicating that a factoring situation is being documented.
+To reflect the assignment of an Invoice to a factor there is a need to:
+.	have a disclaimer (notification notice) on the Invoice that the Invoice has been assigned to a factor. The disclaimer should be given using the Invoice note (IBT-22) on document level.
+.	identify the Factor as the Payee
+.	to have the bank account changed to favour of a Factor.
+
+[.red]#_UBL example of payee information_#
+
+----
+
+include::example$payeeInformation.xml[]
+
+----
+
+① schemeID attribute is recommended for all party identifiers
+② schemeID attribute is recommended for party legal entity identifiers
+
+
+== 2.1.4. Seller tax representative (TaxRepresentativeParty)
+Tax representative party for the seller is relevant for sellers delivering goods and services in a country without having a permanent establishment in that country. In such cases information on the tax representative shall be included in the invoice.
+
+[.red]#_UBL example of tax representative information_#
+
+----
+
+include::example$taxRepInformation.xml[]
+
+----
+
+① Tax identifier of seller tax representative (ibt-063)
+
+== 2.2. Delivery Details (Date and Location)
+Delivery details may be given at document level.
+Place and date of delivery is recommended, and should be sent unless this does not affect the ability to ensure the correctness of the invoice.
+The delivery element contains information on name, address and delivery location identifier (`cac:Delivery/cac:DeliveryLocation/cbc:ID`) which may be used if the place of delivery is defined through an identifier. For example, GLN (Global Location Number) issued by GS1.
+
+[.red]#_UBL example of delivery information_#
+
+----
+
+include::example$deliInformation.xml[]
+
+----
+
+① Deliver to address (ibg-15), the address to which goods and services invoiced were or are delivered.
+② Deliver to country code (ibt-080), mandatory
+③ Deliver to party name (ibt-070), the name of the party to which the goods and services are delivered.
 
 == 2.3. References and attachments
 
-References should use existing PINT/UBL structures before introducing Taiwan-specific extensions. These include purchase order, sales order, buyer reference, contract reference, despatch advice, receipt advice, tender reference, project reference, preceding invoice reference, attachments, and delivery note reference.
+Support for invoice verification is a key function of an invoice. The invoice should provide sufficient information to look up relevant existing documentation, electronic or paper.
+
+[cols="1,1"]
+|[IMPORTANT]
+|Any reference element should contain valid information, if you do not have a reference, the element should not be present in the instance document.
+|===
+
+The invoice and credit note transactions supports the following references to existing documentation:
 
 == 2.4. Allowances and Charges
 
