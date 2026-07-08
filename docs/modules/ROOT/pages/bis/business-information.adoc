@@ -26,14 +26,22 @@ include::example$sellerInformation.xml[]
 ----
 
 
-Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
+<1> Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.
+
 Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+
 Sellers trading name (ibt-028).
+
 Sellers country code (ibt-040).
+
 Seller tax registration ID (ibt-031).
+
 Tax scheme for the sellers tax registration. Use the appropriate code for the sellers jurisdiction, such as VAT or GST.
+
 Seller legal registrated name (ibt-027).
+
 Seller legal registration identifier (ibt-030), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.
+
 Seller contact (ibg-06).
 
 
