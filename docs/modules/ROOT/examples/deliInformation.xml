@@ -1,0 +1,23 @@
+<cac:Delivery>
+   <cbc:ActualDeliveryDate>2017-11-01</cbc:ActualDeliveryDate> 
+   <cac:DeliveryLocation>
+      <cbc:ID schemeID="0088">7300010000001</cbc:ID>
+      <cac:Address> <!--1-->
+         <cbc:StreetName>Delivery street 2</cbc:StreetName> 
+         <cbc:AdditionalStreetName>Building 56</cbc:AdditionalStreetName> 
+         <cbc:CityName>Stockholm</cbc:CityName> 
+         <cbc:PostalZone>21234</cbc:PostalZone>
+         <cac:AddressLine>
+            <cbc:Line>Gate 15</cbc:Line>
+         </cac:AddressLine>
+         <cac:Country>
+            <cbc:IdentificationCode>SE</cbc:IdentificationCode> <!--2-->
+         </cac:Country>
+      </cac:Address>
+   </cac:DeliveryLocation>
+   <cac:DeliveryParty> <!--3-->
+      <cac:PartyName>    
+         <cbc:Name>Delivery party Name</cbc:Name>
+      </cac:PartyName>
+   </cac:DeliveryParty>
+</cac:Delivery>
