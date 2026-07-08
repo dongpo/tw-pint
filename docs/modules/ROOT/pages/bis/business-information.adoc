@@ -4,9 +4,26 @@
 
 toc::[]
 
+In the subchapters below you find description of selected parts of the transaction.
+
 == 2.1. Parties
 
-The seller is represented using `cac:AccountingSupplierParty`. The buyer is represented using `cac:AccountingCustomerParty`.
+The following roles may be specified. The same actor may play more than one role depending on the handling routine.
+Further details on the roles/actors can be found in the section Roles. 
+
+=== 2.1.1. Seller (AccountingSupplierParty) 
+
+Seller is mandatory information and provided in element `cac:AccountingSupplierParty`
+
+_UBL example of seller information_
+
+[source,xml]
+
+----
+
+include::example$sellerInformation.xml[]
+
+----
 
 == 2.2. Delivery Details
 
