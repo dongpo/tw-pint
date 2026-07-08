@@ -138,30 +138,464 @@ Any reference element should contain valid information, if you do not have a ref
 
 The invoice and credit note transactions supports the following references to existing documentation:
 
+=== 2.3.1. Purchase order and sales order reference
+The purchase order reference is a conditional business term. If the customer has issued a purchase order should be referenced by providing its identifier in the resulting invoice, otherwise the Buyer reference should be used (see Buyer reference).
+
+If the purchase order is referenced at the invoice header level, the order reference element on line level can be used to state the relevant line numbers in the order .
+
+A sales order is issued by the seller, confirming the sale of specified products and may be provided in the invoice.
+
+[IMPORTANT]
+====
+In the invoice, both a purchase order and a sales order reference can be given, but be aware that an invoice instance cannot reference a sales order, without providing the corresponding purchase order reference.
+====
+
+[.red]#_UBL example or order and sales reference_#
+
+----
+
+include::example$orderAndSalesRef.xml[]
+
+----
+
+① Purchase order reference
+
+② Sales order reference
+
+=== 2.3.2. Buyer reference
+The buyer reference, known as Your ref, is conditional. An invoice shall have either the buyer reference or the order reference (see Purchase order and sales order reference)
+
+The element is used for the reference of who ordered the products/services. Example being the name of the person ordering, employee number or a code identifying this person or department/group. Your ref is often used for internal routing at recipient, and hence it is important to fill this element with the correct values according to the need of the recipient.
+
+If neither buyer reference nor a reference to an order is supplied by the customer, the name of the person ordering or appointed for the customer can be supplied in buyer reference if known by the supplier.
+
+[IMPORTANT]
+====
+When reference is provided by the customer, the correct element shall contain the provided reference.
+====
+
+[.red]#_UBL example of buyer reference_#
+
+----
+
+include::example$buyerRef.xml[]
+
+----
+
+=== 2.3.3. Invoiced object identifier
+
+The invoiced object identifier is the identifier for an object on which the invoice is based, given by the Seller. Examples may be a subscription number, telephone number, meter point, vehicle, person etc., as applicable.
+
+If it is not clear to the receiver what scheme is used for the identifier, an optional scheme identifier attribute should be used, that shall be chosen from the Invoiced object identifier scheme code list.
+
+The invoiced object reference is provided by using the element cac:AdditionalDocumentReference with the document type code = 130
+
+[.red]#_UBL example of invoiced object identifier_#
+
+----
+
+include::example$invoiceObjID.xml[]
+
+----
+
+① Invoice object identifier scheme is given as an attribute on the identifier. It states the type of the identifier according to code list UN/CEFACT 1153
+
+② An identifier of an object that the invoice relates to.
+
+③ A code that qualifies the identifier as an invoiced object identifier. Document type code "130" qualifies that. 
+
+=== 2.3.4. Contract reference
+
+To reference or match an invoice to a purchase contract, the contract number could be specified like this:
+
+[.red]#_UBL example of contract reference_#
+
+----
+
+include::example$contactInfo.xml[]
+
+----
+
+① Despatch advice
+
+② Receipt advice
+
+[.bule]#Line level#
+When an invoice is charging items that have been delivered with separate despatches the references should be provided on the line level as follows. When the invoiced quantity of an item has been delivered by more than one despatch the invoice shall have separate lines for each despatch. When despatches are referenced on line level there shall not be a reference on document level.
+
+[.red]#_UBL example of despatch and receipt advice_#
+
+----
+
+include::example$dispatchAndRecipt.xml[]
+
+----
+
+① Despatch advice
+
+=== 2.3.6. Tender reference
+
+To identify the call for tender or lot the invoice relates to, use the 'OriginatorDocumentReference'. The identifier is, in most cases, the Procurement Procedure Identifier.
+
+[.red]#_UBL example of tender reference_#
+
+----
+
+include::example$tenderRef.xml[]
+
+----
+
+=== 2.3.7. Project reference
+The project reference is optional to use, and is sent in an invoice in the element cac:ProjectReference/ cbc:ID. In a credit note, this element does not exist, and project reference is sent by using the element `cac:AdditionalDocumentReference[cbc:DocumentTypeCode='50']/cbc:ID`.
+
+NOTE
+
+When sending the project reference, only the cbc:ID and the `cbc:DocumentTypeCode` are allowed in the `cac:AdditionalDocumentReference` element.
+
+[.red]#_UBL example of project reference in an invoice_#
+
+----
+
+include::example$projectRef.xml[]
+
+----
+
+=== 2.3.8. Preceding invoice references
+
+A credit note or negative invoice can refer to one or more initial invoice(s). This is done in the business group BG-3 Preceding invoice reference, providing the invoice number and issue date. The issue date shall be provided in case the preceding invoice reference is not unique.
+
+In case correction applies to a large number of invoices, the invoicing period (BG-14), as necessary combined with a clarifying invoice note (IBT-22), may instead be given at document level.
+
+=== 2.3.9. Attachments
+
+An invoice may contain a supportive document as informative. Examples of such documents may be work reports, certificates or other documents that relate to the purchase or the invoiced items. A supportive document can be attached to the invoice in two ways: by providing a direct hyperlink through which the document can be downloaded or by embedding the document into the invoice. A compliant receiver is required to be able to receive an attached supportive document and, in case of embedded files, to convert it into a file but he is not required to handle the content of that file since it is only provided as informative.
+
+When attaching a document using an uri the hyperlink shall point directly to the file that is to be downloaded.
+
+An embedded document is contained in the invoice as binary object using base64 encoding and shall be supplemented with information about the name of the document file and a mime code indicating the type of the file. This allows the receiver to convert the binary code into a file that has the same name as the original file and allows him to associate the received file to a suitable application for viewing its content. The set of allowed codes for the file type (mime code) is limited to types that can be opened with applications that are commonly used and available.
+
+As is with other file types, when an attached file is an XML file the receiver is expected to be able to receive and convert the binary object into an XML file but the sender can not expect the receiver to view or process the content of that XML file. Any further handling of an embedded XML file attachment is optional for the receiver.
+
+[.red]#_UBL example of a document attachment using URI_#
+
+----
+
+include::example$docAttachmentURI.xml[]
+
+----
+
+[.red]#_UBL example of an embedded document attachment_#
+
+----
+
+include::example$docAttachmentEmd.xml[]
+
+----
+
+① An identifier of the supporting document (ibt-122)
+
+② A description of the supporting document (ibt-123)
+
+③ The URL (Uniform Resource Locator) that identifies where the external document is located (ibt-124)
+
+④ An attached document embedded as binary object or sent together with the invoice. (ibt-125). The file type is given with the attribute "mimeCode" (ibt-125-1) and the name of the original file is given in the attribute "filename" (ibt-125-2).
+
+=== 2.3.10. Reference to delivery note
+
+In Summarised invoicing process, the supplier sends a Delivery Note to the customer with each delivery and the buyer uses the information in the Delivery Note to verify the reception of the items. The Delivery Note is focused on providing information about the items that are being delivered. At the end of a period (usually a month) the supplier sends an invoice that summarises the items that were delivered during that period.
+
+To reference or match an invoice to a despatch or receipt advice use the following elements:
+
+[.red]#_UBL example for summarised invoice 1_#
+
+----
+
+include::example$SumInvoice1.xml[]
+
+----
+
+① Delivery note number
+
+
+[.red]#_UBL example for summarised invoice 2_#
+
+----
+
+include::example$SumInvoice2.xml[]
+
+----
+
+① Invoiced quantity is 1.
+
+② Delivery note number
+
+③ Item net price shall equal to the total taxable amount stated on the Delivery Note.
+
+
 == 2.4. Allowances and Charges
 
-Allowances and charges are inherited from PINT and UBL.
+The Invoice and credit note transactions has elements for Allowance/charge on 3 levels.
+
+The element cac:AllowanceCharge with sub element cbc:ChargeIndicator indicates whether the instance is a charge (true) or an allowance (false).
+
+The header level
+
+Applies to the whole invoice and is included in the calculation of the invoice total amount.
+*	Several allowances and charges may be supplied
+*	Specification of TAX for allowances and charges, cac:TaxCategory with sub elements, shall be supplied
+*	The sum of all allowances and charges on the header level shall be specified in cbc:AllowanceTotalAmount and cbc:ChargeTotalAmount respectively.
+
+The line level
+
+Applies to the line level and is included in the calculation of the line amount.
+
+*	Several allowances and charges may be supplied
+*	Specification of TAX for allowances and charges shall not be specified, as the TAX category stated for the invoice line itself, applies also to the allowances or charges of that line.
+*	The sum of all allowances and charges on the line level shall be taken into account, subtracted or added, when calculating the line extension amount . These line level allowances and charges shall not be calculated into the header level elements.
+
+The line level Price element
+
+A way to inform the buyer how the price is set. Is also relevant if the seller or buyer want to post the allowance in their accounting systems. The price itself shall always be the net price, i.e. the base amount reduced with a discount (allowance).
+*	Only one occurrence of allowance (discount) is allowed.
+*	Specification of TAX for allowance shall not be specified
+*	Allowance related to Price shall not be part of any other calculations.
+*	Allowance related to Price may specify amount and the base amount.
+
+[.red]#_UBL example of Allowances and Charges on the document level_#
+
+----
+
+include::example$allowancesAndChargesDoc.xml[]
+
+----
+
+① ChargeIndicator = true to indicate a charge
+
+② ChargeIndicator = false to indicate an allowance
+
+③ Base amount, to be used with the percentage to calculate the amount
+
+④ Charge percentage
+
+⑤ Amount=Base amount×(Percentage÷100)
+
+[.red]#_UBL example of Allowances and Charges on invoice line_#
+
+----
+
+include::example$allowancesAndChargesLine.xml[]
+
+----
+
 
 == 2.5. Payment means information
 
-TW-PINT inherits credit transfer and card payment structures from PINT. Taiwan-specific payment practices may be documented as implementation guidance but should not break PINT interoperability.
+=== 2.5.1. Credit transfer
+
+[IMPORTANT]
+====
+Payment means code 30 as defined below shall be supported by all receivers of a PINT compliant invoice. This payment method acts as the common denominator for global trade.
+====
+
+If payment is made by credit transfer, the Payment account identifier (IBT-84) is mandatory
+
+Examples of codes for payment by credit transfer are:
+
+30 - Credit transfer
+
+UBL example of payment means info when payment is done by credit transfer
+
+----
+
+include::example$creditTransfer.xml[]
+
+----
+
+① Mandatory, payment means code for credit transfer
+
+② Remittance information
+
+③ Mandatory, IBAN (in case of a SEPA payment) or a national account number (BBAN)
+
+④ BIC or a national clearing cod
+
+=== 2.5.2. Card Payment
+If the Buyer had opted to pay by using a payment card such as a credit or debit card, information on the Primary Account Number (PAN) shall be present in the invoice.
+Examples of codes for payment by card are:
+
+*	48 - Bank card
+*	54 - Credit card
+*	55 - Debit card
+
+[.red]#_UBL example of payment means info when payment is done by payment card_#
+
+----
+
+include::example$paymentCard.xml[]
+
+----
+
+① Payment means code for credit card
+② Mandatory, shall be the last 4 to 6 digits of the payment card number
+③ Mandatory, used to identify the financial service network provider of the card. Examples are VISA, MasterCard, American Express.
+④ Card holder name
+
+=== 2.5.3. Taiwan payment means
+Taiwan-specific payment methods should be represented with existing payment means codes if supported. If a local payment method cannot be represented, it should first be handled in implementation guidance before introducing any new TW-PINT rule.
+
 
 == 2.6. Item information
 
-Item identifiers and classifications may support invoice verification, trade documentation, and future digital product passport integration.
+Item information follows PINT. Item name or description should be sufficient for accounting and tax review. Product identifiers and classifications may be used where applicable.
+
+=== 2.6.1. Item identifiers
+
+In an invoice line the seller item identifier, the buyer item identifier and the standard item identifier can be provided. For sellers and buyers item identifiers, no scheme attribute is used, whilst the schemeID is mandatory for the standard item identification, and must be from the ISO 6523 ICD list.
+
+[.red]#_UBL example of item identifiers_#
+
+----
+
+include::example$itemsID.xml[]
+
+----
+
+① 0160 is the ICD value for a GTIN identifier
+
+=== 2.6.2. Item classification
+Several different item classification codes can be provided per invoice line, and the codes must be from one of the classification schemes in code list UNCL7143.
+
+[.red]#_UBL example of using CPV_#
+
+----
+
+include::example$CPV.xml[]
+
+----
+
+① listID must be from UNCL7143 code list, and code STI indicates this is a CPV classification.
+
+[.red]#_UBL example of UNSPSC_#
+
+----
+
+include::example$UNSPSC.xml[]
+
+----
+
+① listID must be from UNCL7143 code list, and code TST indicates this is a UNSPSC classification, listVersionID is optional, but can be used to specify the version of UNSPSC. NOTE, in previous versions code MP was used as temporary workaround to identify UNSPSC. In fall release 2019 it is replaced with the new 7143 code TST that is specific for UNSPSC.
 
 == 2.7. Price information
 
-Price information follows PINT and UBL.
+An invoice must contain information about the item net price and additional information such as gross price, item price base quantity and price discount may be added.
+For details on calculating price see Item net price (IBT-146).
+
+[.red]#_UBL example of price with price discount_#
+
+----
+
+include::example$priceDiscount.xml[]
+
+----
+
+① Item gross price
+
+② Item price discount
+
+③ Item price base quantity
+
+④ Item net price, must be equal to Item Gross price - item price discount (if these elements are used)
+
 
 == 2.8. Unit of measure
 
-Unit codes should follow inherited PINT unit code lists.
+Unit of measure in an invoice allows the use of codes from UNECE Recommendation No. 20 (version 11e), as well as codes from UNECE Recommendation No. 21 prefixed with an X.
 
-== 2.9. Taiwan business identifiers and trade identifiers
+[cols="1,1"]
+|===
+|Code|Name
 
-The seller UBN identifies a Taiwan seller in domestic transactions. The buyer UBN identifies a Taiwan buyer in domestic B2B transactions. Foreign buyers and foreign sellers may not have Taiwan UBNs, so rules must distinguish domestic Taiwan B2B from cross-border cases.
+|H87
+|Piece
 
-== 2.10. Additional information for Taiwan eGUI bridge
+|KGM
+|Kilogram
 
-The eGUI gateway should preserve the original Peppol invoice identifier and maintain traceability between TW-PINT and local eGUI records.
+|MTR
+|Meter
+
+|LTR
+|Litre
+
+|MTK
+|Square metre
+
+|MTQ
+|Cubic metre
+
+|KTM
+|Kilometre
+
+|TNE
+|Tonne (metric ton)
+
+|KWH
+|Kilowatt hour
+
+|DAY
+|Day
+
+|HUR
+|Hour
+
+|MIN
+|Minute
+|===
+table:
+  caption: Table 1. Examples of unit of measure from Recommendation No. 20
+    end: bottom
+
+[cols="1,1"]
+|===
+|Code|Name
+
+|XBG
+|Bag
+
+|XBX
+|Box
+
+|XCT
+|Carton
+
+|XCY
+|Cylinder
+
+|XBA
+|Barrel
+
+|XPK
+|Package
+
+|XPX
+|Pallet
+
+|XRL
+|Reel
+
+|XSA
+|Sack
+
+|XST
+|Sheet
+|===
+table:
+  caption: Table 2. Examples of unit of measure from Recommendation No. 21, prefixed with an X
+    end: bottom
+
+
+`<cbc:InvoicedQuantity unitCode="H87">10</cbc:InvoicedQuantity>`
+`<cbc:InvoicedQuantity unitCode="XPX">10</cbc:InvoicedQuantity>`
+
+Code H87 from Recommendation no. 20
+Code PX, prefixed with an X from Recommendation no. 21
