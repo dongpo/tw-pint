@@ -21,7 +21,7 @@ Seller is mandatory information and provided in element `cac:AccountingSupplierP
 
 ----
 
-include::example$sellerInformation.xml[]
+include::examples$sellerInformation.xml[]
 
 ----
 
@@ -163,6 +163,7 @@ include::example$orderAndSalesRef.xml[]
 ② Sales order reference
 
 === 2.3.2. Buyer reference
+
 The buyer reference, known as Your ref, is conditional. An invoice shall have either the buyer reference or the order reference (see Purchase order and sales order reference)
 
 The element is used for the reference of who ordered the products/services. Example being the name of the person ordering, employee number or a code identifying this person or department/group. Your ref is often used for internal routing at recipient, and hence it is important to fill this element with the correct values according to the need of the recipient.
