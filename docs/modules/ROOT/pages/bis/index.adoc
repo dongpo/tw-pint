@@ -15,6 +15,7 @@ On the syntactical level, TW-PINT uses OASIS UBL 2.1 XML for Invoice and CreditN
 This is a non-official working draft prepared for review. It is not a final OpenPeppol document and should not be used as a production conformance source until approved by the relevant Taiwan Peppol Authority or competent body and aligned with OpenPeppol publication procedures.
 
 == Document Structure
+
 •	Chapter 1 gives general information on the business processes, roles, requirements, and functionalities supported by TW-PINT.
 •	Chapter 2 provides guidance on business information supported by the invoice and credit note.
 •	Chapter 3 provides Taiwan tax-related guidance, especially Business Tax and eGUI bridge considerations.
@@ -27,13 +28,17 @@ This is a non-official working draft prepared for review. It is not a final Open
 == Scope
 
 This document provides implementation guidance for invoice and credit note transactions in Taiwan under a PINT-based profile. TW-PINT v0.1 is scoped to B2B billing. The document clarifies interoperability requirements, Taiwan localization constraints, and the use of UBL 2.1 Invoice and CreditNote syntax.
+
 The following are in scope for v0.1:
+
 •	Invoice and CreditNote documents.
 •	B2B transactions where seller and buyer are identifiable business entities.
 •	Taiwan Business Tax mainstream scenarios, including standard-rated and zero-rated transactions.
 •	Use of Taiwan business number as party identifier in B2B scenarios.
 •	Basic references needed to connect a Peppol invoice with an eGUI process without changing PINT core semantics.
+
 The following are out of scope for v0.1:
+
 •	B2C carrier, donation, and lottery handling.
 •	Real-time tax clearance or centralized transaction control implementation.
 •	Transport-layer changes to Peppol AS4/SMP/SML.
