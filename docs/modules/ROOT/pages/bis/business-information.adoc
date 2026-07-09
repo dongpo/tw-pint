@@ -21,7 +21,7 @@ Seller is mandatory information and provided in element `cac:AccountingSupplierP
 
 ----
 
-include::examples$sellerInformation.xml[]
+include::example$sellerInformation.xml[]
 
 ----
 
