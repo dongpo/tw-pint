@@ -23,10 +23,10 @@ Specification identifier (IBT-24) is a string without spaces. The list below con
 
 In the table below you will find the values to be used as the specification identifier (IBT-24) and the business process type (IBT-23) for this profile.
 
-[cols="1,1"]
+[cols="1,1,1"]
 |===
 
-|Type | Element c`bc:CustomizationID` | Element `cbc:ProfileID`
+|Type | Element `cbc:CustomizationID` | Element `cbc:ProfileID`
 |Invoice and credit note | `urn:peppol:pint:billing-1@tw-1` |	`urn:peppol:bis:billing`
 
 `<cbc:CustomizationID>urn:peppol:pint:billing-1@tw-1</cbc:CustomizationID> `
