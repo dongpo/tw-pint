@@ -1,4 +1,4 @@
-cac:PayeeParty>
+<cac:PayeeParty>
    <cac:PartyIdentification>
       <cbc:ID schemeID="0088">4711967900017</cbc:ID> <!--1-->
    </cac:PartyIdentification>
@@ -6,6 +6,6 @@ cac:PayeeParty>
       <cbc:Name>Payee party</cbc:Name>
    </cac:PartyName>
    <cac:PartyLegalEntity>
-      <cbc:CompanyID schemeID="0088">4711967900017</cbc:CompanyID> <!--2-->   
+      <cbc:CompanyID schemeID="0088">4711967900017</cbc:CompanyID> <!--2--> 
    </cac:PartyLegalEntity>
 </cac:PayeeParty>
