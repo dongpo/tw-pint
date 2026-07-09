@@ -1,0 +1,38 @@
+<cac:AccountingCustomerParty>
+   <cac:Party>
+      <cbc:EndpointID schemeID="0088">0099299000006</cbc:EndpointID> <!--1-->
+      <cac:PartyIdentification>
+         <cbc:ID schemeID="0088"> 0099299000006</cbc:ID> <!--2-->
+      </cac:PartyIdentification>
+      <cac:PartyName>
+         <cbc:Name>Mitusi & Co.Ltd.</cbc:Name> <!--3-->
+      </cac:PartyName>
+     <cac:PostalAddress> 
+      <cbc:StreetName>Bldf. 2-1 Ohtemachi 1-chome Chiyoda-ku</cbc:StreetName>
+      <cbc:AdditionalStreetName></cbc:AdditionalStreetName>  
+      <cbc:CityName>Tokyo</cbc:CityName>
+      <cbc:PostalZone>100-0004</cbc:PostalZone>
+      <cac:AddressLine>
+         <cbc:Line>Third line</cbc:Line>
+      </cac:AddressLine>
+         <cac:Country>
+            <cbc:IdentificationCode>JP</cbc:IdentificationCode> <!--4-->
+         </cac:Country>
+   </cac:PostalAddress>
+   <cac:PartyTaxScheme>
+      <cbc:CompanyID>1010001008767 </cbc:CompanyID> <!--5-->
+         <cac:TaxScheme>
+            <cbc:ID>VAT</cbc:ID> <!--6-->
+         </cac:TaxScheme> 
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity> 
+         <cbc:RegistrationName> Mitusi & Co.Ltd.</cbc:RegistrationName> <!--7-->
+         <cbc:CompanyID schemeID="0088">0099299000006</cbc:CompanyID> <!--8-->
+      </cac:PartyLegalEntity> 
+      <cac:Contact> <!--9-->
+         <cbc:Name>Kenichi Hori</cbc:Name>
+         <cbc:Telephone>+81(3)3285-1111</cbc:Telephone>       
+         <cbc:ElectronicMail>mbrm.infotkzrm@mbrm.co.jp</cbc:ElectronicMail>
+      </cac:Contact>
+   </cac:Party>
+</cac:AccountingCustomerParty>

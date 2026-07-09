@@ -1,0 +1,15 @@
+<cac:AllowanceCharge>
+    <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReasonCode>CG</cbc:AllowanceChargeReasonCode>
+    <cbc:AllowanceChargeReason>Cleaning</cbc:AllowanceChargeReason>
+    <cbc:MultiplierFactorNumeric>20</cbc:MultiplierFactorNumeric> <!--2-->
+    <cbc:Amount currencyID="TWD">200</cbc:Amount> <!--3-->
+    <cbc:BaseAmount currencyID="TWD">1000</cbc:BaseAmount> <!--1-->
+    <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>10</cbc:Percent>
+        <cac:TaxScheme>
+            <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+    </cac:TaxCategory>
+</cac:AllowanceCharge>

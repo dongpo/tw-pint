@@ -1,0 +1,4 @@
+<cac:OrderReference>
+   <cbc:ID>o-998877</cbc:ID> <!--1-->
+   <cbc:SalesOrderID>so-12343</cbc:SalesOrderID> <!--2-->
+</cac:OrderReference>
