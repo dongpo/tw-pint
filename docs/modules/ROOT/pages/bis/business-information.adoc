@@ -53,7 +53,7 @@ Buyer is mandatory information and provided in element `cac:AccountingCustomerPa
 
 ----
 
-include::example$buyererInformation.xml[]
+include::example$buyerInformation.xml[]
 
 ----
 
