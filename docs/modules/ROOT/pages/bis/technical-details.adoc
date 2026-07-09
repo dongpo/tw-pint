@@ -31,7 +31,7 @@ In the table below you will find the values to be used as the specification iden
 
 |===
 
-`<cbc:CustomizationID>urn:peppol:pint:billing-1@tw-1</cbc:CustomizationID> `
+`<cbc:CustomizationID>urn:peppol:pint:billing-1@tw-1</cbc:CustomizationID>`
 
 `<cbc:ProfileID>urn:peppol:bis:billing</cbc:ProfileID>`
 
