@@ -49,11 +49,14 @@ The following are out of scope for v0.1:
 == Audience
 
 The audience for this specification is organizations expecting to use Peppol for exchanging electroic invoices, and/or their ICT-suppliers. These organizations that need to send, receive, validate, map, or archive Taiwan PINT invoices and credit notes. They include: 
+
 •	Service providers
 •	Contracting Authorities (CA) 
 •	Economic Operators (EO)
 •	Software Developers
+
 More specifically, roles addressed are the following:
+
 •	ICT Architects
 •	ICT Developers
 •	Business Experts
@@ -62,6 +65,7 @@ For further information on Peppol/OpenPEPPOL see http://peppol.org
 == Benefits
 
 The invoice and credit note provides simple support for invoicing where there is a need for credit note in addition to an invoice. Other potential benefits are, among others:
+
 •	Can be mandated as a basis for national or regional eInvoicing initiatives.
 •	Procurement agencies can use them as basis for moving all invoices into electronic form. The flexibility of the specifications allows the buyers to automate processing of invoices gradually, based on different sets of identifiers or references, based on a cost/benefit approach.
 •	SME can offer their trading partners the option of exchanging standardised documents in a uniform way and thereby move all invoices/credit notes into electronic form.
