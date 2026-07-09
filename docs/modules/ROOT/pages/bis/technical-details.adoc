@@ -35,6 +35,7 @@ In the table below you will find the values to be used as the specification iden
 
 `<cbc:ProfileID>urn:peppol:bis:billing</cbc:ProfileID>`
 
+
 === 5.1.2. Document type identifier scheme
 
 The document type identifier must follow Peppol network requirements. This draft does not finalize document type identifiers because they require formal registration and publication decisions.
