@@ -1,0 +1,7 @@
+<cbc:InvoicedQuantity unitCode="C62">10</cbc:InvoicedQuantity> <!--3-->
+<cbc:LineExtensionAmount currencyID="TWD">1000</cbc:LineExtensionAmount> <!--4-->
+<!-- Code omitted for clarity--> 
+<cac:Price>
+   <cbc:PriceAmount currencyID="TWD">200</cbc:PriceAmount> <!--1-->
+   <cbc:BaseQuantity unitCode="C62">2</cbc:BaseQuantity> <!--2-->
+</cac:Price>

@@ -1,11 +1,11 @@
 <cac:AccountingSupplierParty> 
    <cac:Party> 
-      <cbc:EndpointID schemeID="0088"> 4711967900017</cbc:EndpointID> <!--1-->
+      <cbc:EndpointID schemeID="0088"> 4711967900017</cbc:EndpointID>u
       <cac:PartyIdentification> 
-         <cbc:ID schemeID="0088">4711967900017</cbc:ID> <!--2-->
+         <cbc:ID schemeID="0088">4711967900017</cbc:ID> v
       </cac:PartyIdentification> 
       <cac:PartyName> 
-         <cbc:Name>TEN REN TEA CO., LTD.<cbc:Name> <!--3-->
+         <cbc:Name>TEN REN TEA CO., LTD.<cbc:Name> w
       </cac:PartyName>    
       <cac:PostalAddress>
          <cbc:StreetName>6 F., No. 107, Sec. 4, Zhongxiao E. Rd.<cbc:StreetName>    
@@ -17,21 +17,21 @@
             <cbc:Line>Third address line</cbc:Line> 
          </cac:AddressLine> 
          <cac:Country>
-           <cbc:IdentificationCode>TW</cbc:IdentificationCode> <!--4-->
+           <cbc:IdentificationCode>TW</cbc:IdentificationCode> x
          </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
-         <cbc:CompanyID> 18559415</cbc:CompanyID> <!--5-->
+         <cbc:CompanyID> 18559415</cbc:CompanyID> y
          <cac:TaxScheme>
-            <cbc:ID>VAT</cbc:ID> <!--6-->
+            <cbc:ID>VAT</cbc:ID> z
          </cac:TaxScheme>
       </cac:PartyTaxScheme> 
       <cac:PartyLegalEntity>     
-         <cbc:RegistrationName>天仁茶業股份有限公司</cbc:RegistrationName> <!--7-->
-            <cbc:CompanyID>18559415</cbc:CompanyID> <!--8-->
+         <cbc:RegistrationName>天仁茶業股份有限公司</cbc:RegistrationName> {
+            <cbc:CompanyID>18559415</cbc:CompanyID> |
             <cbc:CompanyLegalForm>Private Limited Company</cbc:CompanyLegalForm>    
       </cac:PartyLegalEntity>
-      <cac:Contact> <!--9-->
+      <cac:Contact> }
          <cbc:Name>李國麟</cbc:Name>
          <cbc:Telephone>+8862-27765580 </cbc:Telephone>    
          <cbc:ElectronicMail>service@tenren.com.tw</cbc:ElectronicMail>

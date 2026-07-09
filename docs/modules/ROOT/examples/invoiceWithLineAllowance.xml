@@ -1,0 +1,22 @@
+<cbc:InvoicedQuantity unitCode="C62">10</cbc:InvoicedQuantity> <!--4-->
+<cbc:LineExtensionAmount currencyID="TWD">900</cbc:LineExtensionAmount> <!--5-->
+<!-- Code omitted for clarity-->
+<cac:AllowanceCharge>
+    <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReasonCode>CG</cbc:AllowanceChargeReasonCode>
+    <cbc:AllowanceChargeReason>Charge</cbc:AllowanceChargeReason>
+    <cbc:MultiplierFactorNumeric>1</cbc:MultiplierFactorNumeric>
+    <cbc:Amount currencyID="TWD">1</cbc:Amount> <!--2-->
+    <cbc:BaseAmount currencyID="TWD">100</cbc:BaseAmount>
+</cac:AllowanceCharge>
+<cac:AllowanceCharge>
+    <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+    <cbc:AllowanceChargeReasonCode>95</cbc:AllowanceChargeReasonCode>
+    <cbc:AllowanceChargeReason>Discount</cbc:AllowanceChargeReason>
+    <cbc:Amount currencyID="TWD">101</cbc:Amount> <!--3-->
+</cac:AllowanceCharge>
+<!-- Code omitted for clarity-->
+<cac:Price>
+    <cbc:PriceAmount currencyID="TWD">100</cbc:PriceAmount> <!--1-->
+    <cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>            
+</cac:Price>

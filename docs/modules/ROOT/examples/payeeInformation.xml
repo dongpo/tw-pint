@@ -1,4 +1,4 @@
-cac:PayeeParty>
+<cac:PayeeParty>
    <cac:PartyIdentification>
       <cbc:ID schemeID="0088">4711967900017</cbc:ID> <!--1-->
    </cac:PartyIdentification>
