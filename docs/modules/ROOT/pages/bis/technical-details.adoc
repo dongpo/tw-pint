@@ -29,6 +29,8 @@ In the table below you will find the values to be used as the specification iden
 |Type | Element `cbc:CustomizationID` | Element `cbc:ProfileID`
 |Invoice and credit note | `urn:peppol:pint:billing-1@tw-1` |	`urn:peppol:bis:billing`
 
+|===
+
 `<cbc:CustomizationID>urn:peppol:pint:billing-1@tw-1</cbc:CustomizationID> `
 
 `<cbc:ProfileID>urn:peppol:bis:billing</cbc:ProfileID>`
