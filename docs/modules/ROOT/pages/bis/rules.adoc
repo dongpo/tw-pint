@@ -4,13 +4,238 @@
 
 toc::[]
 
+The information given in a PINT invoice must comply to a set of rules on the content of the business terms as well as the relationship between them.
+
 == 4.1. Calculations
 
-TW-PINT inherits PINT calculation principles and adds Taiwan-aligned tax calculation guidance.
+=== 4.1.1. Calculation of totals
+
+Formulas for the calculations of totals are as follows:
+
+[cols="1,1,1", options="header"]
+|===
+|Business term ID | Term name | Calculation
+
+|IBT-106 | Sum of invoice line net amounts | ∑(IBT-131: Invoice line net amount)
+|IBT-107 | Sum of allowances on document level | ∑(IBT-92: Document level allowance amount)
+|IBT-108 | Sum of charges on document level | ∑(IBT-99: Document level charge amount)
+|IBT-109 | Invoice total amount without TAX | IBT-106: Sum of invoice line net amounts
+|||− IBT-107: Sum of allowances on document level
+|||+ IBT-108: Sum of charges on document level
+|IBT-110 | Invoice total TAX amount | ∑(IBT-117: TAX category tax amount)
+|IBT-112 | Invoice total amount with TAX | IBT-109: Invoice total amount without TAX
+|||+ IBT-110: Invoice total TAX amount
+|IBT-115 | Amount due for payment | IBT-112: Invoice total amount with TAX
+|||− IBT-113: Paid amount
+|||+ IBT-114: Rounding amount
+|===
+
+
+=== 4.1.2. UBL syntax calculation formulas
+
+[cols="1,1", options="header"]
+|===
+| Element	| Formula
+
+|<cbc:LineExtensionAmount>	| ∑(cac:InvoiceLine/cbc:LineExtensionAmount)
+|<cbc:AllowanceTotalAmount> | ∑(cac:AllowanceCharge[ChargeIndicator='false']/cbc:Amount)
+|<cbc:ChargeTotalAmount> | ∑(cac:AllowanceCharge[ChargeIndicator='true']/cbc:Amount)
+|<cbc:TaxExclusiveAmount> | cac:LegalMonetaryTotal/cbc:LineExtensionAmount
+||– cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount
+||+ cac:LegalMonetaryTotal/cbc:ChargeTotalAmount
+|<cbc:TaxInclusiveAmount> | cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount
+||+ cac:TaxTotal/cbc:TaxAmount
+|<cbc:PrepaidAmount> | Not applicable
+|<cbc:PayableRoundingAmount> | Not applicable
+|<cbc:PayableAmount> | cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount
+||− cac:LegalMonetaryTotal/cbc:PrepaidAmount
+||+ cac:LegalMonetaryTotal/cbc:PayableRoundingAmount
+|===
+
+*Element for rounding amount, the PayableRoundingAmount*
+
+It is possible to round the expected payable amount.
+
+The element `cac:LegalMonetaryTotal/cbc:PayableRoundingAmount` is used for this purpose and is specified on the header level. This value shall be added to the value in `cac:LegalMonetaryTotal/cbc:PayableAmount`.
+
+=== 4.1.3. Calculation on line level
+
+Item net price (IBT-146)
+
+If gross price and discount exist, the Item net price has to equal with the item gross price less the item price discount.
+
+Calculation formula:
+
+Item net price=Item gross price (IBT-148)−Item price discount (IBT-147)
+
+[.red]*_UBL example of item net price_*
+
+----
+
+include::example$itemNetPrice.xml[]
+
+----
+
+① Item gross price
+
+② Item price discount
+
+③ Item price net amount=Item gross price−Item price discount
+
+
+*Invoice line net amount (IBT-131)*
+
+The invoice line net amount (IBT-131) is as the name implies the net amount without TAX, and inclusive of line level allowance and charges.
+
+The formula for calculating the invoice line net amount is:
+
+Item line net amount=((Item net price (IBT-146)÷Item price base quantity (IBT-149)) ×(Invoiced Quantity (IBT-129)) +Invoice line charge amount (IBT-141)−Invoice line allowance amount (IBT-136)
+
+[IMPORTANT]
+====
+If the line net amount must be rounded to maximum decimals, please note that the different parts of the calculation must be rounded separately.
+
+I.e the result of: 
+
+Item line net amount=((Item net price (IBT-146)÷Item price base quantity (IBT-149))×(Invoiced Quantity (IBT-129)) must be rounded to maximum decimals, and the allowance/charge amounts are also rounded separately.
+====
+
+[.red]*_UBL example of invoice line net amount where no line allowance/charge exist_*
+
+----
+
+include::example$invoiceNoLineAllowance.xml[]
+
+----
+
+① Item net price
+
+② Item price base quantity
+
+③ Invoiced quantity
+
+④ Invoice line net amount = (( Item net price ÷ Item price base quantity) × (Invoiced Quantity)
+
+[.red]*_UBL example of invoice line net amount where line allowance and charge exist_*
+
+----
+
+include::example$invoiceWithLineAllowance.xml[]
+
+----
+
+① Item net price
+
+② Line charge amounts
+
+③ Line allowance amount
+
+④ Invoiced quantity
+
+⑤ Invoice line net amount = (Item net price×Invoiced Quantity) + line charge amount − line allowance amount
+
+=== 4.1.4. Calculation of allowance/charge amount
+
+Allowance and charge on document- and line level consists of elements carrying information on the allowance/charge base amount and the allowance/charge percentage. These are, if present in the invoice instance, used for calculating the allowance/charge amount.
+
+If base amount is present, the percentage shall also be present, and if percentage is present, the base amount shall also be present, and the calculation of the amount shall be:
+
+Amount=Base amount×(Percentage÷100)
+
+[.red]*_UBL example of calculations of allowances and charges where base amount and percentage exist_*
+
+----
+
+include::example$calculationAllowanceBasePercentage.xml[]
+
+----
+
+① Base amount, to be used with the percentage to calculate the amount
+
+② Charge percentage
+
+③ Base amount×(Percentage÷100)=Amount
+
+[.red]*_UBL example of calculations of allowances and charges where base amount and percentage does not exist_*
+
+----
+
+include::example$calculationAllowanceNoBasePercentage.xml[]
+
+----
+
+① Amount of allowance without calculations based on base amount and percentage
+
+
+
 
 == 4.2. Rounding
 
-Rounding should follow PINT shared rules unless Taiwan reporting alignment requires more specific guidance.
+=== 4.2.1. Shared rounding rules
+
+A maximum of two digits are allowed for the following amounts in an invoice.
+
+*	Document level allowance amount (ibt-092)
+*	Document level charge amount (ibt-099)
+*	Sum of allowances on document level (ibt-107)
+*	Sum of charges on document level (ibt-108)
+*	Invoice total amount without TAX (ibt-109)
+*	Invoice total TAX amount (ibt-110)
+*	Invoice total amount with TAX (ibt-112)
+*	Amount due for payment (ibt-115)
+
+[.blue]*Aligned rounding*
+
+Tax category tax amount (ibt-117) must be amount rounded to integer.
+
+Tax category tax amount in accounting currency (ibt-190) must be amount rounded to integer.
+
+== 4.3. Taiwan aligned calculations
+
+This section explains how tax is calculated in the jurisdiction as well as other rules thar are specific to the jurisdiction.
+
+4.3.1. Calculation of Business Tax
+
+Tax breakdown (ibg-23) shall be provided for each distinct combination of Tax category code and Tax rate. For each distinct combination of BT category code and BT rate the calculations are:  
+
+===
+BT category taxable amount (IBT-116)= ∑(Invoice line net amounts (IBT-131))+Document level charge amount (IBT-99)−Document level allowance amount (IBT-92)
+===
+
+===
+BT category tax amount (IBT-117)= BT category taxable amount (IBT-116)×(BT rate (IBT-119)÷100)
+===
+
+[important]
+===
+Tax category tax amount (ibt-117) shall be 0 (zero), if Tax category code (ibt-118) equals to “E” (Exempt from Tax) or “O” (Outside of scope of tax).
+===
+
+[important]
+===
+Tax category tax amount (ibt-117) must be rounded to integer and the rounded result amount shall be between the floor and the ceiling.
+===
+
+[.red]*_UBL example of calculations of BT Breakdown_*
+
+----
+
+include::example$calculationBT.xml[]
+
+----
+
+① Document level charge amount for category S and rate 5%
+
+② Document level allowance amount for category S and rate 5%
+
+③ BT Breakdown for category S and rate = 5%
+
+④ Taxable amount = sum of line amount (line 1 and 3), plus charge amount minus allowance amount where category = S and rate = 5%
+
+⑤ Tax Amount=Taxable amount×(BT rate÷100)
+
+⑥ BT Breakdown for category E, and rate = 0%
+
 
 == 4.3. Taiwan aligned calculations
 
