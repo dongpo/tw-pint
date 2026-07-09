@@ -272,24 +272,24 @@ The XML schemas used are
 
 == 5.4. Glossary
 
-electronic invoice - invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing
-semantic data model - structured set of logically interrelated information elements
-information element - semantic concept that can be defined independent of any particular representation in a syntax
-structured information element - information element that can be processed automatically
-syntax - machine-readable language or dialect used to represent the information elements contained in an electronic document (e.g. an electronic invoice)
-business term - label assigned to a given information element which is used as a primary reference
-identifier - character string used to establish the identity of, and distinguish uniquely, one instance of an object within an identification scheme from all other objects within the same scheme Note 1 to entry: An identifier may be a word, number, letter, symbol, or any combination of those, depending on the identification scheme used.
-identification scheme - collection of identifiers applicable for a given type of object governed under a common set of rules
-compliant - some or all features of the invoice model are used and all rules of the invoice model are respected Note 1 to entry: Based on TOGAF definition of a compliant specification
-conformant - all rules of the invoice model are respected and some additional features not defined in the invoice model are also used
-Optional Whether the option is used or not is the choice of the users independently from other data in the message.
-Conditional Whether the option is used or not and in what way is dependent on other data in the message.
-Mandatory The option must be used in all messages.
-shall - the definition is an absolute requirement of the specification.
-shall not - the definition is an absolute prohibition of the specification.
-should - there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
-should not - there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
-may - is truly optional.
+*electronic invoice* - invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing
+*semantic data model* - structured set of logically interrelated information elements
+*information element* - semantic concept that can be defined independent of any particular representation in a syntax
+*structured information element* - information element that can be processed automatically
+*syntax* - machine-readable language or dialect used to represent the information elements contained in an electronic document (e.g. an electronic invoice)
+*business term* - label assigned to a given information element which is used as a primary reference
+*identifier* - character string used to establish the identity of, and distinguish uniquely, one instance of an object within an identification scheme from all other objects within the same scheme Note 1 to entry: An identifier may be a word, number, letter, symbol, or any combination of those, depending on the identification scheme used.
+*identification scheme* - collection of identifiers applicable for a given type of object governed under a common set of rules
+*compliant* - some or all features of the invoice model are used and all rules of the invoice model are respected Note 1 to entry: Based on TOGAF definition of a compliant specification
+*conformant* - all rules of the invoice model are respected and some additional features not defined in the invoice model are also used
+*Optional* - Whether the option is used or not is the choice of the users independently from other data in the message.
+*Conditional* - Whether the option is used or not and in what way is dependent on other data in the message.
+*Mandatory* - The option must be used in all messages.
+*shall* - the definition is an absolute requirement of the specification.
+*shall not* - the definition is an absolute prohibition of the specification.
+*should* - there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+*should not* - there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+*may* - is truly optional.
 
 
 Syntax binding is maintained in `syntax-binding/`. Code lists are maintained in `codelists/`. Rules are maintained in `rules/`. Schematron is maintained in `schematron/`. Examples and test cases are maintained in `examples/` and `tests/`.
