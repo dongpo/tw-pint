@@ -4,26 +4,289 @@
 
 toc::[]
 
+Following section provide technical details.
+
 == 5.1. BIS Identifiers
 
-The TW-PINT `CustomizationID` is a candidate value and must be finalized through governance and community review.
+Peppol has a defined policy that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the Peppol environment. The policies that apply to this BIS are the following:
+
+=== 5.1.1. Profiles and messages
+
+All messages contains Business process type (IBT-23) and Specification identifier (IBT-24). Business process type (IBT-23) identifies what business process a given message is part of, and Specification identifier (IBT-24) identifies the kind of message and the rules applied.
+
+Profiles are connected to one business process, and may contain multiple document types. Valid document instances shall contain corresponding Business process type (IBT-23) and Specification identifier (IBT-24).
+
+[importance]
+===
+Specification identifier (IBT-24) is a string without spaces. The list below contains spaces in Specification identifier (IBT-24) to make them easier to read. Make sure to remove any spaces before use.
+===
+
+In the table below you will find the values to be used as the specification identifier (IBT-24) and the business process type (IBT-23) for this profile.
+
+[cols="1,1"]
+|===
+
+|Type | Element c`bc:CustomizationID` | Element `cbc:ProfileID`
+|Invoice and credit note | `urn:peppol:pint:billing-1@tw-1` |	`urn:peppol:bis:billing`
+
+`<cbc:CustomizationID>urn:peppol:pint:billing-1@tw-1</cbc:CustomizationID> `
+
+`<cbc:ProfileID>urn:peppol:bis:billing</cbc:ProfileID>`
+
+=== 5.1.2. Document type identifier scheme
+
+The document type identifier must follow Peppol network requirements. This draft does not finalize document type identifiers because they require formal registration and publication decisions.
 
 == 5.2. Datatypes
 
-TW-PINT inherits PINT semantic datatypes and adds Taiwan-specific identifier usage.
+Semantic data types are used to bridge the gap between the semantic concepts expressed by the information elements defined in the semantic model and the technical implementation. The semantic data types define the allowed value domain for the content, and any additional information components (attributes) needed in order to ensure its precise interpretation.
+
+=== 5.2.1. Primitive types
+Semantic data type content may be of the following primitive types. These primitive types were taken from ISO15000, Annex A.
+
+[cols="1,1",options="header"]]
+|===
+|Primitive type	|Definition
+
+|Binary	|A set of finite-length sequences of binary digits.
+|Date	|Time point representing a calendar day on a time scale consisting of an origin and a succession of calendar ISO8601.
+|Decimal	|A subset of the real numbers, which can be represented by decimal numerals.
+|String	|A finite sequence of characters.
+
+|===
+
+=== 5.2.2. Semantic data types
+
+The different semantic data types are described in the tables below, where various features such as attributes, format, and decimals as well as the basic type are defined for each semantic data type. They are based on {ISO15000}.
+
+When used in an instance of an invoice, each data element will contain data. In the below tables this is identified as the “content”. Whenever a business term is used this term shall always have content and therefore the content is always mandatory.
+
+*Amount*
+
+An amount states a numerical monetary value. The currency of the amount is defined as a separate business term.
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type |	Example
+
+|Content | Mandatory |	Decimal |	10000
+|===
+
+*Unit Price Amount*
+
+A unit price amount states a numerical monetary amount value for data elements that contain item prices that may be multiplied by item quantities. The currency of the amount is defined as a separate business term.
+
+[importance]
+===
+Unit price amount does not set restrictions on number of decimals, as contrast to the Amount type
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | Decimal | 10000.1234
+|===
+
+*Percentage*
+Percentages are given as fractions of a hundred (per cent) e.g. the value 34.78 % in percentage terms is given as 34.78.
+
+[importance]
+===
+No restriction on number of decimals for percentages.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | Decimal | 34.7812
+|===
+
+*Quantity*
+Quantities are used to state a number of units such as for items. The code for the Unit of Measure is defined as a separate business term.
+
+[importance]
+===
+No restriction on number of decimals for quantities.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | Decimal | 34.7812
+|===
+
+*Code*
+Codes are used to specify allowed values in elements as well as for lists of options. Code is different from Identifier in that allowed values have standardized meanings that can be known by the recipient.
+
+[importance]
+===
+Codes shall be entered exactly as shown in the selected code list of the applicable syntax.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | String | Abc123
+|===
+
+*Indicator*
+
+
+[importance]
+===
+Indicators shall be used in lower case.
+===
+
+
+[importance]
+===
+Default value is "false" and applies if the relevant business term is not used.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | String | false
+||| *true*
+|===
+
+*Identifier*
+Identifiers (IDs) are keys that are issued by the sender or recipient of a document or by a third party.
+
+[importance]
+===
+The use of the attributes is specified for each information element.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | String | abc:123-DEF
+|Scheme identifier | Optional | String | GLN
+|Scheme version identifier | Optional | String | 1.0
+|===
+
+*Date*
+Dates shall be in accordance to the “Calendar date complete representation” as specified by {ISO8601}, format YYYY-MM-DD.
+
+[importance]
+===
+Dates shall not include timezone information.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Example
+
+|Content | Mandatory | Date | 2017-12-01
+|===
+
+[.red]*_Table 3. EN 16931_ Date. Type_*
+
+*Time*
+Time shall be according to UBL allowed format.
+
+[importance]
+===
+Time may include timezone information.
+===
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | Allowed forms
+
+|Content | Mandatory | Date | 13:20:00 (1:30 PM)
+|||| 13:20:30.55 (30.55 sec)
+|||| 13:20:00Z (UTC)
+|||| 13:20:00-05:00 (UTC-5)
+|||| 00:00:00 (midnight)
+|||| 24:00:00 (midnight)
+|===
+
+Table 4. EN 16931_ Date. Type
+
+
+*Document Reference*
+Document Reference Types are identifiers that were assigned to a document or document line by the Buyer, the Seller or by a third party.
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | EXample
+
+|Content | Mandatory | String | abc:123-DEF
+|===
+
+Table 5. Document Reference Type
+
+*Text*
+
+Text is the actual wording of anything written or printed. Line breaks in the text may be present, and any line breaks should be preserved and respected by the receiver’s system
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | EXample
+
+|Content | Mandatory | String | 5% allowance when paid within 30 days
+|===
+
+
+*Binary object*
+
+Binary object can be used to describe files which are transmitted together with the Invoice. The attachment functionality is not intended for attaching a copy of the invoice in an image format (such as PDF). Attaching an invoice copy is not in compliance with this specification.
+
+Attachments shall be transmitted together with the Invoice. The binary object has two supplementary components: a Mime Code, which specifies the Mime type of the attachment and a Filename that is provided by (or on behalf of) the sender of the invoice or credit note.
+
+[cols="1,1,1,1",options="header"]]
+|===
+|Component | Use | Primitive Type | EXample
+
+|Content | Mandatory | Binary | QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==
+|Mime Code |Mandatory | String | image/jpeg
+|Filename | Mandatory | String | drawing5.jpg
+|===
+
+A receiver of an invoice or credit note, shall accept and process attachments that are according to the Media type code list.
 
 == 5.3. UBL schemas and namespaces
 
-TW-PINT uses OASIS UBL 2.1 Invoice and CreditNote syntax.
+The XML schemas used are
+
+*	UBL Invoice 2.1, with the target namespace  
+
+`urn:oasis:names:specification:ubl:schema:xsd:Invoice-2`
+
+*	UBL CreditNote 2.1 with the target namespace 
+
+`urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2`
+
+
 
 == 5.4. Glossary
 
-The glossary should include PINT, TW-PINT, eGUI, UBN, Business Tax, Access Point, SMP, SML and Peppol Authority.
+electronic invoice - invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing
+semantic data model - structured set of logically interrelated information elements
+information element - semantic concept that can be defined independent of any particular representation in a syntax
+structured information element - information element that can be processed automatically
+syntax - machine-readable language or dialect used to represent the information elements contained in an electronic document (e.g. an electronic invoice)
+business term - label assigned to a given information element which is used as a primary reference
+identifier - character string used to establish the identity of, and distinguish uniquely, one instance of an object within an identification scheme from all other objects within the same scheme Note 1 to entry: An identifier may be a word, number, letter, symbol, or any combination of those, depending on the identification scheme used.
+identification scheme - collection of identifiers applicable for a given type of object governed under a common set of rules
+compliant - some or all features of the invoice model are used and all rules of the invoice model are respected Note 1 to entry: Based on TOGAF definition of a compliant specification
+conformant - all rules of the invoice model are respected and some additional features not defined in the invoice model are also used
+Optional Whether the option is used or not is the choice of the users independently from other data in the message.
+Conditional Whether the option is used or not and in what way is dependent on other data in the message.
+Mandatory The option must be used in all messages.
+shall - the definition is an absolute requirement of the specification.
+shall not - the definition is an absolute prohibition of the specification.
+should - there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+should not - there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+may - is truly optional.
 
-== 5.5. TW-PINT specialization architecture
-
-TW-PINT inherits shared content from PINT, adds Taiwan aligned restrictions for tax and identifiers, and defines Taiwan distinct content such as UBN usage and eGUI bridge mapping guidance.
-
-== 5.6. Semantic model, syntax binding and validation artefacts
 
 Syntax binding is maintained in `syntax-binding/`. Code lists are maintained in `codelists/`. Rules are maintained in `rules/`. Schematron is maintained in `schematron/`. Examples and test cases are maintained in `examples/` and `tests/`.
