@@ -1,7 +1,0 @@
-<cac:AdditionalDocumentReference> 
-   <cbc:ID>mr4343</cbc:ID> <!--1-->
-   <cbc:DocumentDescription>milage report</cbc:DocumentDescription> <!--2-->
-   <cac:Attachment>
-      <cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="milage.csv" >bWlsYWdlIHJlcG9ydA==</cbc:EmbeddedDocumentBinaryObject>
-   </cac:Attachment> <!--4-->
-</cac:AdditionalDocumentReference>

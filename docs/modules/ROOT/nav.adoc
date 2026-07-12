@@ -1,20 +1,13 @@
 * xref:index.adoc[TW-PINT Home]
 ** Documentation
-*** xref:bis/index.adoc[Document body]
-**** xref:bis/business-processes.adoc[1. Business processes]
-**** xref:bis/business-information.adoc[2. Business information]
-**** xref:bis/tax-information.adoc[3. Tax information]
-**** xref:bis/rules.adoc[4. Rules]
-**** xref:bis/technical-details.adoc[5. Technical details]
-*** xref:bis/peppol-egui-relationship.adoc[Peppol and Taiwan eGUI]
+*** xref:bis/index.adoc[Peppol International (PINT) model for Billing]
+*** xref:bis/peppol-egui-relationship.adoc[PINT compliance]
 *** xref:bis/international-trade.adoc[International trade context]
-** Transaction
+** Transactions
 *** xref:trn-invoice/index.adoc[Invoice Transaction]
 **** xref:trn-invoice/semantic-model/index.adoc[Semantic model]
 **** xref:trn-invoice/syntax/index.adoc[Syntax binding]
 **** xref:trn-invoice/codelist/index.adoc[Code lists]
 **** xref:trn-invoice/businessrule/index.adoc[Rules]
 **** xref:trn-invoice/rule/index.adoc[Schematrons]
-** Download resources
-*** xref:downloads/index.adoc[Resources]
-*** xref:downloads/release-package.adoc[Release package]
+** xref:downloads/index.adoc[Download resources]

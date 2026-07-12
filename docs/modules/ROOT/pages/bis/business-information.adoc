@@ -1,8 +1,5 @@
 = 2. Business Information
-:toc: macro
-:toclevels: 3
 
-toc::[]
 
 In the subchapters below you find description of selected parts of the transaction.
 

@@ -1,0 +1,331 @@
+/* Minimal Antora-to-PDK bridge. Official Peppol assets remain authoritative. */
+body { padding-top: 56px !important; }
+.navbar_light { margin-bottom: 0 !important; }
+#header > h1 { margin-top: 0; }
+#content { min-height: calc(100vh - 150px); }
+#content > h1.page { display: none; }
+.publication-meta { margin-bottom: 1.5em; }
+#toc-content > ul { margin-left: 0; }
+#toc a { color: rgba(0,0,0,.8); }
+#toc a:hover { color: var(--primarycolor); }
+.navbar-brand { white-space: normal; }
+@media (max-width: 767px) {
+  body { padding-top: 56px !important; }
+  .navbar-brand { font-size: .9rem; }
+  .toc22 { padding-left: 15px !important; }
+  #toc { position: static !important; width: auto !important; height: auto !important; overflow: visible !important; }
+}
+
+/* Official PDK-style product landing page */
+body.pdk-landing-page {
+  padding-top: 0 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212529;
+}
+body.pdk-landing-page .navbar_light {
+  position: static;
+  min-height: 62px;
+  background: #a6d0f3 !important;
+}
+.pdk-home {
+  max-width: 1320px;
+  padding-top: 28px;
+  padding-bottom: 48px;
+}
+.pdk-breadcrumb {
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+  font-size: 1.05rem;
+}
+.pdk-home h1 {
+  margin: 0 0 1.5rem;
+  color: #0878d1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.65rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.pdk-home .pdk-lead {
+  max-width: 1250px;
+  margin-bottom: 3.25rem;
+  font-size: 1.32rem;
+  line-height: 1.5;
+}
+.pdk-home-columns { margin-left: -10px; margin-right: -10px; }
+.pdk-home-column { padding-left: 10px; padding-right: 10px; }
+.pdk-home h2 {
+  margin: 0 0 1.25rem .75rem;
+  color: #0878d1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+.pdk-link-card {
+  margin-bottom: 1.05rem;
+  border: 1px solid #ddd;
+  border-radius: .25rem;
+  box-shadow: none;
+}
+.pdk-link-card .card-body { padding: 1.35rem; }
+.pdk-link-card h3 {
+  margin: 0 0 .8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.pdk-link-card h3 a,
+.pdk-transaction-links a { color: #007bff; text-decoration: none; }
+.pdk-link-card p { margin: 0; font-size: 1.08rem; line-height: 1.45; }
+.pdk-link-card-compact .card-body { min-height: 92px; display: flex; align-items: center; }
+.pdk-link-card-compact h3 { margin: 0; }
+.pdk-transaction-card .card-body { padding: 1.35rem; }
+.pdk-transaction-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem 1.65rem;
+  margin-top: 1.1rem;
+  font-size: 1.08rem;
+}
+.pdk-download { margin-top: .1rem; font-size: 1rem; }
+@media (max-width: 991px) {
+  .pdk-home-column + .pdk-home-column { margin-top: 2rem; }
+  .pdk-home h1 { font-size: 2.15rem; }
+}
+
+/* BIS documentation layout: official Peppol fixed left-hand table of contents */
+body.book.toc2.toc-left {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.book.toc2.toc-left .toc22 {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+body.book.toc2.toc-left #toc.toc2 {
+  position: fixed !important;
+  left: 0 !important;
+  top: 56px !important;
+  bottom: 0 !important;
+  z-index: 2;
+  display: block !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 1.25rem 1rem 2rem !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  background: #f4f4f4;
+  border-right: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+
+body.book.toc2.toc-left #toc #toctitle {
+  margin: 0 0 .75rem;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+body.book.toc2.toc-left #toc ul {
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+body.book.toc2.toc-left #toc > #toc-content > ul {
+  padding-left: 0;
+}
+
+body.book.toc2.toc-left #toc li {
+  margin: .28rem 0;
+  line-height: 1.35;
+}
+
+body.book.toc2.toc-left #toc a {
+  display: block;
+  padding: .12rem 0;
+  color: #333;
+  text-decoration: none;
+}
+
+body.book.toc2.toc-left #toc a:hover,
+body.book.toc2.toc-left #toc a:focus {
+  color: #0878d1;
+  text-decoration: underline;
+}
+
+body.book.toc2.toc-left #header > h1,
+body.book.toc2.toc-left #content,
+body.book.toc2.toc-left #footer {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1280px) {
+  body.book.toc2.toc-left .toc22 {
+    padding-left: 21rem !important;
+  }
+  body.book.toc2.toc-left #toc.toc2 {
+    width: 20rem !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  body.book.toc2.toc-left .toc22 {
+    padding-left: 16rem !important;
+  }
+  body.book.toc2.toc-left #toc.toc2 {
+    width: 15rem !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body.book.toc2.toc-left .toc22 {
+    padding: 0 15px !important;
+  }
+  body.book.toc2.toc-left #toc.toc2 {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 0 1.5rem !important;
+    padding: 1rem !important;
+    overflow: visible !important;
+    border: 1px solid #d9d9d9;
+  }
+}
+
+/* TW-PINT document typography and Peppol-style examples */
+body.book.toc2.toc-left #content {
+  font-size: 1.0625rem;
+}
+
+/* Make figures follow the full readable paragraph width. */
+body.book.toc2.toc-left #content .imageblock,
+body.book.toc2.toc-left #content .imageblock > .content,
+body.book.toc2.toc-left #content .imageblock img,
+body.book.toc2.toc-left #content figure,
+body.book.toc2.toc-left #content figure img {
+  width: 100%;
+  max-width: 100%;
+}
+body.book.toc2.toc-left #content .imageblock img,
+body.book.toc2.toc-left #content figure img {
+  height: auto;
+  object-fit: contain;
+}
+
+/* UBL example captions. Supports both [.red] inline phrases and block titles. */
+body.book.toc2.toc-left #content .red,
+body.book.toc2.toc-left #content .ubl-example-title,
+body.book.toc2.toc-left #content .listingblock > .title,
+body.book.toc2.toc-left #content .literalblock > .title {
+  color: #bf0000 !important;
+  font-style: italic !important;
+  font-weight: 400;
+}
+
+/* XML examples: exactly one grey box. */
+body.book.toc2.toc-left #content .listingblock.xml-example,
+body.book.toc2.toc-left #content .literalblock.xml-example {
+  margin: 0 0 1.25em;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.book.toc2.toc-left #content .listingblock.xml-example > .content,
+body.book.toc2.toc-left #content .literalblock.xml-example > .content {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+body.book.toc2.toc-left #content .listingblock.xml-example pre,
+body.book.toc2.toc-left #content .literalblock.xml-example pre,
+body.book.toc2.toc-left #content pre.CodeRay,
+body.book.toc2.toc-left #content pre.highlight.xml {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  background: #f1f1f1 !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 4px;
+  box-shadow: none !important;
+  color: #000;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+body.book.toc2.toc-left #content .listingblock.xml-example pre code,
+body.book.toc2.toc-left #content .literalblock.xml-example pre code,
+body.book.toc2.toc-left #content pre.CodeRay code,
+body.book.toc2.toc-left #content pre.highlight.xml code {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font: inherit;
+}
+
+body.book.toc2.toc-left #content .xml-tag,
+body.book.toc2.toc-left #content .CodeRay .tag {
+  color: #008000 !important;
+}
+body.book.toc2.toc-left #content .xml-attr-name,
+body.book.toc2.toc-left #content .CodeRay .attribute-name {
+  color: #006400 !important;
+}
+body.book.toc2.toc-left #content .xml-attr-value,
+body.book.toc2.toc-left #content .CodeRay .attribute-value,
+body.book.toc2.toc-left #content .CodeRay .string {
+  color: #006400 !important;
+}
+body.book.toc2.toc-left #content .xml-cdata,
+body.book.toc2.toc-left #content .CodeRay .content,
+body.book.toc2.toc-left #content .CodeRay .delimiter {
+  color: #000 !important;
+}
+body.book.toc2.toc-left #content .xml-comment {
+  color: #666 !important;
+  font-style: italic;
+}
+
+/* Use Unicode circled numerals for XML callouts instead of (1), (2), ... */
+body.book.toc2.toc-left #content .conum.tw-circled-callout {
+  display: inline !important;
+  width: auto;
+  height: auto;
+  padding: 0;
+  color: #000 !important;
+  background: transparent !important;
+  border-radius: 0;
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+body.book.toc2.toc-left #content .conum.tw-circled-callout::after {
+  content: none !important;
+}
+body.book.toc2.toc-left #content .conum.tw-circled-callout + b {
+  display: none !important;
+}

@@ -1,7 +1,0 @@
-<cac:InvoiceLine>
-   <cac:DespatchLineReference>
-      <cac:DocumentReference>
-         <cbc:ID>despadv-3</cbc:ID> <!--1-->
-      </cac:DocumentReference>
-   <cac:DespatchLineReference>
-</cac:InvoiceLine>

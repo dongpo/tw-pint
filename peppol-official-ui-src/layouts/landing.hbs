@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{#if page.attributes.lang}}{{page.attributes.lang}}{{else}}en{{/if}}">
+<head>
+{{> head}}
+</head>
+<body class="pdk-landing-page">
+{{> header}}
+<main class="container pdk-home">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb pdk-breadcrumb">
+      <li class="breadcrumb-item"><a href="{{{siteRootPath}}}/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Peppol BIS Standard Invoice TW PINT</li>
+    </ol>
+  </nav>
+
+  <h1>Peppol BIS Standard Invoice TW PINT</h1>
+  <p class="pdk-lead">Peppol BIS Standard Invoice TW PINT Version 0.3 that is compliant to the Peppol International (PINT) model for Billing.</p>
+
+  <div class="row pdk-home-columns">
+    <section class="col-lg-5 pdk-home-column">
+      <h2>Documentation</h2>
+
+      <div class="card pdk-link-card">
+        <div class="card-body">
+          <h3><a href="bis/index.html">Peppol International (PINT) model for Billing</a></h3>
+          <p>The TW-PINT Billing specification provides Taiwan implementation guidance for globally interoperable invoice specifications based on Peppol PINT.</p>
+        </div>
+      </div>
+
+      <div class="card pdk-link-card pdk-link-card-compact">
+        <div class="card-body"><h3><a href="bis/peppol-egui-relationship.html">PINT compliance</a></h3></div>
+      </div>
+
+      <div class="card pdk-link-card pdk-link-card-compact">
+        <div class="card-body"><h3><a href="downloads/release-package.html">Release notes for Peppol BIS Standard Invoice TW PINT</a></h3></div>
+      </div>
+
+      <a class="btn btn-outline-primary pdk-download" href="downloads/index.html">Download resources</a>
+    </section>
+
+    <section class="col-lg-7 pdk-home-column">
+      <h2>Transactions</h2>
+      <div class="card pdk-link-card pdk-transaction-card">
+        <div class="card-body">
+          <h3><a href="trn-invoice/index.html">Invoice Transaction</a></h3>
+          <p>The Invoice Transaction</p>
+          <div class="pdk-transaction-links">
+            <a href="trn-invoice/semantic-model/index.html">Semantic model</a>
+            <a href="trn-invoice/syntax/index.html">Syntax binding</a>
+            <a href="trn-invoice/codelist/index.html">Code lists</a>
+            <a href="trn-invoice/businessrule/index.html">Rules</a>
+            <a href="trn-invoice/rule/index.html">Schematrons</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{{> footer-scripts}}
+</body>
+</html>

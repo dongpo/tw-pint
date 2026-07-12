@@ -1,199 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>4. Rules :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/rules.html">
-    <meta name="generator" content="Antora 3.1.15">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-<meta property="og:image" content="../../../_/img/iconx128.png">
-<meta property="og:description" content="4. Rules">
-<meta property="og:title" content="TW-PINT Candidate Specification">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="article">
-<header class="tw-topbar">
-  <div class="tw-topbar-inner">
-    <div class="tw-brand">
-      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
-        <span class="tw-brand-mark">TW</span>
-        <span class="tw-brand-text">
-          <span class="tw-brand-title">TW-PINT</span>
-          <span class="tw-brand-subtitle">Candidate Specification</span>
-        </span>
-      </a>
-    </div>
-    <nav class="tw-topnav" aria-label="Top navigation">
-      <a href="https://dongpo.github.io/tw-pint">Home</a>
-      <a href="../scope.html">Scope</a>
-      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
-      <a href="../conformance.html">Conformance</a>
-      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4. Rules | Peppol Specifications for Taiwan implementation of PINT</title>
+<link rel="stylesheet" href="../../../_/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../_/css/peppol_pdk.css">
+<link rel="stylesheet" href="../../../_/css/main.css">
+<link rel="stylesheet" href="../../../_/css/asciidoc-ext-pdk.css">
+<link rel="stylesheet" href="../../../_/css/asciidoctor-default.css">
+<link rel="stylesheet" href="../../../_/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../_/css/tw-pint-official.css">
+</head>
+<body class="book toc2 toc-left">
+<div class="navbar navbar-expand-lg navbar_light bg_light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="../../../">
+      <img src="../../../_/img/peppol-logo.png" height="30" class="d-inline-block align-top" alt="Peppol" style="width: inherit !important; height: 30px !important; vertical-align: top !important;">
+      Peppol Specifications for Taiwan implementation of PINT
+    </a>
   </div>
-</header>
-<div class="body">
-<div class="nav-container" data-component="tw-pint" data-version="1.0">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Project links</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">TW-PINT Home</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Document body</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-processes.html">1. Business processes</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-information.html">2. Business information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="tax-information.html">3. Tax information</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="4">
-    <a class="nav-link" href="rules.html">4. Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="technical-details.html">5. Technical details</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="international-trade.html">International trade context</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Transaction</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Download resources</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/index.html">Resources</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">TW-PINT Candidate Specification</span>
-    <span class="version">1.0</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <span class="title">TW-PINT Candidate Specification</span>
-      <ul class="versions">
-        <li class="version is-current">
-          <a href="../index.html">1.0</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>4. Rules</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle-label">Project links</span>
-<button class="nav-toggle"></button>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
-    <li><a href="../index.html">TW-PINT Home</a></li>
-    <li>Documentation</li>
-    <li><a href="index.html">Document body</a></li>
-    <li><a href="rules.html">4. Rules</a></li>
-  </ul>
-</nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/rules.adoc">Edit this page</a></div>
-</div>
-  <div class="content">
-<article class="doc">
-<h1 class="page">4. Rules</h1>
-<div id="preamble">
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>TW-PINT Candidate Specification</p></div>
+      </div>
+    </div>
+    <div id="preamble">
 <div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_4_1_calculations">4.1. Calculations</a></li>
-<li><a href="#_4_2_rounding">4.2. Rounding</a></li>
-<li><a href="#_4_3_taiwan_aligned_calculations">4.3. Taiwan aligned calculations</a></li>
-<li><a href="#_4_4_taiwan_specific_business_rules">4.4. Taiwan-specific business rules</a></li>
-</ul>
+<div class="paragraph">
+<p>The information given in a PINT invoice must comply to a set of rules on the content of the business terms as well as the relationship between them.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_4_1_calculations"><a class="anchor" href="#_4_1_calculations"></a>4.1. Calculations</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_4_1_1_calculation_of_totals"><a class="anchor" href="#_4_1_1_calculation_of_totals"></a>4.1.1. Calculation of totals</h3>
 <div class="paragraph">
-<p>TW-PINT inherits PINT calculation principles and adds Taiwan-aligned tax calculation guidance.</p>
+<p>Formulas for the calculations of totals are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Business term ID</th>
+<th class="tableblock halign-left valign-top">Term name</th>
+<th class="tableblock halign-left valign-top">Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-106</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of invoice line net amounts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-131: Invoice line net amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of allowances on document level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-92: Document level allowance amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of charges on document level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-99: Document level charge amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total amount without TAX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-106: Sum of invoice line net amounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− IBT-107: Sum of allowances on document level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-108: Sum of charges on document level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total TAX amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-117: TAX category tax amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-112</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total amount with TAX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-109: Invoice total amount without TAX</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-110: Invoice total TAX amount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-115</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amount due for payment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-112: Invoice total amount with TAX</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− IBT-113: Paid amount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-114: Rounding amount</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_4_1_2_ubl_syntax_calculation_formulas"><a class="anchor" href="#_4_1_2_ubl_syntax_calculation_formulas"></a>4.1.2. UBL syntax calculation formulas</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:LineExtensionAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:InvoiceLine/cbc:LineExtensionAmount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:AllowanceTotalAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:AllowanceCharge[ChargeIndicator='false']/cbc:Amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:ChargeTotalAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:AllowanceCharge[ChargeIndicator='true']/cbc:Amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:TaxExclusiveAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:LineExtensionAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">– cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:LegalMonetaryTotal/cbc:ChargeTotalAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:TaxInclusiveAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:TaxTotal/cbc:TaxAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PrepaidAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PayableRoundingAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PayableAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− cac:LegalMonetaryTotal/cbc:PrepaidAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:LegalMonetaryTotal/cbc:PayableRoundingAmount</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Element for rounding amount, the PayableRoundingAmount</strong></p>
+</div>
+<div class="paragraph">
+<p>It is possible to round the expected payable amount.</p>
+</div>
+<div class="paragraph">
+<p>The element <code>cac:LegalMonetaryTotal/cbc:PayableRoundingAmount</code> is used for this purpose and is specified on the header level. This value shall be added to the value in <code>cac:LegalMonetaryTotal/cbc:PayableAmount</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_1_3_calculation_on_line_level"><a class="anchor" href="#_4_1_3_calculation_on_line_level"></a>4.1.3. Calculation on line level</h3>
+<div class="paragraph">
+<p>Item net price (IBT-146)</p>
+</div>
+<div class="paragraph">
+<p>If gross price and discount exist, the Item net price has to equal with the item gross price less the item price discount.</p>
+</div>
+<div class="paragraph">
+<p>Calculation formula:</p>
+</div>
+<div class="paragraph">
+<p>Item net price=Item gross price (IBT-148)−Item price discount (IBT-147)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of item net price</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;700&lt;/cbc:PriceAmount&gt; &lt;!--3--&gt;   
+   &lt;cbc:BaseQuantity unitCode="C62"&gt;1&lt;/cbc:BaseQuantity&gt;  
+   &lt;cac:AllowanceCharge&gt; 
+      &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;800&lt;/cbc:BaseAmount&gt; &lt;!--1--&gt; 
+   &lt;/cac:AllowanceCharge&gt;
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item gross price</p>
+</div>
+<div class="paragraph">
+<p>② Item price discount</p>
+</div>
+<div class="paragraph">
+<p>③ Item price net amount=Item gross price−Item price discount</p>
+</div>
+<div class="paragraph">
+<p><strong>Invoice line net amount (IBT-131)</strong></p>
+</div>
+<div class="paragraph">
+<p>The invoice line net amount (IBT-131) is as the name implies the net amount without TAX, and inclusive of line level allowance and charges.</p>
+</div>
+<div class="paragraph">
+<p>The formula for calculating the invoice line net amount is:</p>
+</div>
+<div class="paragraph">
+<p>Item line net amount=Item net price (IBT-146)÷Item price base quantity (IBT-149 ×(Invoiced Quantity (IBT-129)) +Invoice line charge amount (IBT-141)−Invoice line allowance amount (IBT-136)</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the line net amount must be rounded to maximum decimals, please note that the different parts of the calculation must be rounded separately.</p>
+</div>
+<div class="paragraph">
+<p>I.e the result of:</p>
+</div>
+<div class="paragraph">
+<p>Item line net amount=Item net price (IBT-146)÷Item price base quantity (IBT-149×(Invoiced Quantity (IBT-129)) must be rounded to maximum decimals, and the allowance/charge amounts are also rounded separately.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of invoice line net amount where no line allowance/charge exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;cbc:LineExtensionAmount currencyID="TWD"&gt;1000&lt;/cbc:LineExtensionAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;!-- Code omitted for clarity--&gt; 
+&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;200&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:BaseQuantity unitCode="C62"&gt;2&lt;/cbc:BaseQuantity&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item net price</p>
+</div>
+<div class="paragraph">
+<p>② Item price base quantity</p>
+</div>
+<div class="paragraph">
+<p>③ Invoiced quantity</p>
+</div>
+<div class="paragraph">
+<p>④ Invoice line net amount = (( Item net price ÷ Item price base quantity) × (Invoiced Quantity)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of invoice line net amount where line allowance and charge exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;cbc:LineExtensionAmount currencyID="TWD"&gt;900&lt;/cbc:LineExtensionAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+&lt;!-- Code omitted for clarity--&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Charge&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:MultiplierFactorNumeric&gt;1&lt;/cbc:MultiplierFactorNumeric&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;1&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:BaseAmount currencyID="TWD"&gt;100&lt;/cbc:BaseAmount&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;101&lt;/cbc:Amount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AllowanceCharge&gt;
+&lt;!-- Code omitted for clarity--&gt;
+&lt;cac:Price&gt;
+    &lt;cbc:PriceAmount currencyID="TWD"&gt;100&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cbc:BaseQuantity unitCode="C62"&gt;1&lt;/cbc:BaseQuantity&gt;            
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item net price</p>
+</div>
+<div class="paragraph">
+<p>② Line charge amounts</p>
+</div>
+<div class="paragraph">
+<p>③ Line allowance amount</p>
+</div>
+<div class="paragraph">
+<p>④ Invoiced quantity</p>
+</div>
+<div class="paragraph">
+<p>⑤ Invoice line net amount = (Item net price×Invoiced Quantity) + line charge amount − line allowance amount</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_1_4_calculation_of_allowancecharge_amount"><a class="anchor" href="#_4_1_4_calculation_of_allowancecharge_amount"></a>4.1.4. Calculation of allowance/charge amount</h3>
+<div class="paragraph">
+<p>Allowance and charge on document- and line level consists of elements carrying information on the allowance/charge base amount and the allowance/charge percentage. These are, if present in the invoice instance, used for calculating the allowance/charge amount.</p>
+</div>
+<div class="paragraph">
+<p>If base amount is present, the percentage shall also be present, and if percentage is present, the base amount shall also be present, and the calculation of the amount shall be:</p>
+</div>
+<div class="paragraph">
+<p>Amount=Base amount×(Percentage÷100)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of allowances and charges where base amount and percentage exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:MultiplierFactorNumeric&gt;20&lt;/cbc:MultiplierFactorNumeric&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:Amount currencyID="TWD"&gt;200&lt;/cbc:Amount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;cbc:BaseAmount currencyID="TWD"&gt;1000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Base amount, to be used with the percentage to calculate the amount</p>
+</div>
+<div class="paragraph">
+<p>② Charge percentage</p>
+</div>
+<div class="paragraph">
+<p>③ Base amount×(Percentage÷100)=Amount</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of allowances and charges where base amount and percentage does not exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Amount of allowance without calculations based on base amount and percentage</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_4_2_rounding"><a class="anchor" href="#_4_2_rounding"></a>4.2. Rounding</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_4_2_1_shared_rounding_rules"><a class="anchor" href="#_4_2_1_shared_rounding_rules"></a>4.2.1. Shared rounding rules</h3>
 <div class="paragraph">
-<p>Rounding should follow PINT shared rules unless Taiwan reporting alignment requires more specific guidance.</p>
+<p>A maximum of two digits are allowed for the following amounts in an invoice.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Document level allowance amount (ibt-092)</p>
+</li>
+<li>
+<p>Document level charge amount (ibt-099)</p>
+</li>
+<li>
+<p>Sum of allowances on document level (ibt-107)</p>
+</li>
+<li>
+<p>Sum of charges on document level (ibt-108)</p>
+</li>
+<li>
+<p>Invoice total amount without TAX (ibt-109)</p>
+</li>
+<li>
+<p>Invoice total TAX amount (ibt-110)</p>
+</li>
+<li>
+<p>Invoice total amount with TAX (ibt-112)</p>
+</li>
+<li>
+<p>Amount due for payment (ibt-115)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong class="blue">Aligned rounding</strong></p>
+</div>
+<div class="paragraph">
+<p>Tax category tax amount (ibt-117) must be amount rounded to integer.</p>
+</div>
+<div class="paragraph">
+<p>Tax category tax amount in accounting currency (ibt-190) must be amount rounded to integer.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_4_3_taiwan_aligned_calculations"><a class="anchor" href="#_4_3_taiwan_aligned_calculations"></a>4.3. Taiwan aligned calculations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section explains how tax is calculated in the jurisdiction as well as other rules thar are specific to the jurisdiction.</p>
+</div>
+<div class="paragraph">
+<p>4.3.1. Calculation of Business Tax</p>
+</div>
+<div class="paragraph">
+<p>Tax breakdown (ibg-23) shall be provided for each distinct combination of Tax category code and Tax rate. For each distinct combination of BT category code and BT rate the calculations are:</p>
+</div>
+<div class="paragraph">
+<p>===
+BT category taxable amount (IBT-116)= ∑(Invoice line net amounts (IBT-131))+Document level charge amount (IBT-99)−Document level allowance amount (IBT-92)
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+BT category tax amount (IBT-117)= BT category taxable amount (IBT-116)×(BT rate (IBT-119)÷100)
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+Tax category tax amount (ibt-117) shall be 0 (zero), if Tax category code (ibt-118) equals to “E” (Exempt from Tax) or “O” (Outside of scope of tax).
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+Tax category tax amount (ibt-117) must be rounded to integer and the rounded result amount shall be between the floor and the ceiling.
+===</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of BT Breakdown</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;200&lt;/cbc:Amount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:TaxTotal&gt;
+    &lt;cbc:TaxAmount currencyID="TWD"&gt;250&lt;/cbc:TaxAmount&gt;
+    &lt;cac:TaxSubtotal&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+        &lt;cbc:TaxableAmount currencyID="TWD"&gt;5000&lt;/cbc:TaxableAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+        &lt;cbc:TaxAmount currencyID="TWD"&gt;250&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+        &lt;cac:TaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:TaxCategory&gt;
+    &lt;/cac:TaxSubtotal&gt;
+    &lt;cac:TaxSubtotal&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+        &lt;cbc:TaxableAmount currencyID="TWD"&gt;2000&lt;/cbc:TaxableAmount&gt;
+        &lt;cbc:TaxAmount currencyID="TWD"&gt;0&lt;/cbc:TaxAmount&gt;
+        &lt;cac:TaxCategory&gt;
+            &lt;cbc:ID&gt;E&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;0&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:TaxCategory&gt;
+    &lt;/cac:TaxSubtotal&gt;
+&lt;/cac:TaxTotal&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+    &lt;cbc:Note&gt;Testing note on line level&lt;/cbc:Note&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;2500&lt;/cbc:LineExtensionAmount&gt;
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;2&lt;/cbc:ID&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;2500&lt;/cbc:LineExtensionAmount&gt; 
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;E&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;0&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;3&lt;/cbc:ID&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;900&lt;/cbc:LineExtensionAmount&gt;    
+        &lt;!-- code omitted for clarity --&gt;
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Document level charge amount for category S and rate 5%</p>
+</div>
+<div class="paragraph">
+<p>② Document level allowance amount for category S and rate 5%</p>
+</div>
+<div class="paragraph">
+<p>③ BT Breakdown for category S and rate = 5%</p>
+</div>
+<div class="paragraph">
+<p>④ Taxable amount = sum of line amount (line 1 and 3), plus charge amount minus allowance amount where category = S and rate = 5%</p>
+</div>
+<div class="paragraph">
+<p>⑤ Tax Amount=Taxable amount×(BT rate÷100)</p>
+</div>
+<div class="paragraph">
+<p>⑥ BT Breakdown for category E, and rate = 0%</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_3_taiwan_aligned_calculations_2"><a class="anchor" href="#_4_3_taiwan_aligned_calculations_2"></a>4.3. Taiwan aligned calculations</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Taiwan-aligned calculations include Business Tax calculation, tax subtotal alignment, foreign currency and tax-currency handling, and export invoice totals.</p>
@@ -208,25 +623,13 @@
 </div>
 </div>
 </div>
-</article>
-<aside class="toc sidebar" data-title="Page contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
   </div>
-</main>
+  <div id="footer"><div id="footer-text">TW-PINT — Peppol Specifications for Taiwan implementation of PINT</div></div>
 </div>
-<footer class="tw-footer">
-  <div class="tw-footer-inner">
-    <div>
-      <strong>TW-PINT Candidate Specification</strong><br>
-      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
-    </div>
-    <div class="tw-footer-note">
-      Community review draft. Not an official OpenPeppol publication.
-    </div>
-  </div>
-</footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script src="../../../_/js/jquery-3.6.3.min.js"></script>
+<script src="../../../_/js/popper.min.js"></script>
+<script src="../../../_/js/bootstrap.min.js"></script>
+<script src="../../../_/js/pdk-toc.js"></script>
+<script src="../../../_/js/tw-pint-document.js"></script>
+</body>
 </html>

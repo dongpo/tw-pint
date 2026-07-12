@@ -1,0 +1,56 @@
+:root {
+    --primarycolordark: #a1cef6;
+    --primarycolor: #007AD7; /* Blue 500 */
+    --secondarycolor: #2196F3;
+    --tertiarycolor: #186d7a;
+    --linkcolor: #90CAF9; /* Blue 200 */
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Open Sans","DejaVu Sans",sans-serif !important;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+    text-align: right;
+    color: #95999c;
+    background-color: #e9ecef;
+    height: 50px;
+    line-height: 50px;
+    font-size: 80%;
+}
+
+h1, h2, h3, #toctitle {
+    color: var(--primarycolor) !important;
+    font-family: "Open Sans","DejaVu Sans",sans-serif !important;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar_light{
+    background-color: var(--primarycolordark) !important;
+}
+
+.navbar-brand{
+    color: black !important;
+}
+
+
+h4, h5, h6 {
+    color: var(--secondarycolor) !important;
+}
+
+
+a, a:visited{
+    text-decoration: none !important;
+}

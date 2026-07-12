@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{#if page.attributes.lang}}{{page.attributes.lang}}{{else}}en{{/if}}">
+<head>
+{{> head}}
+</head>
+<body class="book toc2 toc-left">
+{{> header}}
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>{{{page.title}}}</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
+    </div>
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>{{#if page.attributes.revnumber}}{{page.attributes.revnumber}}{{else}}TW-PINT Candidate Specification{{/if}}</p></div>
+      </div>
+    </div>
+    {{{page.contents}}}
+  </div>
+  {{> footer}}
+</div>
+{{> footer-scripts}}
+</body>
+</html>

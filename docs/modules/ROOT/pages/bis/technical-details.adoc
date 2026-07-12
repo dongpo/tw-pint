@@ -1,8 +1,5 @@
 = 5. Technical Details
-:toc: macro
-:toclevels: 3
 
-toc::[]
 
 Following section provide technical details.
 
@@ -27,7 +24,7 @@ In the table below you will find the values to be used as the specification iden
 |===
 
 |Type | Element `cbc:CustomizationID` | Element `cbc:ProfileID`
-|Invoice and credit note | `urn:peppol:pint:billing-1@tw-1` |	`urn:peppol:bis:billing`
+|Invoice and credit note | `urn:peppol:pint:billing-1@tw-1` | `urn:peppol:bis:billing`
 
 |===
 
@@ -49,12 +46,12 @@ Semantic data type content may be of the following primitive types. These primit
 
 [cols="1,1",options="header"]]
 |===
-|Primitive type	|Definition
+|Primitive type |Definition
 
-|Binary	|A set of finite-length sequences of binary digits.
-|Date	|Time point representing a calendar day on a time scale consisting of an origin and a succession of calendar ISO8601.
-|Decimal	|A subset of the real numbers, which can be represented by decimal numerals.
-|String	|A finite sequence of characters.
+|Binary |A set of finite-length sequences of binary digits.
+|Date |Time point representing a calendar day on a time scale consisting of an origin and a succession of calendar ISO8601.
+|Decimal  |A subset of the real numbers, which can be represented by decimal numerals.
+|String |A finite sequence of characters.
 
 |===
 
@@ -70,9 +67,9 @@ An amount states a numerical monetary value. The currency of the amount is defin
 
 [cols="1,1,1,1",options="header"]]
 |===
-|Component | Use | Primitive Type |	Example
+|Component | Use | Primitive Type | Example
 
-|Content | Mandatory |	Decimal |	10000
+|Content | Mandatory |  Decimal | 10000
 |===
 
 *Unit Price Amount*
@@ -150,12 +147,22 @@ Indicators shall be used in lower case.
 Default value is "false" and applies if the relevant business term is not used.
 ====
 
-[cols="1,1,1,1",options="header"]]
-|===
-|Component | Use | Primitive Type | Example
+[cols="1,1,1,2",options="header"]
 
-|Content | Mandatory | String | false
-||| *true*
+|===
+
+|Component |Use |Primitive Type |Allowed values
+
+.2+|*Content*
+
+.2+|Mandatory
+
+.2+|String
+
+|false
+
+|*true*
+
 |===
 
 *Identifier*
@@ -260,11 +267,11 @@ A receiver of an invoice or credit note, shall accept and process attachments th
 
 The XML schemas used are
 
-*	UBL Invoice 2.1, with the target namespace  
+* UBL Invoice 2.1, with the target namespace  
 
 `urn:oasis:names:specification:ubl:schema:xsd:Invoice-2`
 
-*	UBL CreditNote 2.1 with the target namespace 
+* UBL CreditNote 2.1 with the target namespace 
 
 `urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2`
 

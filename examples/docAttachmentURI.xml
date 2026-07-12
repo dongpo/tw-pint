@@ -1,9 +1,0 @@
-<cac:AdditionalDocumentReference>
-   <cbc:ID>ts12345</cbc:ID> <!--1-->
-   <cbc:DocumentDescription>Technical specification</cbc:DocumentDescription> <!--2-->
-   <cac:Attachment> 
-      <cac:ExternalReference>
-         <cbc:URI>www.techspec.no</cbc:URI> <!--3-->
-      </cac:ExternalReference>
-   </cac:Attachment>
-</cac:AdditionalDocumentReference>

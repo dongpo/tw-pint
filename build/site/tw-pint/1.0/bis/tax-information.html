@@ -1,177 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>3. Tax Information :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/tax-information.html">
-    <meta name="generator" content="Antora 3.1.15">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-<meta property="og:image" content="../../../_/img/iconx128.png">
-<meta property="og:description" content="3. Tax Information">
-<meta property="og:title" content="TW-PINT Candidate Specification">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="article">
-<header class="tw-topbar">
-  <div class="tw-topbar-inner">
-    <div class="tw-brand">
-      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
-        <span class="tw-brand-mark">TW</span>
-        <span class="tw-brand-text">
-          <span class="tw-brand-title">TW-PINT</span>
-          <span class="tw-brand-subtitle">Candidate Specification</span>
-        </span>
-      </a>
-    </div>
-    <nav class="tw-topnav" aria-label="Top navigation">
-      <a href="https://dongpo.github.io/tw-pint">Home</a>
-      <a href="../scope.html">Scope</a>
-      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
-      <a href="../conformance.html">Conformance</a>
-      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3. Tax Information | Peppol Specifications for Taiwan implementation of PINT</title>
+<link rel="stylesheet" href="../../../_/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../_/css/peppol_pdk.css">
+<link rel="stylesheet" href="../../../_/css/main.css">
+<link rel="stylesheet" href="../../../_/css/asciidoc-ext-pdk.css">
+<link rel="stylesheet" href="../../../_/css/asciidoctor-default.css">
+<link rel="stylesheet" href="../../../_/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../_/css/tw-pint-official.css">
+</head>
+<body class="book toc2 toc-left">
+<div class="navbar navbar-expand-lg navbar_light bg_light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="../../../">
+      <img src="../../../_/img/peppol-logo.png" height="30" class="d-inline-block align-top" alt="Peppol" style="width: inherit !important; height: 30px !important; vertical-align: top !important;">
+      Peppol Specifications for Taiwan implementation of PINT
+    </a>
   </div>
-</header>
-<div class="body">
-<div class="nav-container" data-component="tw-pint" data-version="1.0">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Project links</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">TW-PINT Home</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Document body</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-processes.html">1. Business processes</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-information.html">2. Business information</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="4">
-    <a class="nav-link" href="tax-information.html">3. Tax information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="rules.html">4. Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="technical-details.html">5. Technical details</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="international-trade.html">International trade context</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Transaction</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Download resources</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/index.html">Resources</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">TW-PINT Candidate Specification</span>
-    <span class="version">1.0</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <span class="title">TW-PINT Candidate Specification</span>
-      <ul class="versions">
-        <li class="version is-current">
-          <a href="../index.html">1.0</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>3. Tax Information</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle-label">Project links</span>
-<button class="nav-toggle"></button>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
-    <li><a href="../index.html">TW-PINT Home</a></li>
-    <li>Documentation</li>
-    <li><a href="index.html">Document body</a></li>
-    <li><a href="tax-information.html">3. Tax information</a></li>
-  </ul>
-</nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/tax-information.adoc">Edit this page</a></div>
-</div>
-  <div class="content">
-<article class="doc">
-<h1 class="page">3. Tax Information</h1>
-<div id="preamble">
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>TW-PINT Candidate Specification</p></div>
+      </div>
+    </div>
+    <div id="preamble">
 <div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_3_1_taiwan_business_tax">3.1. Taiwan Business Tax</a></li>
-<li><a href="#_3_2_peppol_tw_pint_and_egui_tax_reporting_relationship">3.2. Peppol, TW-PINT and eGUI tax reporting relationship</a></li>
-<li><a href="#_3_3_international_trade_and_taiwan_tax_handling">3.3. International trade and Taiwan tax handling</a></li>
-</ul>
+<div class="paragraph">
+<p>Taiwan imposes Business Tax under the Value-added and Non-value-added Business Tax Act. For most B2B transactions covered by TW-PINT, Business Tax is collected through the Uniform Invoice (GUI/eGUI) system and is represented as a consumption tax applied to the sale of goods and services.</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT does not redefine Taiwan tax legislation. Instead, it provides a mapping between Taiwan Business Tax information and the tax structures defined by PINT and UBL. The objective is to support cross-border interoperability while maintaining compatibility with Taiwan electronic invoice requirements.</p>
 </div>
 </div>
 </div>
@@ -179,76 +50,455 @@
 <h2 id="_3_1_taiwan_business_tax"><a class="anchor" href="#_3_1_taiwan_business_tax"></a>3.1. Taiwan Business Tax</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT represents Taiwan Business Tax information needed for invoice exchange and downstream reporting.</p>
+<p>Business Tax is the principal indirect tax represented in TW-PINT. For the purposes of TW-PINT v0.1, only mainstream invoice scenarios supported by Taiwan electronic invoices are considered.</p>
+</div>
+<div class="paragraph">
+<p>The legal basis for Business Tax (BT) reporting remains Value-added and Non-value-added Business Tax Act and Regulations Governing the Use of Uniform Invoices. TW-PINT is an interoperability specification and does not replace statutory reporting obligations.</p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_1_overview_of_taiwan_business_tax"><a class="anchor" href="#_3_1_1_overview_of_taiwan_business_tax"></a>3.1.1. Overview of Taiwan Business Tax</h3>
+<div class="paragraph">
+<p>Taiwan Business Tax distinguishes several taxation categories. The most common categories are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 50%;">
-<col style="width: 25%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Taiwan Tax Category</th>
+<th class="tableblock halign-left valign-top">Tax Percentage</th>
 <th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Rate</th>
+<th class="tableblock halign-left valign-top">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable (應稅)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable transactions refers to supplies of goods or services that are subject to Taiwan Business Tax at the applicable statutory rate. For standard taxable transactions, the supplier is required to calculate, charge, and report Business Tax on the taxable amount in accordance with Taiwan tax regulations. Businesses making taxable supplies may generally deduct eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero-tax-rate (零稅率)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero-rated transactions refers to supplies that are subject to Taiwan Business Tax but are taxed at a rate of zero percent (0%). Common examples include qualifying export goods and services as specified by Taiwan tax regulations.
+Unlike exempt transactions, zero-rated transactions remain taxable supplies under the Business Tax system. Businesses making zero-rated supplies may be entitled to deduct or claim refunds of eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax-exempt (免稅)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax-exempt transactions refer  to supplies of goods or services that are exempt from Taiwan Business Tax under applicable laws and regulations. For exempt transactions, no Business Tax is charged on the sale. In general, businesses making exempt supplies are not entitled to deduct the input Business Tax incurred on related purchases and expenses, except where otherwise provided by law.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TW-PINT v0.1 supports standard taxable transactions and zero-rated transactions. Exempt and special tax scenarios are outside the scope of this version.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_2_business_tax_rates"><a class="anchor" href="#_3_1_2_business_tax_rates"></a>3.1.2. Business Tax rates</h3>
+<div class="paragraph">
+<p>The standard Taiwan Business Tax rate is currently five percent (5%).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tax Category</th>
+<th class="tableblock halign-left valign-top">Tax Percentage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5%</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zero Rated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exempt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_3_2_peppol_tw_pint_and_egui_tax_reporting_relationship"><a class="anchor" href="#_3_2_peppol_tw_pint_and_egui_tax_reporting_relationship"></a>3.2. Peppol, TW-PINT and eGUI tax reporting relationship</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_3_1_3_taxable_and_zero_rated_transactions"><a class="anchor" href="#_3_1_3_taxable_and_zero_rated_transactions"></a>3.1.3. Taxable and Zero-Rated Transactions</h3>
 <div class="paragraph">
-<p>TW-PINT carries the tax information needed for buyer-seller exchange and validation. Local Taiwan reporting may require additional processing through an eGUI gateway. Consumer-facing eGUI details, donation, lottery and clearance workflows remain outside TW-PINT v1.0.</p>
+<p>Taxable transactions are represented using category S and are subject to Business Tax at the applicable rate.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_3_international_trade_and_taiwan_tax_handling"><a class="anchor" href="#_3_3_international_trade_and_taiwan_tax_handling"></a>3.3. International trade and Taiwan tax handling</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Export invoices may use zero-rated tax treatment. Foreign buyers should not be forced to provide Taiwan UBN. Inbound invoices may follow another PINT specialization and be mapped to Taiwan accounting and tax reporting requirements.</p>
+<p>Zero-rated transactions are represented using category Z and include transactions that remain taxable under Taiwan law but are subject to a zero-percent rate, such as qualifying export transactions.</p>
+</div>
+<div class="paragraph">
+<p>The distinction between zero-rated and exempt transactions is important because only zero-rated transactions remain taxable under Taiwan Business Tax legislation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_4_relationship_with_uniform_invoices"><a class="anchor" href="#_3_1_4_relationship_with_uniform_invoices"></a>3.1.4. Relationship with Uniform Invoices</h3>
+<div class="paragraph">
+<p>For B2B transactions, Business Tax information is normally supported by a Uniform Invoice or electronic Uniform Invoice (eGUI).</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT supports the exchange of invoice data required to bridge to Taiwan eGUI systems, as follow tables.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Party / Identification Layer</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seller identification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SellerParty / PartyIdentification / ID + schemeID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seller Uniform Business Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use Party ID scheme whitelist (e.g. TW:VAT, ISO6523:0195)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer identification (B2B)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer Party ID (often mandatory in CIUS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer Uniform Business Number – mandatory for B2B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory in TW-PINT B2B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Party name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PartyName / Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Company name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Party address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structured address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Address information not always complete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional; do not over-constrain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Document Identity &amp; Lifecycle</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice/ID (business document ID)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Government-issued eGUI invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keep separate; must not overload</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legal invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business-level identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legally assigned invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carried out-of-band or via Extension reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice / Credit Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice / Allowance or Credit Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map to 380 / 381*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IssueDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue dat (開立日期)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lifecycle status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not in core PINT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System processing status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TW-PINT Extension: LifecycleStatus</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TW-PINT does not itself constitute the legal eGUI record unless explicitly recognized by future Taiwan regulations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_5_required_tax_information"><a class="anchor" href="#_3_1_5_required_tax_information"></a>3.1.5. Required Tax Information</h3>
+<div class="paragraph">
+<p>For tax calculation and eGUI bridgeability, TW-PINT v0.1 requires at minimum:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Monetary &amp; Tax Layer</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DocumentCurrencyCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency, usually TWD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow multi-currency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Line amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LineExtensionAmount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sales amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax category</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAT category codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable / Zero-rated / Exempt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common (semantic)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CIUS mapping table</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TaxTotal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total tax amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cross-check only</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Line Item / Business Semantics</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Line item</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InvoiceLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice line item</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item/Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quantity / unit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UNECE unit codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simplified unit representation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relax validation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Price</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PriceAmount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unit price</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Where multiple tax categories are used, each category shall be represented separately in the tax breakdown.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_6_calculation_of_business_tax"><a class="anchor" href="#_3_1_6_calculation_of_business_tax"></a>3.1.6. Calculation of Business Tax</h3>
+<div class="paragraph">
+<p>The tax amount shall be calculated from the taxable amount and the applicable tax percentage.</p>
+</div>
+<div class="paragraph">
+<p>For standard taxable transactions: Tax Amount = Taxable Amount × 5%</p>
+</div>
+<div class="paragraph">
+<p>The sum of tax category amounts shall equal the document-level tax total.</p>
+</div>
+<div class="paragraph">
+<p>The sum of taxable amount and tax amount shall equal the tax-inclusive total amount, subject to the rounding rules specified in Chapter 4.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_7_foreign_currency_invoices"><a class="anchor" href="#_3_1_7_foreign_currency_invoices"></a>3.1.7.Foreign Currency Invoices</h3>
+<div class="paragraph">
+<p>TW-PINT permits invoices issued in currencies other than Taiwanese dollar (TWD).</p>
+</div>
+<div class="paragraph">
+<p>Where Taiwan tax reporting requires amounts to be expressed in TWD, conversion and reporting requirements remain governed by Taiwan tax regulations and eGUI implementation rules.</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT does not prescribe a mandatory foreign-exchange conversion methodology in v0.1.</p>
+</div>
+<div class="paragraph">
+<p>When the Invoice currency (IBT-005) is not TWD the seller may be required to Buinese Tax (BT) related amounts in TWD. This can be provided in the following way.
+The tax currency code (IBT-006) shall be given as TWD. The required amounts are given as shown in the following XML.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example showing BT in TWD when invoice currency is EUR</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:DocumentCurrencyCode&gt;EUR&lt;/cbc:DocumentCurrencyCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:TaxCurrencyCode&gt;TWD&lt;/cbc:TaxCurrencyCode&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;cac:AdditionalDocumentReference&gt;
+        &lt;cbc:ID&gt;TWD&lt;/cbc:ID&gt;
+        &lt;cbc:DocumentTypeCode&gt;twdtotal-excl-bt&lt;/cbc:DocumentTypeCode&gt;
+        &lt;cbc:DocumentDescription&gt;48478.26&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AdditionalDocumentReference&gt;
+&lt;cac:AdditionalDocumentReference&gt;
+        &lt;cbc:ID&gt;TWD&lt;/cbc:ID&gt;
+        &lt;cbc:DocumentTypeCode&gt;twdtotal-incl-bt&lt;/cbc:DocumentTypeCode&gt;
+        &lt;cbc:DocumentDescription&gt;50902.17&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;/cac:AdditionalDocumentReference&gt;
+&lt;!-- Code omitted for clarity --&gt;
+&lt;cac:TaxTotal&gt;
+   &lt;cbc:TaxAmount currencyID="EUR"&gt;66.25&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+   &lt;cac:TaxSubtotal&gt;
+       &lt;cbc:TaxableAmount currencyID="EUR"&gt;1325&lt;/cbc:TaxableAmount&gt;
+       &lt;cbc:TaxAmount currencyID="EUR"&gt;66.25&lt;/cbc:TaxAmount&gt;
+       &lt;cac:TaxCategory&gt;
+           &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+           &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+           &lt;cac:TaxScheme&gt;
+               &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+           &lt;/cac:TaxScheme&gt;
+       &lt;/cac:TaxCategory&gt;
+   &lt;/cac:TaxSubtotal&gt;
+&lt;/cac:TaxTotal&gt;
+&lt;cac:TaxTotal&gt;
+   &lt;cbc:TaxAmount currencyID="TWD"&gt;2423.91&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+&lt;/cac:TaxTotal&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoice currency as EUR (IBT-005)</p>
+</div>
+<div class="paragraph">
+<p>② Tax currency as TWD (IBT-006)</p>
+</div>
+<div class="paragraph">
+<p>③ Invoice total without BT in tax currency being BT (IBT-SG-001)</p>
+</div>
+<div class="paragraph">
+<p>④ Invoice total with BT in tax currency being BT (IBT-SG-002)</p>
+</div>
+<div class="paragraph">
+<p>⑤ BT total amount in invoice currency (IBT-110)</p>
+</div>
+<div class="paragraph">
+<p>⑥ BT total amount in tax currency being BT (IBT-111)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_1_8_credit_notes_and_tax_corrections"><a class="anchor" href="#_3_1_8_credit_notes_and_tax_corrections"></a>3.1.8. Credit Notes and Tax Corrections</h3>
+<div class="paragraph">
+<p>Tax adjustments shall be represented using Credit Notes and shall reference the original invoice.</p>
+</div>
+<div class="paragraph">
+<p>The processing of invoice cancellation, allowance, correction, or other eGUI-specific procedures remains the responsibility of Taiwan eGUI systems and associated gateway implementations.</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT does not introduce Taiwan-specific tax correction document types.</p>
 </div>
 </div>
 </div>
-</article>
-<aside class="toc sidebar" data-title="Page contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
+</div>
   </div>
-</main>
+  <div id="footer"><div id="footer-text">TW-PINT — Peppol Specifications for Taiwan implementation of PINT</div></div>
 </div>
-<footer class="tw-footer">
-  <div class="tw-footer-inner">
-    <div>
-      <strong>TW-PINT Candidate Specification</strong><br>
-      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
-    </div>
-    <div class="tw-footer-note">
-      Community review draft. Not an official OpenPeppol publication.
-    </div>
-  </div>
-</footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script src="../../../_/js/jquery-3.6.3.min.js"></script>
+<script src="../../../_/js/popper.min.js"></script>
+<script src="../../../_/js/bootstrap.min.js"></script>
+<script src="../../../_/js/pdk-toc.js"></script>
+<script src="../../../_/js/tw-pint-document.js"></script>
+</body>
 </html>

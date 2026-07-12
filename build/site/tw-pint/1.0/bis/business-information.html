@@ -1,184 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>2. Business Information :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/business-information.html">
-    <meta name="generator" content="Antora 3.1.15">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-<meta property="og:image" content="../../../_/img/iconx128.png">
-<meta property="og:description" content="2. Business Information">
-<meta property="og:title" content="TW-PINT Candidate Specification">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="article">
-<header class="tw-topbar">
-  <div class="tw-topbar-inner">
-    <div class="tw-brand">
-      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
-        <span class="tw-brand-mark">TW</span>
-        <span class="tw-brand-text">
-          <span class="tw-brand-title">TW-PINT</span>
-          <span class="tw-brand-subtitle">Candidate Specification</span>
-        </span>
-      </a>
-    </div>
-    <nav class="tw-topnav" aria-label="Top navigation">
-      <a href="https://dongpo.github.io/tw-pint">Home</a>
-      <a href="../scope.html">Scope</a>
-      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
-      <a href="../conformance.html">Conformance</a>
-      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Business Information | Peppol Specifications for Taiwan implementation of PINT</title>
+<link rel="stylesheet" href="../../../_/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../_/css/peppol_pdk.css">
+<link rel="stylesheet" href="../../../_/css/main.css">
+<link rel="stylesheet" href="../../../_/css/asciidoc-ext-pdk.css">
+<link rel="stylesheet" href="../../../_/css/asciidoctor-default.css">
+<link rel="stylesheet" href="../../../_/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../_/css/tw-pint-official.css">
+</head>
+<body class="book toc2 toc-left">
+<div class="navbar navbar-expand-lg navbar_light bg_light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="../../../">
+      <img src="../../../_/img/peppol-logo.png" height="30" class="d-inline-block align-top" alt="Peppol" style="width: inherit !important; height: 30px !important; vertical-align: top !important;">
+      Peppol Specifications for Taiwan implementation of PINT
+    </a>
   </div>
-</header>
-<div class="body">
-<div class="nav-container" data-component="tw-pint" data-version="1.0">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Project links</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">TW-PINT Home</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Document body</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-processes.html">1. Business processes</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="4">
-    <a class="nav-link" href="business-information.html">2. Business information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="tax-information.html">3. Tax information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="rules.html">4. Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="technical-details.html">5. Technical details</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="international-trade.html">International trade context</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Transaction</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Download resources</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/index.html">Resources</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">TW-PINT Candidate Specification</span>
-    <span class="version">1.0</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <span class="title">TW-PINT Candidate Specification</span>
-      <ul class="versions">
-        <li class="version is-current">
-          <a href="../index.html">1.0</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>2. Business Information</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle-label">Project links</span>
-<button class="nav-toggle"></button>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
-    <li><a href="../index.html">TW-PINT Home</a></li>
-    <li>Documentation</li>
-    <li><a href="index.html">Document body</a></li>
-    <li><a href="business-information.html">2. Business information</a></li>
-  </ul>
-</nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/business-information.adoc">Edit this page</a></div>
-</div>
-  <div class="content">
-<article class="doc">
-<h1 class="page">2. Business Information</h1>
-<div id="preamble">
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>TW-PINT Candidate Specification</p></div>
+      </div>
+    </div>
+    <div id="preamble">
 <div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_2_1_parties">2.1. Parties</a></li>
-<li><a href="#_2_2_delivery_details">2.2. Delivery Details</a></li>
-<li><a href="#_2_3_references_and_attachments">2.3. References and attachments</a></li>
-<li><a href="#_2_4_allowances_and_charges">2.4. Allowances and Charges</a></li>
-<li><a href="#_2_5_payment_means_information">2.5. Payment means information</a></li>
-<li><a href="#_2_6_item_information">2.6. Item information</a></li>
-<li><a href="#_2_7_price_information">2.7. Price information</a></li>
-<li><a href="#_2_8_unit_of_measure">2.8. Unit of measure</a></li>
-<li><a href="#_2_9_taiwan_business_identifiers_and_trade_identifiers">2.9. Taiwan business identifiers and trade identifiers</a></li>
-<li><a href="#_2_10_additional_information_for_taiwan_egui_bridge">2.10. Additional information for Taiwan eGUI bridge</a></li>
-</ul>
+<div class="paragraph">
+<p>In the subchapters below you find description of selected parts of the transaction.</p>
 </div>
 </div>
 </div>
@@ -186,15 +47,291 @@
 <h2 id="_2_1_parties"><a class="anchor" href="#_2_1_parties"></a>2.1. Parties</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The seller is represented using <code>cac:AccountingSupplierParty</code>. The buyer is represented using <code>cac:AccountingCustomerParty</code>.</p>
+<p>The following roles may be specified. The same actor may play more than one role depending on the handling routine.
+Further details on the roles/actors can be found in the section Roles.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_1_seller_accountingsupplierparty"><a class="anchor" href="#_2_1_1_seller_accountingsupplierparty"></a>2.1.1. Seller (AccountingSupplierParty)</h3>
+<div class="paragraph">
+<p>Seller is mandatory information and provided in element <code>cac:AccountingSupplierParty</code></p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of seller information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:AccountingSupplierParty&gt; 
+   &lt;cac:Party&gt; 
+      &lt;cbc:EndpointID schemeID="0088"&gt; 4711967900017&lt;/cbc:EndpointID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:PartyIdentification&gt; 
+         &lt;cbc:ID schemeID="0088"&gt;4711967900017&lt;/cbc:ID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;/cac:PartyIdentification&gt; 
+      &lt;cac:PartyName&gt; 
+         &lt;cbc:Name&gt;TEN REN TEA CO., LTD.&lt;cbc:Name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:PartyName&gt;    
+      &lt;cac:PostalAddress&gt;
+         &lt;cbc:StreetName&gt;6 F., No. 107, Sec. 4, Zhongxiao E. Rd.&lt;cbc:StreetName&gt;    
+         &lt;cbc:AdditionalStreetName&gt; Da’an Dist.&lt;cbc:AdditionalStreetName&gt;  
+         &lt;cbc:CityName&gt;Taipei&lt;/cbc:CityName&gt; 
+         &lt;cbc:PostalZone&gt; 106076&lt;/cbc:PostalZone&gt; 
+         &lt;cbc:CountrySubentity&gt;Taiwan&lt;/cbc:CountrySubentity&gt; 
+         &lt;cac:AddressLine&gt;
+            &lt;cbc:Line&gt;Third address line&lt;/cbc:Line&gt; 
+         &lt;/cac:AddressLine&gt; 
+         &lt;cac:Country&gt;
+           &lt;cbc:IdentificationCode&gt;TW&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+         &lt;/cac:Country&gt;
+      &lt;/cac:PostalAddress&gt;
+      &lt;cac:PartyTaxScheme&gt;
+         &lt;cbc:CompanyID&gt; 18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:PartyTaxScheme&gt; 
+      &lt;cac:PartyLegalEntity&gt;     
+         &lt;cbc:RegistrationName&gt;天仁茶業股份有限公司&lt;/cbc:RegistrationName&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+            &lt;cbc:CompanyID&gt;18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+            &lt;cbc:CompanyLegalForm&gt;Private Limited Company&lt;/cbc:CompanyLegalForm&gt;    
+      &lt;/cac:PartyLegalEntity&gt;
+      &lt;cac:Contact&gt; <i class="conum" data-value="9"></i><b>(9)</b>
+         &lt;cbc:Name&gt;李國麟&lt;/cbc:Name&gt;
+         &lt;cbc:Telephone&gt;+8862-27765580 &lt;/cbc:Telephone&gt;    
+         &lt;cbc:ElectronicMail&gt;service@tenren.com.tw&lt;/cbc:ElectronicMail&gt;
+      &lt;/cac:Contact&gt;
+   &lt;/cac:Party&gt;
+&lt;/cac:AccountingSupplierParty&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.</p>
+</div>
+<div class="paragraph">
+<p>② Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>③ Sellers trading name (ibt-028).</p>
+</div>
+<div class="paragraph">
+<p>④ Sellers country code (ibt-040).</p>
+</div>
+<div class="paragraph">
+<p>⑤ Seller tax registration ID (ibt-031).</p>
+</div>
+<div class="paragraph">
+<p>⑥ Tax scheme for the sellers tax registration. Use the appropriate code for the sellers jurisdiction, such as VAT or GST.</p>
+</div>
+<div class="paragraph">
+<p>⑦ Seller legal registrated name (ibt-027).</p>
+</div>
+<div class="paragraph">
+<p>⑧ Seller legal registration identifier (ibt-030), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>⑨ Seller contact (ibg-06).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_1_2_buyer_accountingcustomerparty"><a class="anchor" href="#_2_1_2_buyer_accountingcustomerparty"></a>2.1.2. Buyer (AccountingCustomerParty)</h3>
+<div class="paragraph">
+<p>Buyer is mandatory information and provided in element <code>cac:AccountingCustomerParty</code></p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of buyer information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AccountingCustomerParty&gt;
+   &lt;cac:Party&gt;
+      &lt;cbc:EndpointID schemeID="0088"&gt;0099299000006&lt;/cbc:EndpointID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:PartyIdentification&gt;
+         &lt;cbc:ID schemeID="0088"&gt; 0099299000006&lt;/cbc:ID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;/cac:PartyIdentification&gt;
+      &lt;cac:PartyName&gt;
+         &lt;cbc:Name&gt;Mitusi &amp; Co.Ltd.&lt;/cbc:Name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:PartyName&gt;
+     &lt;cac:PostalAddress&gt; 
+      &lt;cbc:StreetName&gt;Bldf. 2-1 Ohtemachi 1-chome Chiyoda-ku&lt;/cbc:StreetName&gt;
+      &lt;cbc:AdditionalStreetName&gt;&lt;/cbc:AdditionalStreetName&gt;  
+      &lt;cbc:CityName&gt;Tokyo&lt;/cbc:CityName&gt;
+      &lt;cbc:PostalZone&gt;100-0004&lt;/cbc:PostalZone&gt;
+      &lt;cac:AddressLine&gt;
+         &lt;cbc:Line&gt;Third line&lt;/cbc:Line&gt;
+      &lt;/cac:AddressLine&gt;
+         &lt;cac:Country&gt;
+            &lt;cbc:IdentificationCode&gt;JP&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+         &lt;/cac:Country&gt;
+   &lt;/cac:PostalAddress&gt;
+   &lt;cac:PartyTaxScheme&gt;
+      &lt;cbc:CompanyID&gt;1010001008767 &lt;/cbc:CompanyID&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+         &lt;/cac:TaxScheme&gt; 
+      &lt;/cac:PartyTaxScheme&gt;
+      &lt;cac:PartyLegalEntity&gt; 
+         &lt;cbc:RegistrationName&gt; Mitusi &amp; Co.Ltd.&lt;/cbc:RegistrationName&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+         &lt;cbc:CompanyID schemeID="0088"&gt;0099299000006&lt;/cbc:CompanyID&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+      &lt;/cac:PartyLegalEntity&gt; 
+      &lt;cac:Contact&gt; <i class="conum" data-value="9"></i><b>(9)</b>
+         &lt;cbc:Name&gt;Kenichi Hori&lt;/cbc:Name&gt;
+         &lt;cbc:Telephone&gt;+81(3)3285-1111&lt;/cbc:Telephone&gt;       
+         &lt;cbc:ElectronicMail&gt;mbrm.infotkzrm@mbrm.co.jp&lt;/cbc:ElectronicMail&gt;
+      &lt;/cac:Contact&gt;
+   &lt;/cac:Party&gt;
+&lt;/cac:AccountingCustomerParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Buyer electronic address (ibt-049), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.</p>
+</div>
+<div class="paragraph">
+<p>② Buyer identifier (ibt-046), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>③ Buyer trading name (ibt-045).</p>
+</div>
+<div class="paragraph">
+<p>④ Buyer country code (ibt-055), mandatory.</p>
+</div>
+<div class="paragraph">
+<p>⑤ Buyer tax registration ID (ibt-048).</p>
+</div>
+<div class="paragraph">
+<p>⑥ Tax scheme for the buyer tax registration. Use the appropriate code for the buyers jurisdiction, such as VAT or GST.</p>
+</div>
+<div class="paragraph">
+<p>⑦ Buyer legal registered name (ibt-044).</p>
+</div>
+<div class="paragraph">
+<p>⑧ Buyer legal registration identifier (ibt-047), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>⑨ Buyer contact (ibg-09).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_1_3_payment_receiver_payeeparty"><a class="anchor" href="#_2_1_3_payment_receiver_payeeparty"></a>2.1.3. Payment receiver (PayeeParty)</h3>
+<div class="paragraph">
+<p>Payment receiver is optional information. If this information is not supplied, the seller is the payment receiver. When payee information is sent this is indicating that a factoring situation is being documented.
+To reflect the assignment of an Invoice to a factor there is a need to:
+.	have a disclaimer (notification notice) on the Invoice that the Invoice has been assigned to a factor. The disclaimer should be given using the Invoice note (IBT-22) on document level.
+.	identify the Factor as the Payee
+.	to have the bank account changed to favour of a Factor.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of payee information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PayeeParty&gt;
+   &lt;cac:PartyIdentification&gt;
+      &lt;cbc:ID schemeID="0088"&gt;4711967900017&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;/cac:PartyIdentification&gt;
+   &lt;cac:PartyName&gt;
+      &lt;cbc:Name&gt;Payee party&lt;/cbc:Name&gt;
+   &lt;/cac:PartyName&gt;
+   &lt;cac:PartyLegalEntity&gt;
+      &lt;cbc:CompanyID schemeID="0088"&gt;4711967900017&lt;/cbc:CompanyID&gt; &lt;!--2--&gt;   
+   &lt;/cac:PartyLegalEntity&gt;
+&lt;/cac:PayeeParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① schemeID attribute is recommended for all party identifiers</p>
+</div>
+<div class="paragraph">
+<p>② schemeID attribute is recommended for party legal entity identifiers</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_2_delivery_details"><a class="anchor" href="#_2_2_delivery_details"></a>2.2. Delivery Details</h2>
+<h2 id="_2_1_4_seller_tax_representative_taxrepresentativeparty"><a class="anchor" href="#_2_1_4_seller_tax_representative_taxrepresentativeparty"></a>2.1.4. Seller tax representative (TaxRepresentativeParty)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Delivery details may be used when relevant for invoice verification, trade documentation, or tax treatment.</p>
+<p>Tax representative party for the seller is relevant for sellers delivering goods and services in a country without having a permanent establishment in that country. In such cases information on the tax representative shall be included in the invoice.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of tax representative information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:TaxRepresentativeParty&gt;
+   &lt;cac:PartyName&gt;
+      &lt;cbc:Name&gt;TaxRepresentative Name&lt;/cbc:Name&gt;
+   &lt;/cac:PartyName&gt;
+   &lt;cac:PostalAddress&gt;
+      &lt;cbc:StreetName&gt;6 F., No. 107, Sec. 4, Zhongxiao E. Rd.&lt;cbc:StreetName&gt;    
+      &lt;cbc:AdditionalStreetName&gt; Da’an Dist.&lt;cbc:AdditionalStreetName&gt;  
+      &lt;cbc:CityName&gt;Taipei&lt;/cbc:CityName&gt; 
+      &lt;cbc:PostalZone&gt; 106076&lt;/cbc:PostalZone&gt; 
+      &lt;cbc:CountrySubentity&gt;Taiwan&lt;/cbc:CountrySubentity&gt; 
+      &lt;cac:AddressLine&gt; 
+         &lt;cbc:Line&gt;Back door&lt;/cbc:Line&gt;
+      &lt;/cac:AddressLine&gt;
+      &lt;cac:Country&gt; 
+         &lt;cbc:IdentificationCode&gt;TW&lt;/cbc:IdentificationCode&gt;
+      &lt;/cac:Country&gt;
+   &lt;/cac:PostalAddress&gt; 
+   &lt;cac:PartyTaxScheme&gt;
+      &lt;cbc:CompanyID&gt;18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:TaxScheme&gt;
+      &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+   &lt;/cac:PartyTaxScheme&gt;
+&lt;/cac:TaxRepresentativeParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Tax identifier of seller tax representative (ibt-063)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_2_delivery_details_date_and_location"><a class="anchor" href="#_2_2_delivery_details_date_and_location"></a>2.2. Delivery Details (Date and Location)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Delivery details may be given at document level.
+Place and date of delivery is recommended, and should be sent unless this does not affect the ability to ensure the correctness of the invoice.
+The delivery element contains information on name, address and delivery location identifier (<code>cac:Delivery/cac:DeliveryLocation/cbc:ID</code>) which may be used if the place of delivery is defined through an identifier. For example, GLN (Global Location Number) issued by GS1.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of delivery information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Delivery&gt;
+   &lt;cbc:ActualDeliveryDate&gt;2017-11-01&lt;/cbc:ActualDeliveryDate&gt; 
+   &lt;cac:DeliveryLocation&gt;
+      &lt;cbc:ID schemeID="0088"&gt;7300010000001&lt;/cbc:ID&gt;
+      &lt;cac:Address&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+         &lt;cbc:StreetName&gt;Delivery street 2&lt;/cbc:StreetName&gt; 
+         &lt;cbc:AdditionalStreetName&gt;Building 56&lt;/cbc:AdditionalStreetName&gt; 
+         &lt;cbc:CityName&gt;Stockholm&lt;/cbc:CityName&gt; 
+         &lt;cbc:PostalZone&gt;21234&lt;/cbc:PostalZone&gt;
+         &lt;cac:AddressLine&gt;
+            &lt;cbc:Line&gt;Gate 15&lt;/cbc:Line&gt;
+         &lt;/cac:AddressLine&gt;
+         &lt;cac:Country&gt;
+            &lt;cbc:IdentificationCode&gt;SE&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+         &lt;/cac:Country&gt;
+      &lt;/cac:Address&gt;
+   &lt;/cac:DeliveryLocation&gt;
+   &lt;cac:DeliveryParty&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cac:PartyName&gt;    
+         &lt;cbc:Name&gt;Delivery party Name&lt;/cbc:Name&gt;
+      &lt;/cac:PartyName&gt;
+   &lt;/cac:DeliveryParty&gt;
+&lt;/cac:Delivery&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Deliver to address (ibg-15), the address to which goods and services invoiced were or are delivered.</p>
+</div>
+<div class="paragraph">
+<p>② Deliver to country code (ibt-080), mandatory</p>
+</div>
+<div class="paragraph">
+<p>③ Deliver to party name (ibt-070), the name of the party to which the goods and services are delivered.</p>
 </div>
 </div>
 </div>
@@ -202,7 +339,378 @@
 <h2 id="_2_3_references_and_attachments"><a class="anchor" href="#_2_3_references_and_attachments"></a>2.3. References and attachments</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>References should use existing PINT/UBL structures before introducing Taiwan-specific extensions. These include purchase order, sales order, buyer reference, contract reference, despatch advice, receipt advice, tender reference, project reference, preceding invoice reference, attachments, and delivery note reference.</p>
+<p>Support for invoice verification is a key function of an invoice. The invoice should provide sufficient information to look up relevant existing documentation, electronic or paper.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Any reference element should contain valid information, if you do not have a reference, the element should not be present in the instance document.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The invoice and credit note transactions supports the following references to existing documentation:</p>
+</div>
+<div class="sect2">
+<h3 id="_2_3_1_purchase_order_and_sales_order_reference"><a class="anchor" href="#_2_3_1_purchase_order_and_sales_order_reference"></a>2.3.1. Purchase order and sales order reference</h3>
+<div class="paragraph">
+<p>The purchase order reference is a conditional business term. If the customer has issued a purchase order should be referenced by providing its identifier in the resulting invoice, otherwise the Buyer reference should be used (see Buyer reference).</p>
+</div>
+<div class="paragraph">
+<p>If the purchase order is referenced at the invoice header level, the order reference element on line level can be used to state the relevant line numbers in the order .</p>
+</div>
+<div class="paragraph">
+<p>A sales order is issued by the seller, confirming the sale of specified products and may be provided in the invoice.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the invoice, both a purchase order and a sales order reference can be given, but be aware that an invoice instance cannot reference a sales order, without providing the corresponding purchase order reference.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example or order and sales reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:OrderReference&gt;
+   &lt;cbc:ID&gt;o-998877&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:SalesOrderID&gt;so-12343&lt;/cbc:SalesOrderID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:OrderReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Purchase order reference</p>
+</div>
+<div class="paragraph">
+<p>② Sales order reference</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_2_buyer_reference"><a class="anchor" href="#_2_3_2_buyer_reference"></a>2.3.2. Buyer reference</h3>
+<div class="paragraph">
+<p>The buyer reference, known as Your ref, is conditional. An invoice shall have either the buyer reference or the order reference (see Purchase order and sales order reference)</p>
+</div>
+<div class="paragraph">
+<p>The element is used for the reference of who ordered the products/services. Example being the name of the person ordering, employee number or a code identifying this person or department/group. Your ref is often used for internal routing at recipient, and hence it is important to fill this element with the correct values according to the need of the recipient.</p>
+</div>
+<div class="paragraph">
+<p>If neither buyer reference nor a reference to an order is supplied by the customer, the name of the person ordering or appointed for the customer can be supplied in buyer reference if known by the supplier.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When reference is provided by the customer, the correct element shall contain the provided reference.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of buyer reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:BuyerReference&gt;0150abc&lt;/cbc:BuyerReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_3_invoiced_object_identifier"><a class="anchor" href="#_2_3_3_invoiced_object_identifier"></a>2.3.3. Invoiced object identifier</h3>
+<div class="paragraph">
+<p>The invoiced object identifier is the identifier for an object on which the invoice is based, given by the Seller. Examples may be a subscription number, telephone number, meter point, vehicle, person etc., as applicable.</p>
+</div>
+<div class="paragraph">
+<p>If it is not clear to the receiver what scheme is used for the identifier, an optional scheme identifier attribute should be used, that shall be chosen from the Invoiced object identifier scheme code list.</p>
+</div>
+<div class="paragraph">
+<p>The invoiced object reference is provided by using the element cac:AdditionalDocumentReference with the document type code = 130</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of invoiced object identifier</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt;
+   &lt;cbc:ID schemeID="ABT"&gt;DR35141&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cbc:DocumentTypeCode&gt;130&lt;/cbc:DocumentTypeCode&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoice object identifier scheme is given as an attribute on the identifier. It states the type of the identifier according to code list UN/CEFACT 1153</p>
+</div>
+<div class="paragraph">
+<p>② An identifier of an object that the invoice relates to.</p>
+</div>
+<div class="paragraph">
+<p>③ A code that qualifies the identifier as an invoiced object identifier. Document type code "130" qualifies that.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_4_contract_reference"><a class="anchor" href="#_2_3_4_contract_reference"></a>2.3.4. Contract reference</h3>
+<div class="paragraph">
+<p>To reference or match an invoice to a purchase contract, the contract number could be specified like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of contract reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:ContractDocumentReference&gt;
+   &lt;cbc:ID&gt;framework no 1&lt;/cbc:ID&gt;
+&lt;/cac:ContractDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Despatch advice</p>
+</div>
+<div class="paragraph">
+<p>② Receipt advice</p>
+</div>
+<div class="paragraph">
+<p><span class="bule">Line level</span>
+When an invoice is charging items that have been delivered with separate despatches the references should be provided on the line level as follows. When the invoiced quantity of an item has been delivered by more than one despatch the invoice shall have separate lines for each despatch. When despatches are referenced on line level there shall not be a reference on document level.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of despatch and receipt advice</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cac:DespatchLineReference&gt;
+      &lt;cac:DocumentReference&gt;
+         &lt;cbc:ID&gt;despadv-3&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;/cac:DocumentReference&gt;
+   &lt;cac:DespatchLineReference&gt;
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Despatch advice</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_6_tender_reference"><a class="anchor" href="#_2_3_6_tender_reference"></a>2.3.6. Tender reference</h3>
+<div class="paragraph">
+<p>To identify the call for tender or lot the invoice relates to, use the 'OriginatorDocumentReference'. The identifier is, in most cases, the Procurement Procedure Identifier.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of tender reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:OriginatorDocumentReference&gt;
+   &lt;cbc:ID&gt;ppid-123&lt;/cbc:ID&gt;
+&lt;/cac:OriginatorDocumentReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_7_project_reference"><a class="anchor" href="#_2_3_7_project_reference"></a>2.3.7. Project reference</h3>
+<div class="paragraph">
+<p>The project reference is optional to use, and is sent in an invoice in the element cac:ProjectReference/ cbc:ID. In a credit note, this element does not exist, and project reference is sent by using the element <code>cac:AdditionalDocumentReference[cbc:DocumentTypeCode='50']/cbc:ID</code>.</p>
+</div>
+<div class="paragraph">
+<p>NOTE</p>
+</div>
+<div class="paragraph">
+<p>When sending the project reference, only the cbc:ID and the <code>cbc:DocumentTypeCode</code> are allowed in the <code>cac:AdditionalDocumentReference</code> element.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of project reference in an invoice</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:ProjectReference&gt;
+   &lt;cbc:ID&gt;project333&lt;/cbc:ID&gt;
+&lt;/cac:ProjectReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_8_preceding_invoice_references"><a class="anchor" href="#_2_3_8_preceding_invoice_references"></a>2.3.8. Preceding invoice references</h3>
+<div class="paragraph">
+<p>A credit note or negative invoice can refer to one or more initial invoice(s). This is done in the business group BG-3 Preceding invoice reference, providing the invoice number and issue date. The issue date shall be provided in case the preceding invoice reference is not unique.</p>
+</div>
+<div class="paragraph">
+<p>In case correction applies to a large number of invoices, the invoicing period (BG-14), as necessary combined with a clarifying invoice note (IBT-22), may instead be given at document level.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_9_attachments"><a class="anchor" href="#_2_3_9_attachments"></a>2.3.9. Attachments</h3>
+<div class="paragraph">
+<p>An invoice may contain a supportive document as informative. Examples of such documents may be work reports, certificates or other documents that relate to the purchase or the invoiced items. A supportive document can be attached to the invoice in two ways: by providing a direct hyperlink through which the document can be downloaded or by embedding the document into the invoice. A compliant receiver is required to be able to receive an attached supportive document and, in case of embedded files, to convert it into a file but he is not required to handle the content of that file since it is only provided as informative.</p>
+</div>
+<div class="paragraph">
+<p>When attaching a document using an uri the hyperlink shall point directly to the file that is to be downloaded.</p>
+</div>
+<div class="paragraph">
+<p>An embedded document is contained in the invoice as binary object using base64 encoding and shall be supplemented with information about the name of the document file and a mime code indicating the type of the file. This allows the receiver to convert the binary code into a file that has the same name as the original file and allows him to associate the received file to a suitable application for viewing its content. The set of allowed codes for the file type (mime code) is limited to types that can be opened with applications that are commonly used and available.</p>
+</div>
+<div class="paragraph">
+<p>As is with other file types, when an attached file is an XML file the receiver is expected to be able to receive and convert the binary object into an XML file but the sender can not expect the receiver to view or process the content of that XML file. Any further handling of an embedded XML file attachment is optional for the receiver.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of a document attachment using URI</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt;
+   &lt;cbc:ID&gt;ts12345&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:DocumentDescription&gt;Technical specification&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:Attachment&gt; 
+      &lt;cac:ExternalReference&gt;
+         &lt;cbc:URI&gt;www.techspec.no&lt;/cbc:URI&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:ExternalReference&gt;
+   &lt;/cac:Attachment&gt;
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of an embedded document attachment</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt; 
+   &lt;cbc:ID&gt;mr4343&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:DocumentDescription&gt;milage report&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:Attachment&gt;
+      &lt;cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="milage.csv" &gt;bWlsYWdlIHJlcG9ydA==&lt;/cbc:EmbeddedDocumentBinaryObject&gt;
+   &lt;/cac:Attachment&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① An identifier of the supporting document (ibt-122)</p>
+</div>
+<div class="paragraph">
+<p>② A description of the supporting document (ibt-123)</p>
+</div>
+<div class="paragraph">
+<p>③ The URL (Uniform Resource Locator) that identifies where the external document is located (ibt-124)</p>
+</div>
+<div class="paragraph">
+<p>④ An attached document embedded as binary object or sent together with the invoice. (ibt-125). The file type is given with the attribute "mimeCode" (ibt-125-1) and the name of the original file is given in the attribute "filename" (ibt-125-2).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_10_reference_to_delivery_note"><a class="anchor" href="#_2_3_10_reference_to_delivery_note"></a>2.3.10. Reference to delivery note</h3>
+<div class="paragraph">
+<p>In Summarised invoicing process, the supplier sends a Delivery Note to the customer with each delivery and the buyer uses the information in the Delivery Note to verify the reception of the items. The Delivery Note is focused on providing information about the items that are being delivered. At the end of a period (usually a month) the supplier sends an invoice that summarises the items that were delivered during that period.</p>
+</div>
+<div class="paragraph">
+<p>To reference or match an invoice to a despatch or receipt advice use the following elements:</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example for summarised invoice 1</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode="H87"&gt;10&lt;/cbc:InvoicedQuantity&gt; 
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;50000&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:DocumentReference&gt;
+      &lt;cbc:ID&gt;D001-1&lt;/cbc:ID&gt; 
+   &lt;/cac:DocumentReference&gt;
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;辦公椅&lt;/cbc:Name&gt;
+      &lt;cac:ClassifiedTaxCategory&gt;
+         &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+         &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;5000&lt;/cbc:PriceAmount&gt; 
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt;
+&lt;/cac:InvoiceLine&gt;
+&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;2&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode="H87"&gt;5&lt;/cbc:InvoicedQuantity&gt; 
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;1000&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:DocumentReference&gt;
+      &lt;cbc:ID&gt;D001-2&lt;/cbc:ID&gt;
+   &lt;/cac:DocumentReference&gt;
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;影印紙（A4）&lt;/cbc:Name&gt;
+      &lt;cac:ClassifiedTaxCategory&gt;
+      &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+      &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+      &lt;cac:TaxScheme&gt;
+         &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;200&lt;/cbc:PriceAmount&gt;
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt;
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Delivery note number</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example for summarised invoice 2</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode=”H87”&gt;1&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;3740&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;D001&lt;/cbc:Name&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cac:ClassifiedTaxCategory&gt;
+         &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+         &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;3740&lt;/cbc:PriceAmount&gt;
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt; 
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoiced quantity is 1.</p>
+</div>
+<div class="paragraph">
+<p>② Delivery note number</p>
+</div>
+<div class="paragraph">
+<p>③ Item net price shall equal to the total taxable amount stated on the Delivery Note.</p>
+</div>
 </div>
 </div>
 </div>
@@ -210,15 +718,229 @@
 <h2 id="_2_4_allowances_and_charges"><a class="anchor" href="#_2_4_allowances_and_charges"></a>2.4. Allowances and Charges</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Allowances and charges are inherited from PINT and UBL.</p>
+<p>The Invoice and credit note transactions has elements for Allowance/charge on 3 levels.</p>
+</div>
+<div class="paragraph">
+<p>The element cac:AllowanceCharge with sub element cbc:ChargeIndicator indicates whether the instance is a charge (true) or an allowance (false).</p>
+</div>
+<div class="paragraph">
+<p>The header level</p>
+</div>
+<div class="paragraph">
+<p>Applies to the whole invoice and is included in the calculation of the invoice total amount.
+*	Several allowances and charges may be supplied
+*	Specification of TAX for allowances and charges, cac:TaxCategory with sub elements, shall be supplied
+*	The sum of all allowances and charges on the header level shall be specified in cbc:AllowanceTotalAmount and cbc:ChargeTotalAmount respectively.</p>
+</div>
+<div class="paragraph">
+<p>The line level</p>
+</div>
+<div class="paragraph">
+<p>Applies to the line level and is included in the calculation of the line amount.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Several allowances and charges may be supplied</p>
+</li>
+<li>
+<p>Specification of TAX for allowances and charges shall not be specified, as the TAX category stated for the invoice line itself, applies also to the allowances or charges of that line.</p>
+</li>
+<li>
+<p>The sum of all allowances and charges on the line level shall be taken into account, subtracted or added, when calculating the line extension amount . These line level allowances and charges shall not be calculated into the header level elements.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The line level Price element</p>
+</div>
+<div class="paragraph">
+<p>A way to inform the buyer how the price is set. Is also relevant if the seller or buyer want to post the allowance in their accounting systems. The price itself shall always be the net price, i.e. the base amount reduced with a discount (allowance).
+*	Only one occurrence of allowance (discount) is allowed.
+*	Specification of TAX for allowance shall not be specified
+*	Allowance related to Price shall not be part of any other calculations.
+*	Allowance related to Price may specify amount and the base amount.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of Allowances and Charges on the document level</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+   &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:AllowanceChargeReasonCode&gt;FC&lt;/cbc:AllowanceChargeReasonCode&gt;  
+   &lt;cbc:AllowanceChargeReason&gt;Freight service&lt;/cbc:AllowanceChargeReason&gt; 
+   &lt;cbc:MultiplierFactorNumeric&gt;2&lt;/cbc:MultiplierFactorNumeric&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;cbc:Amount currencyID=”TWD”&gt;20&lt;/cbc:Amount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+   &lt;cbc:BaseAmount currencyID="TWD"&gt;1000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+   &lt;cac:TaxCategory&gt;
+   &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+   &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+   &lt;cac:TaxScheme&gt;
+      &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; 
+   &lt;/cac:TaxScheme&gt;
+   &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt; 
+   &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt; &lt;!--2--&gt;  
+   &lt;cbc:AllowanceChargeReasonCode&gt;65&lt;/cbc:AllowanceChargeReasonCode&gt; 
+   &lt;cbc:AllowanceChargeReason&gt;Production error discount&lt;/cbc:AllowanceChargeReason&gt;
+   &lt;cbc:Amount currencyID="TWD"&gt;10&lt;/cbc:Amount&gt;
+   &lt;cac:TaxCategory&gt; 
+      &lt;cbc:ID&gt;S&lt;/cbc:ID&gt; 
+      &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt; 
+      &lt;cac:TaxScheme&gt;
+         &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+   &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① ChargeIndicator = true to indicate a charge</p>
+</div>
+<div class="paragraph">
+<p>② ChargeIndicator = false to indicate an allowance</p>
+</div>
+<div class="paragraph">
+<p>③ Base amount, to be used with the percentage to calculate the amount</p>
+</div>
+<div class="paragraph">
+<p>④ Charge percentage</p>
+</div>
+<div class="paragraph">
+<p>⑤ Amount=Base amount×(Percentage÷100)</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of Allowances and Charges on invoice line</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt; 
+   &lt;cac:AllowanceCharge&gt;
+      &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;    
+      &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;  
+      &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt; 
+      &lt;cbc:MultiplierFactorNumeric&gt;10&lt;/cbc:MultiplierFactorNumeric&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;1&lt;/cbc:Amount&gt;
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;10&lt;/cbc:BaseAmount&gt;
+   &lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+   &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;   
+   &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;    
+   &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+   &lt;cbc:Amount currencyID="TWD"&gt;101&lt;/cbc:Amount&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_5_payment_means_information"><a class="anchor" href="#_2_5_payment_means_information"></a>2.5. Payment means information</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_2_5_1_credit_transfer"><a class="anchor" href="#_2_5_1_credit_transfer"></a>2.5.1. Credit transfer</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>TW-PINT inherits credit transfer and card payment structures from PINT. Taiwan-specific payment practices may be documented as implementation guidance but should not break PINT interoperability.</p>
+<p>Payment means code 30 as defined below shall be supported by all receivers of a PINT compliant invoice. This payment method acts as the common denominator for global trade.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If payment is made by credit transfer, the Payment account identifier (IBT-84) is mandatory</p>
+</div>
+<div class="paragraph">
+<p>Examples of codes for payment by credit transfer are:</p>
+</div>
+<div class="paragraph">
+<p>30 - Credit transfer</p>
+</div>
+<div class="paragraph">
+<p>UBL example of payment means info when payment is done by credit transfer</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PaymentMeans&gt;
+   &lt;cbc:PaymentMeansCode name="Credit transfer"&gt;30&lt;/cbc:PaymentMeansCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:PaymentID&gt;93274234&lt;/cbc:PaymentID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:PayeeFinancialAccount&gt; 
+      &lt;cbc:ID&gt;32423940&lt;/cbc:ID&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cbc:Name&gt;AccountName&lt;/cbc:Name&gt;
+      &lt;cac:FinancialInstitutionBranch&gt;
+          &lt;cbc:ID&gt;BIC32409&lt;/cbc:ID&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+      &lt;/cac:FinancialInstitutionBranch&gt;
+   &lt;/cac:PayeeFinancialAccount&gt;
+&lt;/cac:PaymentMeans&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Mandatory, payment means code for credit transfer</p>
+</div>
+<div class="paragraph">
+<p>② Remittance information</p>
+</div>
+<div class="paragraph">
+<p>③ Mandatory, IBAN (in case of a SEPA payment) or a national account number (BBAN)</p>
+</div>
+<div class="paragraph">
+<p>④ BIC or a national clearing cod</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_5_2_card_payment"><a class="anchor" href="#_2_5_2_card_payment"></a>2.5.2. Card Payment</h3>
+<div class="paragraph">
+<p>If the Buyer had opted to pay by using a payment card such as a credit or debit card, information on the Primary Account Number (PAN) shall be present in the invoice.
+Examples of codes for payment by card are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>48 - Bank card</p>
+</li>
+<li>
+<p>54 - Credit card</p>
+</li>
+<li>
+<p>55 - Debit card</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of payment means info when payment is done by payment card</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PaymentMeans&gt;
+   &lt;cbc:PaymentMeansCode name="Credit card"&gt;54&lt;/cbc:PaymentMeansCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:PaymentID&gt;9387439&lt;/cbc:PaymentID&gt;
+   &lt;cac:CardAccount&gt;
+      &lt;cbc:PrimaryAccountNumberID&gt;123236&lt;/cbc:PrimaryAccountNumberID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:NetworkID&gt;VISA&lt;/cbc:NetworkID&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cbc:HolderName&gt;Card holders name&lt;/cbc:HolderName&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;/cac:CardAccount&gt;
+&lt;/cac:PaymentMeans&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Payment means code for credit card
+② Mandatory, shall be the last 4 to 6 digits of the payment card number
+③ Mandatory, used to identify the financial service network provider of the card. Examples are VISA, MasterCard, American Express.
+④ Card holder name</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_5_3_taiwan_payment_means"><a class="anchor" href="#_2_5_3_taiwan_payment_means"></a>2.5.3. Taiwan payment means</h3>
+<div class="paragraph">
+<p>Taiwan-specific payment methods should be represented with existing payment means codes if supported. If a local payment method cannot be represented, it should first be handled in implementation guidance before introducing any new TW-PINT rule.</p>
+</div>
 </div>
 </div>
 </div>
@@ -226,7 +948,64 @@
 <h2 id="_2_6_item_information"><a class="anchor" href="#_2_6_item_information"></a>2.6. Item information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Item identifiers and classifications may support invoice verification, trade documentation, and future digital product passport integration.</p>
+<p>Item information follows PINT. Item name or description should be sufficient for accounting and tax review. Product identifiers and classifications may be used where applicable.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_6_1_item_identifiers"><a class="anchor" href="#_2_6_1_item_identifiers"></a>2.6.1. Item identifiers</h3>
+<div class="paragraph">
+<p>In an invoice line the seller item identifier, the buyer item identifier and the standard item identifier can be provided. For sellers and buyers item identifiers, no scheme attribute is used, whilst the schemeID is mandatory for the standard item identification, and must be from the ISO 6523 ICD list.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of item identifiers</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:BuyersItemIdentification&gt;
+   &lt;cbc:ID&gt;b-13214&lt;/cbc:ID&gt;
+&lt;/cac:BuyersItemIdentification&gt;
+&lt;cac:SellersItemIdentification&gt;
+   &lt;cbc:ID&gt;97iugug876&lt;/cbc:ID&gt;
+&lt;/cac:SellersItemIdentification&gt;
+&lt;cac:StandardItemIdentification&gt;
+   &lt;cbc:ID schemeID="0160"&gt;4503994155481&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:StandardItemIdentification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① 0160 is the ICD value for a GTIN identifier</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_6_2_item_classification"><a class="anchor" href="#_2_6_2_item_classification"></a>2.6.2. Item classification</h3>
+<div class="paragraph">
+<p>Several different item classification codes can be provided per invoice line, and the codes must be from one of the classification schemes in code list UNCL7143.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of using CPV</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:CommodityClassification&gt;
+   &lt;cbc:ItemClassificationCode listID="STI"&gt;09348023&lt;/cbc:ItemClassificationCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:CommodityClassification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① listID must be from UNCL7143 code list, and code STI indicates this is a CPV classification.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of UNSPSC</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:CommodityClassification&gt;
+   &lt;cbc:ItemClassificationCode listID="TST" listVersionID="19.05.01"&gt;86776&lt;/cbc:ItemClassificationCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:CommodityClassification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① listID must be from UNCL7143 code list, and code TST indicates this is a UNSPSC classification, listVersionID is optional, but can be used to specify the version of UNSPSC. NOTE, in previous versions code MP was used as temporary workaround to identify UNSPSC. In fall release 2019 it is replaced with the new 7143 code TST that is specific for UNSPSC.</p>
+</div>
 </div>
 </div>
 </div>
@@ -234,7 +1013,36 @@
 <h2 id="_2_7_price_information"><a class="anchor" href="#_2_7_price_information"></a>2.7. Price information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Price information follows PINT and UBL.</p>
+<p>An invoice must contain information about the item net price and additional information such as gross price, item price base quantity and price discount may be added.
+For details on calculating price see Item net price (IBT-146).</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of price with price discount</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;4000&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+   &lt;cac:AllowanceCharge&gt;
+      &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;1000&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;5000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;/cac:AllowanceCharge&gt;
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item gross price</p>
+</div>
+<div class="paragraph">
+<p>② Item price discount</p>
+</div>
+<div class="paragraph">
+<p>③ Item price base quantity</p>
+</div>
+<div class="paragraph">
+<p>④ Item net price, must be equal to Item Gross price - item price discount (if these elements are used)</p>
 </div>
 </div>
 </div>
@@ -242,45 +1050,151 @@
 <h2 id="_2_8_unit_of_measure"><a class="anchor" href="#_2_8_unit_of_measure"></a>2.8. Unit of measure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Unit codes should follow inherited PINT unit code lists.</p>
+<p>Unit of measure in an invoice allows the use of codes from UNECE Recommendation No. 20 (version 11e), as well as codes from UNECE Recommendation No. 21 prefixed with an X.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_9_taiwan_business_identifiers_and_trade_identifiers"><a class="anchor" href="#_2_9_taiwan_business_identifiers_and_trade_identifiers"></a>2.9. Taiwan business identifiers and trade identifiers</h2>
-<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H87</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piece</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KGM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilogram</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LTR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Litre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Square metre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTQ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cubic metre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KTM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilometre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TNE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tonne (metric ton)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KWH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilowatt hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HUR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minute</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>The seller UBN identifies a Taiwan seller in domestic transactions. The buyer UBN identifies a Taiwan buyer in domestic B2B transactions. Foreign buyers and foreign sellers may not have Taiwan UBNs, so rules must distinguish domestic Taiwan B2B from cross-border cases.</p>
+<p>table:
+  caption: Table 1. Examples of unit of measure from Recommendation No. 20
+    end: bottom</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_10_additional_information_for_taiwan_egui_bridge"><a class="anchor" href="#_2_10_additional_information_for_taiwan_egui_bridge"></a>2.10. Additional information for Taiwan eGUI bridge</h2>
-<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Box</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XCT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carton</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XCY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cylinder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barrel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XPK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Package</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XPX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pallet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XRL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XSA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>The eGUI gateway should preserve the original Peppol invoice identifier and maintain traceability between TW-PINT and local eGUI records.</p>
+<p>table:
+  caption: Table 2. Examples of unit of measure from Recommendation No. 21, prefixed with an X
+    end: bottom</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cbc:InvoicedQuantity unitCode="H87"&gt;10&lt;/cbc:InvoicedQuantity&gt;</code>
+<code>&lt;cbc:InvoicedQuantity unitCode="XPX"&gt;10&lt;/cbc:InvoicedQuantity&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Code H87 from Recommendation no. 20
+Code PX, prefixed with an X from Recommendation no. 21</p>
 </div>
 </div>
 </div>
-</article>
-<aside class="toc sidebar" data-title="Page contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
   </div>
-</main>
+  <div id="footer"><div id="footer-text">TW-PINT — Peppol Specifications for Taiwan implementation of PINT</div></div>
 </div>
-<footer class="tw-footer">
-  <div class="tw-footer-inner">
-    <div>
-      <strong>TW-PINT Candidate Specification</strong><br>
-      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
-    </div>
-    <div class="tw-footer-note">
-      Community review draft. Not an official OpenPeppol publication.
-    </div>
-  </div>
-</footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script src="../../../_/js/jquery-3.6.3.min.js"></script>
+<script src="../../../_/js/popper.min.js"></script>
+<script src="../../../_/js/bootstrap.min.js"></script>
+<script src="../../../_/js/pdk-toc.js"></script>
+<script src="../../../_/js/tw-pint-document.js"></script>
+</body>
 </html>

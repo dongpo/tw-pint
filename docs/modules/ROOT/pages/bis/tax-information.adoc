@@ -1,8 +1,5 @@
 = 3. Tax Information
-:toc: macro
-:toclevels: 3
 
-toc::[]
 
 Taiwan imposes Business Tax under the Value-added and Non-value-added Business Tax Act. For most B2B transactions covered by TW-PINT, Business Tax is collected through the Uniform Invoice (GUI/eGUI) system and is represented as a consumption tax applied to the sale of goods and services.
 
@@ -36,9 +33,9 @@ The standard Taiwan Business Tax rate is currently five percent (5%).
 
 [cols="1,1", options="header"]
 |===
-|Tax Category |	Tax Percentage
+|Tax Category | Tax Percentage
 
-|S	
+|S  
 |5%
 |===
 
@@ -56,29 +53,72 @@ For B2B transactions, Business Tax information is normally supported by a Unifor
 
 TW-PINT supports the exchange of invoice data required to bridge to Taiwan eGUI systems, as follow tables.
 
-1. Party / Identification Layer
+. Party / Identification Layer
 
 [cols="1,1,1,1,1", options="header"]
 |===
-|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+| Concept, header row | PEPPOL, header row | Taiwan eGUI, header row | Common / Different, header row | TW-PINT Handling, header row
 
-|Seller identification | SellerParty / PartyIdentification / ID + schemeID | Seller Uniform Business Number(賣方統一編號) | Common | Use Party ID scheme whitelist (e.g. TW:VAT, ISO6523:0195)
-|Buyer identification (B2B) |	Buyer Party ID (often mandatory in CIUS) | Buyer Uniform Business Number – mandatory for B2B 買方統一編號（B2B 必填）| Common | Mandatory in TW-PINT B2B
-|Party name |	PartyName / Name	Company name (公司名稱) | Common	Direct mapping
-|Party address |Structured address | Address information not always complete (地址資訊不一定完整) | Different |Optional; do not over-constrain
+| Seller identification 
+| SellerParty / PartyIdentification / ID + schemeID 
+| Seller Uniform Business Number
+| Common 
+| Use Party ID scheme whitelist (e.g. TW:VAT, ISO6523:0195)
+
+| Buyer identification (B2B) 
+| Buyer Party ID (often mandatory in CIUS) 
+| Buyer Uniform Business Number – mandatory for B2B 
+| Common 
+| Mandatory in TW-PINT B2B
+
+| Party name 
+| PartyName / Name  
+| Company name
+| Common  
+| Direct mapping
+
+| Party address 
+| Structured address 
+| Address information not always complete
+| Different 
+| Optional; do not over-constrain
 |===
 
-2. Document Identity & Lifecycle
+. Document Identity & Lifecycle
 
 [cols="1,1,1,1,1", options="header"]
 |===
-|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+|Concept, header row  | PEPPOL, header row  | Taiwan eGUI, header row  | Common / Different, header row  | TW-PINT Handling, header row 
 
-|Invoice ID	| Invoice/ID (business document ID)	 | Government-issued eGUI invoice number (發票字軌號碼) |	Different |	Keep separate; must not overload
-|Legal invoice number	| Business-level identifier |	Legally assigned invoice number (法定發票號碼) | Different	| Carried out-of-band or via Extension reference
-|Document type	| Invoice / Credit Note	| Invoice / Allowance or Credit Note (發票 / 折讓單) | Common	 | Map to 380 / 381*
-|Issue date | IssueDate | Issue dat (開立日期) |	Common| Direct mapping
-|Lifecycle status |	Not in core PINT | System processing status (系統處理狀態) | Different | TW-PINT Extension: LifecycleStatus
+| Invoice ID 
+| Invoice/ID (business document ID)  
+| Government-issued eGUI invoice number 
+| Different 
+| Keep separate; must not overload
+
+| Legal invoice number 
+| Business-level identifier 
+| Legally assigned invoice number
+| Different  
+| Carried out-of-band or via Extension reference
+
+| Document type  
+| Invoice / Credit Note 
+| Invoice / Allowance or Credit Note
+| Common   
+| Map to 380 / 381*
+
+| Issue date 
+| IssueDate 
+| Issue dat (開立日期) 
+| Common
+| Direct mapping
+
+| Lifecycle status 
+| Not in core PINT 
+| System processing status
+| Different 
+| TW-PINT Extension: LifecycleStatus
 |===
 
 TW-PINT does not itself constitute the legal eGUI record unless explicitly recognized by future Taiwan regulations.
@@ -86,29 +126,72 @@ TW-PINT does not itself constitute the legal eGUI record unless explicitly recog
 === 3.1.5. Required Tax Information
 For tax calculation and eGUI bridgeability, TW-PINT v0.1 requires at minimum:
 
-1. Monetary & Tax Layer
+. Monetary & Tax Layer
 
 [cols="1,1,1,1,1", options="header"]
 |===
-|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+|Concept, header row  | PEPPOL, header row  | Taiwan eGUI, header row  | Common / Different, header row  | TW-PINT Handling, header row 
 
-|Currency	| DocumentCurrencyCode | Currency, usually TWD (幣別（通常為新台幣）)	| Common | Allow multi-currency
-|Line amount | LineExtensionAmount |Sales amount (銷售額)	Common	Direct mapping
-|Tax category | VAT category codes | Taxable / Zero-rated / Exempt (應稅 / 零稅 / 免稅) |	Common (semantic) | CIUS mapping table
-|Tax rate	Percent |	Tax rate (稅率) | Common | Direct mapping
-|Tax total | TaxTotal | Total tax amount (稅額) | Common | Cross-check only
+| Currency 
+| DocumentCurrencyCode 
+| Currency, usually TWD
+| Common 
+| Allow multi-currency
+
+| Line amount 
+| LineExtensionAmount 
+| Sales amount 
+| Common  
+| Direct mapping
+
+| Tax category 
+| VAT category codes 
+| Taxable / Zero-rated / Exempt 
+| Common (semantic) 
+| CIUS mapping table
+
+| Tax rate 
+| Percent 
+| Tax rate
+| Common 
+| Direct mapping
+
+| Tax total 
+| TaxTotal 
+| Total tax amount
+| Common 
+| Cross-check only
 |===
 
-2. Line Item / Business Semantics
+. Line Item / Business Semantics
 
 [cols="1,1,1,1,1", options="header"]
 |===
-|Concept | PEPPOL | Taiwan eGUI |	Common / Different | TW-PINT Handling
+|Concept, header row | PEPPOL, header row | Taiwan eGUI, header row | Common / Different, header row | TW-PINT Handling, header row 
 
-|Line item |	InvoiceLine | Invoice line item (明細項目) | Common | Direct mapping
-|Item description |	Item/Name | Item description (品名) | Common | Direct mapping
-|Quantity / unit | UNECE unit codes |	Simplified unit representation (單位簡化) | Different | Relax validation
-|Price | PriceAmount | Unit price (單價) | Common | Direct mapping
+| Line item 
+| InvoiceLine
+| Invoice line item
+| Common 
+| Direct mapping
+
+| Item description 
+| Item/Name 
+| Item description
+| Common 
+| Direct mapping
+
+| Quantity / unit 
+| UNECE unit codes 
+| Simplified unit representation
+| Different 
+| Relax validation
+
+| Price 
+| PriceAmount 
+| Unit price
+| Common 
+| Direct mapping
 |===
 
 Where multiple tax categories are used, each category shall be represented separately in the tax breakdown.

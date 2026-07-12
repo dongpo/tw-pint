@@ -1,180 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>5. Technical Details :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/technical-details.html">
-    <meta name="generator" content="Antora 3.1.15">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-<meta property="og:image" content="../../../_/img/iconx128.png">
-<meta property="og:description" content="5. Technical Details">
-<meta property="og:title" content="TW-PINT Candidate Specification">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="article">
-<header class="tw-topbar">
-  <div class="tw-topbar-inner">
-    <div class="tw-brand">
-      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
-        <span class="tw-brand-mark">TW</span>
-        <span class="tw-brand-text">
-          <span class="tw-brand-title">TW-PINT</span>
-          <span class="tw-brand-subtitle">Candidate Specification</span>
-        </span>
-      </a>
-    </div>
-    <nav class="tw-topnav" aria-label="Top navigation">
-      <a href="https://dongpo.github.io/tw-pint">Home</a>
-      <a href="../scope.html">Scope</a>
-      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
-      <a href="../conformance.html">Conformance</a>
-      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5. Technical Details | Peppol Specifications for Taiwan implementation of PINT</title>
+<link rel="stylesheet" href="../../../_/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../_/css/peppol_pdk.css">
+<link rel="stylesheet" href="../../../_/css/main.css">
+<link rel="stylesheet" href="../../../_/css/asciidoc-ext-pdk.css">
+<link rel="stylesheet" href="../../../_/css/asciidoctor-default.css">
+<link rel="stylesheet" href="../../../_/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../_/css/tw-pint-official.css">
+</head>
+<body class="book toc2 toc-left">
+<div class="navbar navbar-expand-lg navbar_light bg_light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="../../../">
+      <img src="../../../_/img/peppol-logo.png" height="30" class="d-inline-block align-top" alt="Peppol" style="width: inherit !important; height: 30px !important; vertical-align: top !important;">
+      Peppol Specifications for Taiwan implementation of PINT
+    </a>
   </div>
-</header>
-<div class="body">
-<div class="nav-container" data-component="tw-pint" data-version="1.0">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Project links</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">TW-PINT Home</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Document body</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-processes.html">1. Business processes</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-information.html">2. Business information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="tax-information.html">3. Tax information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="rules.html">4. Rules</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="4">
-    <a class="nav-link" href="technical-details.html">5. Technical details</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="international-trade.html">International trade context</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Transaction</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Download resources</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/index.html">Resources</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">TW-PINT Candidate Specification</span>
-    <span class="version">1.0</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <span class="title">TW-PINT Candidate Specification</span>
-      <ul class="versions">
-        <li class="version is-current">
-          <a href="../index.html">1.0</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>5. Technical Details</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle-label">Project links</span>
-<button class="nav-toggle"></button>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
-    <li><a href="../index.html">TW-PINT Home</a></li>
-    <li>Documentation</li>
-    <li><a href="index.html">Document body</a></li>
-    <li><a href="technical-details.html">5. Technical details</a></li>
-  </ul>
-</nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/technical-details.adoc">Edit this page</a></div>
-</div>
-  <div class="content">
-<article class="doc">
-<h1 class="page">5. Technical Details</h1>
-<div id="preamble">
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>TW-PINT Candidate Specification</p></div>
+      </div>
+    </div>
+    <div id="preamble">
 <div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_5_1_bis_identifiers">5.1. BIS Identifiers</a></li>
-<li><a href="#_5_2_datatypes">5.2. Datatypes</a></li>
-<li><a href="#_5_3_ubl_schemas_and_namespaces">5.3. UBL schemas and namespaces</a></li>
-<li><a href="#_5_4_glossary">5.4. Glossary</a></li>
-<li><a href="#_5_5_tw_pint_specialization_architecture">5.5. TW-PINT specialization architecture</a></li>
-<li><a href="#_5_6_semantic_model_syntax_binding_and_validation_artefacts">5.6. Semantic model, syntax binding and validation artefacts</a></li>
-</ul>
+<div class="paragraph">
+<p>Following section provide technical details.</p>
 </div>
 </div>
 </div>
@@ -182,7 +47,64 @@
 <h2 id="_5_1_bis_identifiers"><a class="anchor" href="#_5_1_bis_identifiers"></a>5.1. BIS Identifiers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The TW-PINT <code>CustomizationID</code> is a candidate value and must be finalized through governance and community review.</p>
+<p>Peppol has a defined policy that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the Peppol environment. The policies that apply to this BIS are the following:</p>
+</div>
+<div class="sect2">
+<h3 id="_5_1_1_profiles_and_messages"><a class="anchor" href="#_5_1_1_profiles_and_messages"></a>5.1.1. Profiles and messages</h3>
+<div class="paragraph">
+<p>All messages contains Business process type (IBT-23) and Specification identifier (IBT-24). Business process type (IBT-23) identifies what business process a given message is part of, and Specification identifier (IBT-24) identifies the kind of message and the rules applied.</p>
+</div>
+<div class="paragraph">
+<p>Profiles are connected to one business process, and may contain multiple document types. Valid document instances shall contain corresponding Business process type (IBT-23) and Specification identifier (IBT-24).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Specification identifier (IBT-24) is a string without spaces. The list below contains spaces in Specification identifier (IBT-24) to make them easier to read. Make sure to remove any spaces before use.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the table below you will find the values to be used as the specification identifier (IBT-24) and the business process type (IBT-23) for this profile.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element <code>cbc:CustomizationID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element <code>cbc:ProfileID</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice and credit note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:peppol:pint:billing-1@tw-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:peppol:bis:billing</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>&lt;cbc:CustomizationID&gt;urn:peppol:pint:billing-1@tw-1&lt;/cbc:CustomizationID&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cbc:ProfileID&gt;urn:peppol:bis:billing&lt;/cbc:ProfileID&gt;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_1_2_document_type_identifier_scheme"><a class="anchor" href="#_5_1_2_document_type_identifier_scheme"></a>5.1.2. Document type identifier scheme</h3>
+<div class="paragraph">
+<p>The document type identifier must follow Peppol network requirements. This draft does not finalize document type identifiers because they require formal registration and publication decisions.</p>
+</div>
 </div>
 </div>
 </div>
@@ -190,7 +112,593 @@
 <h2 id="_5_2_datatypes"><a class="anchor" href="#_5_2_datatypes"></a>5.2. Datatypes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT inherits PINT semantic datatypes and adds Taiwan-specific identifier usage.</p>
+<p>Semantic data types are used to bridge the gap between the semantic concepts expressed by the information elements defined in the semantic model and the technical implementation. The semantic data types define the allowed value domain for the content, and any additional information components (attributes) needed in order to ensure its precise interpretation.</p>
+</div>
+<div class="sect2">
+<h3 id="_5_2_1_primitive_types"><a class="anchor" href="#_5_2_1_primitive_types"></a>5.2.1. Primitive types</h3>
+<div class="paragraph">
+<p>Semantic data type content may be of the following primitive types. These primitive types were taken from ISO15000, Annex A.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Primitive type</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of finite-length sequences of binary digits.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time point representing a calendar day on a time scale consisting of an origin and a succession of calendar ISO8601.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A subset of the real numbers, which can be represented by decimal numerals.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A finite sequence of characters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_5_2_2_semantic_data_types"><a class="anchor" href="#_5_2_2_semantic_data_types"></a>5.2.2. Semantic data types</h3>
+<div class="paragraph">
+<p>The different semantic data types are described in the tables below, where various features such as attributes, format, and decimals as well as the basic type are defined for each semantic data type. They are based on {ISO15000}.</p>
+</div>
+<div class="paragraph">
+<p>When used in an instance of an invoice, each data element will contain data. In the below tables this is identified as the “content”. Whenever a business term is used this term shall always have content and therefore the content is always mandatory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Amount</strong></p>
+</div>
+<div class="paragraph">
+<p>An amount states a numerical monetary value. The currency of the amount is defined as a separate business term.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Unit Price Amount</strong></p>
+</div>
+<div class="paragraph">
+<p>A unit price amount states a numerical monetary amount value for data elements that contain item prices that may be multiplied by item quantities. The currency of the amount is defined as a separate business term.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Unit price amount does not set restrictions on number of decimals, as contrast to the Amount type</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000.1234</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Percentage</strong>
+Percentages are given as fractions of a hundred (per cent) e.g. the value 34.78 % in percentage terms is given as 34.78.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No restriction on number of decimals for percentages.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34.7812</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Quantity</strong>
+Quantities are used to state a number of units such as for items. The code for the Unit of Measure is defined as a separate business term.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No restriction on number of decimals for quantities.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34.7812</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Code</strong>
+Codes are used to specify allowed values in elements as well as for lists of options. Code is different from Identifier in that allowed values have standardized meanings that can be known by the recipient.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Codes shall be entered exactly as shown in the selected code list of the applicable syntax.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abc123</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Indicator</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Indicators shall be used in lower case.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Default value is "false" and applies if the relevant business term is not used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Content</strong></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>true</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Identifier</strong>
+Identifiers (IDs) are keys that are issued by the sender or recipient of a document or by a third party.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of the attributes is specified for each information element.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abc:123-DEF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GLN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme version identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Date</strong>
+Dates shall be in accordance to the “Calendar date complete representation” as specified by {ISO8601}, format YYYY-MM-DD.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dates shall not include timezone information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-01</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong class="red"><em>Table 3. EN 16931</em> Date. Type_</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Time</strong>
+Time shall be according to UBL allowed format.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Time may include timezone information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Allowed forms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00 (1:30 PM)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:30.55 (30.55 sec)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00Z (UTC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00-05:00 (UTC-5)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00:00:00 (midnight)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24:00:00 (midnight)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 4. EN 16931_ Date. Type</p>
+</div>
+<div class="paragraph">
+<p><strong>Document Reference</strong>
+Document Reference Types are identifiers that were assigned to a document or document line by the Buyer, the Seller or by a third party.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abc:123-DEF</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 5. Document Reference Type</p>
+</div>
+<div class="paragraph">
+<p><strong>Text</strong></p>
+</div>
+<div class="paragraph">
+<p>Text is the actual wording of anything written or printed. Line breaks in the text may be present, and any line breaks should be preserved and respected by the receiver’s system</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5% allowance when paid within 30 days</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Binary object</strong></p>
+</div>
+<div class="paragraph">
+<p>Binary object can be used to describe files which are transmitted together with the Invoice. The attachment functionality is not intended for attaching a copy of the invoice in an image format (such as PDF). Attaching an invoice copy is not in compliance with this specification.</p>
+</div>
+<div class="paragraph">
+<p>Attachments shall be transmitted together with the Invoice. The binary object has two supplementary components: a Mime Code, which specifies the Mime type of the attachment and a Filename that is provided by (or on behalf of) the sender of the invoice or credit note.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mime Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image/jpeg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filename</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">drawing5.jpg</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A receiver of an invoice or credit note, shall accept and process attachments that are according to the Media type code list.</p>
+</div>
 </div>
 </div>
 </div>
@@ -198,7 +706,27 @@
 <h2 id="_5_3_ubl_schemas_and_namespaces"><a class="anchor" href="#_5_3_ubl_schemas_and_namespaces"></a>5.3. UBL schemas and namespaces</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT uses OASIS UBL 2.1 Invoice and CreditNote syntax.</p>
+<p>The XML schemas used are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UBL Invoice 2.1, with the target namespace</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UBL CreditNote 2.1 with the target namespace</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</code></p>
 </div>
 </div>
 </div>
@@ -206,45 +734,37 @@
 <h2 id="_5_4_glossary"><a class="anchor" href="#_5_4_glossary"></a>5.4. Glossary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The glossary should include PINT, TW-PINT, eGUI, UBN, Business Tax, Access Point, SMP, SML and Peppol Authority.</p>
+<p><strong>electronic invoice</strong> - invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing
+<strong>semantic data model</strong> - structured set of logically interrelated information elements
+<strong>information element</strong> - semantic concept that can be defined independent of any particular representation in a syntax
+<strong>structured information element</strong> - information element that can be processed automatically
+<strong>syntax</strong> - machine-readable language or dialect used to represent the information elements contained in an electronic document (e.g. an electronic invoice)
+<strong>business term</strong> - label assigned to a given information element which is used as a primary reference
+<strong>identifier</strong> - character string used to establish the identity of, and distinguish uniquely, one instance of an object within an identification scheme from all other objects within the same scheme Note 1 to entry: An identifier may be a word, number, letter, symbol, or any combination of those, depending on the identification scheme used.
+<strong>identification scheme</strong> - collection of identifiers applicable for a given type of object governed under a common set of rules
+<strong>compliant</strong> - some or all features of the invoice model are used and all rules of the invoice model are respected Note 1 to entry: Based on TOGAF definition of a compliant specification
+<strong>conformant</strong> - all rules of the invoice model are respected and some additional features not defined in the invoice model are also used
+<strong>Optional</strong> - Whether the option is used or not is the choice of the users independently from other data in the message.
+<strong>Conditional</strong> - Whether the option is used or not and in what way is dependent on other data in the message.
+<strong>Mandatory</strong> - The option must be used in all messages.
+<strong>shall</strong> - the definition is an absolute requirement of the specification.
+<strong>shall not</strong> - the definition is an absolute prohibition of the specification.
+<strong>should</strong> - there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+<strong>should not</strong> - there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+<strong>may</strong> - is truly optional.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_5_tw_pint_specialization_architecture"><a class="anchor" href="#_5_5_tw_pint_specialization_architecture"></a>5.5. TW-PINT specialization architecture</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>TW-PINT inherits shared content from PINT, adds Taiwan aligned restrictions for tax and identifiers, and defines Taiwan distinct content such as UBN usage and eGUI bridge mapping guidance.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_6_semantic_model_syntax_binding_and_validation_artefacts"><a class="anchor" href="#_5_6_semantic_model_syntax_binding_and_validation_artefacts"></a>5.6. Semantic model, syntax binding and validation artefacts</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Syntax binding is maintained in <code>syntax-binding/</code>. Code lists are maintained in <code>codelists/</code>. Rules are maintained in <code>rules/</code>. Schematron is maintained in <code>schematron/</code>. Examples and test cases are maintained in <code>examples/</code> and <code>tests/</code>.</p>
 </div>
 </div>
 </div>
-</article>
-<aside class="toc sidebar" data-title="Page contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
   </div>
-</main>
+  <div id="footer"><div id="footer-text">TW-PINT — Peppol Specifications for Taiwan implementation of PINT</div></div>
 </div>
-<footer class="tw-footer">
-  <div class="tw-footer-inner">
-    <div>
-      <strong>TW-PINT Candidate Specification</strong><br>
-      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
-    </div>
-    <div class="tw-footer-note">
-      Community review draft. Not an official OpenPeppol publication.
-    </div>
-  </div>
-</footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script src="../../../_/js/jquery-3.6.3.min.js"></script>
+<script src="../../../_/js/popper.min.js"></script>
+<script src="../../../_/js/bootstrap.min.js"></script>
+<script src="../../../_/js/pdk-toc.js"></script>
+<script src="../../../_/js/tw-pint-document.js"></script>
+</body>
 </html>

@@ -1,0 +1,102 @@
+
+ul.no_indent {
+    padding-left: 0;
+}
+
+/* A schematron rule with flag="fatal" will have this class */
+.schematron_flag_fatal {
+    color: red;
+    font-weight: bold;
+}
+
+/* an empty flag will hit here */
+.schematron_flag_ {
+    color: red;
+    font-weight: bold;
+}
+
+.indented0 > td > div {
+    margin-left: 0px;
+}
+
+.indented1 > td > div {
+    margin-left: 15px;
+}
+
+.indented2 > td > div {
+    margin-left: 30px;
+}
+
+.nohorizontalpadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.indented3 > td > div {
+    margin-left: 45px;
+}
+
+.indented4 > td > div {
+    margin-left: 60px;
+}
+
+.indented5 > td > div {
+    margin-left: 75px;
+}
+
+
+.level0_expand_collapse_span {
+    margin-right: -15px !important;
+    text-align: right;
+    float: right;
+}
+
+.level1_expand_collapse_span {
+    margin-right: -25px !important;
+    text-align: right;
+    float: right;
+}
+
+.level2_expand_collapse_span {
+    margin-right: -35px !important;
+    text-align: right;
+    float: right;
+}
+
+.level3_expand_collapse_span {
+    margin-right: -45px !important;
+    text-align: right;
+    float: right;
+}
+
+.level4_expand_collapse_span {
+    margin-right: -55px !important;
+    text-align: right;
+    float: right;
+}
+
+.level5_expand_collapse_span {
+    margin-right: -65px !important;
+    text-align: right;
+    float: right;
+}
+
+
+.leaf {
+    background-color: white;
+}
+
+
+.noleaf{
+    background-color: #E5E5E5 !important;
+}
+
+@media only print {
+    .justscreen{
+        display: none;
+    }
+
+    .printvisible{
+        display: inherit !important;
+    }
+}

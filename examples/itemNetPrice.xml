@@ -1,9 +1,0 @@
-<cac:Price>
-   <cbc:PriceAmount currencyID="TWD">700</cbc:PriceAmount> <!--3-->   
-   <cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>  
-   <cac:AllowanceCharge> 
-      <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
-      <cbc:Amount currencyID="TWD">100</cbc:Amount> <!--2-->
-      <cbc:BaseAmount currencyID="TWD">800</cbc:BaseAmount> <!--1--> 
-   </cac:AllowanceCharge>
-</cac:Price>

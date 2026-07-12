@@ -1,9 +1,0 @@
-<cac:PaymentMeans>
-   <cbc:PaymentMeansCode name="Credit card">54</cbc:PaymentMeansCode> <!--1-->
-   <cbc:PaymentID>9387439</cbc:PaymentID>
-   <cac:CardAccount>
-      <cbc:PrimaryAccountNumberID>123236</cbc:PrimaryAccountNumberID> <!--2-->
-      <cbc:NetworkID>VISA</cbc:NetworkID> <!--3-->
-      <cbc:HolderName>Card holders name</cbc:HolderName> <!--4-->
-   </cac:CardAccount>
-</cac:PaymentMeans>

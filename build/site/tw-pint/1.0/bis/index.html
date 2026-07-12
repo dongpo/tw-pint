@@ -1,183 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>TW-PINT Candidate Specification Body :: TW-PINT Candidate Specification</title>
-    <link rel="canonical" href="https://dongpo.github.io/tw-pint/tw-pint/1.0/bis/index.html">
-    <meta name="generator" content="Antora 3.1.15">
-    <link rel="stylesheet" href="../../../_/css/site.css">
-<meta property="og:image" content="../../../_/img/iconx128.png">
-<meta property="og:description" content="TW-PINT Candidate Specification Body">
-<meta property="og:title" content="TW-PINT Candidate Specification">
-<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-  </head>
-  <body class="article">
-<header class="tw-topbar">
-  <div class="tw-topbar-inner">
-    <div class="tw-brand">
-      <a class="tw-brand-link" href="https://dongpo.github.io/tw-pint">
-        <span class="tw-brand-mark">TW</span>
-        <span class="tw-brand-text">
-          <span class="tw-brand-title">TW-PINT</span>
-          <span class="tw-brand-subtitle">Candidate Specification</span>
-        </span>
-      </a>
-    </div>
-    <nav class="tw-topnav" aria-label="Top navigation">
-      <a href="https://dongpo.github.io/tw-pint">Home</a>
-      <a href="../scope.html">Scope</a>
-      <a href="../peppol-egui-relationship.html">Peppol + eGUI</a>
-      <a href="../conformance.html">Conformance</a>
-      <a href="https://github.com/dongpo/tw-pint">GitHub</a>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peppol International (PINT) model for Billing | Peppol Specifications for Taiwan implementation of PINT</title>
+<link rel="stylesheet" href="../../../_/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../_/css/peppol_pdk.css">
+<link rel="stylesheet" href="../../../_/css/main.css">
+<link rel="stylesheet" href="../../../_/css/asciidoc-ext-pdk.css">
+<link rel="stylesheet" href="../../../_/css/asciidoctor-default.css">
+<link rel="stylesheet" href="../../../_/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../_/css/tw-pint-official.css">
+</head>
+<body class="book toc2 toc-left">
+<div class="navbar navbar-expand-lg navbar_light bg_light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="../../../">
+      <img src="../../../_/img/peppol-logo.png" height="30" class="d-inline-block align-top" alt="Peppol" style="width: inherit !important; height: 30px !important; vertical-align: top !important;">
+      Peppol Specifications for Taiwan implementation of PINT
+    </a>
   </div>
-</header>
-<div class="body">
-<div class="nav-container" data-component="tw-pint" data-version="1.0">
-  <aside class="nav">
-    <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
-  <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Project links</a></h3>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">TW-PINT Home</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Documentation</span>
-<ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Document body</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-processes.html">1. Business processes</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="business-information.html">2. Business information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="tax-information.html">3. Tax information</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="rules.html">4. Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="technical-details.html">5. Technical details</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="peppol-egui-relationship.html">Peppol and Taiwan eGUI</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="international-trade.html">International trade context</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Transaction</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../trn-invoice/index.html">Invoice Transaction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/semantic-model/index.html">Semantic model</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/syntax/index.html">Syntax binding</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/codelist/index.html">Code lists</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/businessrule/index.html">Rules</a>
-  </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../trn-invoice/rule/index.html">Schematrons</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Download resources</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/index.html">Resources</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../downloads/release-package.html">Release package</a>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </li>
-</ul>
-  </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
-  <div class="context">
-    <span class="title">TW-PINT Candidate Specification</span>
-    <span class="version">1.0</span>
-  </div>
-  <ul class="components">
-    <li class="component is-current">
-      <span class="title">TW-PINT Candidate Specification</span>
-      <ul class="versions">
-        <li class="version is-current">
-          <a href="../index.html">1.0</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<div class="container-fluid toc22">
+  <div id="header">
+    <h1>Peppol International (PINT) model for Billing</h1>
+    <div id="toc" class="toc2">
+      <div id="toctitle">Table of Contents</div>
+      <div id="toc-content"></div>
     </div>
-  </aside>
-</div>
-<main class="article">
-<div class="toolbar" role="navigation">
-<button class="nav-toggle-label">Project links</span>
-<button class="nav-toggle"></button>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">TW-PINT Candidate Specification</a></li>
-    <li><a href="../index.html">TW-PINT Home</a></li>
-    <li>Documentation</li>
-    <li><a href="index.html">Document body</a></li>
-  </ul>
-</nav>
-  <div class="edit-this-page"><a href="file:///Users/dongpodeng/Downloads/tw-pint-asciidoc-repo-v0.3/docs/modules/ROOT/pages/bis/index.adoc">Edit this page</a></div>
-</div>
-  <div class="content">
-<article class="doc">
-<h1 class="page">TW-PINT Candidate Specification Body</h1>
-<div id="preamble">
+  </div>
+  <div id="content">
+    <div id="preamble">
+      <div class="sectionbody">
+        <div class="paragraph publication-meta"><p>OpenPeppol AISBL, Post-Award Coordinating Community<br>TW-PINT Candidate Specification</p></div>
+      </div>
+    </div>
+    <div id="preamble">
 <div class="sectionbody">
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_introduction">Introduction</a></li>
-<li><a href="#_statement_of_status">Statement of status</a></li>
-<li><a href="#_scope">Scope</a></li>
-<li><a href="#_audience">Audience</a></li>
-<li><a href="#_benefits">Benefits</a></li>
-<li><a href="#_1_business_processes">1. Business processes</a></li>
-<li><a href="#_2_business_information">2. Business information</a></li>
-<li><a href="#_3_tax_information">3. Tax information</a></li>
-<li><a href="#_4_rules">4. Rules</a></li>
-<li><a href="#_5_technical_details">5. Technical details</a></li>
-</ul>
+<div class="paragraph">
+<p>The TW-PINT Billing specification has been developed as Taiwan implementation guidance for the Peppol International (PINT) model for Billing. It provides a single consolidated documentation page while keeping each chapter in an independent AsciiDoc source file for maintenance.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is a candidate specification prepared for review. It is not a final conformance source until formally approved and published through the applicable Peppol governance process.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -185,7 +61,7 @@
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT defines a Taiwan jurisdictional specialization of PINT Billing for B2B invoice exchange. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.</p>
+<p>This specification defines Taiwan-specific implementation guidance for PINT Billing. It uses Peppol as the international invoice exchange layer and positions Taiwan eGUI as the domestic tax reporting and compliance layer.</p>
 </div>
 </div>
 </div>
@@ -193,55 +69,1838 @@
 <h2 id="_statement_of_status"><a class="anchor" href="#_statement_of_status"></a>Statement of status</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This specification is a candidate version prepared for community review. It is not an official legal, tax, or Peppol conformance source.</p>
+<p>This is a working draft for technical and policy review.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scope"><a class="anchor" href="#_scope"></a>Scope</h2>
+<h2 id="_document_structure"><a class="anchor" href="#_document_structure"></a>Document structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT v1.0 covers UBL 2.1 Invoice, UBL 2.1 CreditNote as a correction document, Taiwan domestic B2B exchange, export invoice exchange, inbound PINT-compatible invoice processing, Taiwan Business Tax mainstream cases, Taiwan UBN usage, and eGUI gateway mapping considerations.</p>
+<p>The documentation contains five consolidated chapters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chapter 1 — Business processes</p>
+</li>
+<li>
+<p>Chapter 2 — Business information</p>
+</li>
+<li>
+<p>Chapter 3 — Tax information</p>
+</li>
+<li>
+<p>Chapter 4 — Rules</p>
+</li>
+<li>
+<p>Chapter 5 — Technical details</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_audience"><a class="anchor" href="#_audience"></a>Audience</h2>
+<h2 id="_1_business_processes"><a class="anchor" href="#_1_business_processes"></a>1. Business Processes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The intended audience includes Access Point providers, ERP vendors, e-invoicing service providers, Taiwan eGUI service providers, government agencies, enterprise sellers and buyers, and international trading partners.</p>
+<p>TW-PINT follows the PINT billing process for issuing an invoice or credit note from a seller to a buyer through Peppol-compatible exchange. Taiwan-specific handling is limited to local identifiers, tax terms, eGUI bridge references, and validation constraints.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_1_parties_and_roles"><a class="anchor" href="#_1_1_parties_and_roles"></a>1.1. Parties and roles</h3>
+<div class="paragraph">
+<p>The diagram below shows the roles involved in the invoice and credit note transactions. The customer and invoice receiver is the same entity, as is the supplier and the invoice sender.
+TW-PINT follows the PINT billing process: seller creates invoice data, the invoice is represented as UBL 2.1, the sender validates UBL, PINT shared rules and TW-PINT rules, the invoice is exchanged through Peppol, and the receiver validates and processes the invoice.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/shared-functionality-and-roles.png" alt="shared functionality and roles">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_1_1_parties"><a class="anchor" href="#_1_1_1_parties"></a>1.1.1. Parties</h4>
+<div class="paragraph">
+<p><strong>Customer</strong>
+The customer is the legal person or organisation who is in demand of a product or service. Examples of customer roles: buyer, consignee, debtor, contracting authority.
+<strong>Supplier</strong>
+The supplier is the legal person or organisation who provides a product or service.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_1_2_roles"><a class="anchor" href="#_1_1_2_roles"></a>1.1.2. Roles</h4>
+<div class="paragraph">
+<p>Roles in TW-PINT are aligned with PINT. The seller prepares the invoice or credit note; the buyer receives and processes it; optional roles such as payee or tax representative are used only when the underlying commercial process requires them. Taiwan-specific identifiers should be applied to existing party structures rather than creating new parties.
+<strong>Creditor</strong>
+One to whom a debt is owed. The party that claims the payment and is responsible for resolving billing issues and arranging settlement. The party that sends the invoice or credit note. Also known as invoice issuer, accounts receivable or seller.
+<strong>Debtor</strong>
+One who owes debt. The party responsible for making settlement relating to a purchase. The party that receives the invoice or credit note. Also known as invoicee, accounts payable, or buyer.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_pint_billing_process"><a class="anchor" href="#_1_2_pint_billing_process"></a>1.2. PINT Billing process</h3>
+<div class="paragraph">
+<p>The invoicing process includes issuing and sending the invoice and the credit note from the supplier to the customer and the reception and handling of the same at the customer’s site.
+The invoicing process is shown in this workflow:
+* A supplier issues and sends an invoice to a customer. The invoice refers to one order and a specification of delivered goods and services.
+An invoice may also refer to a contract or a frame agreement. The invoice may specify articles (goods and services) with article number or article description.
+* The customer receives the invoice and processes it in the invoice control system leading to one of the following results:
+.. The customer fully approves the invoice, posts it in the accounting system and passes it on to be paid.
+.. The customer completely rejects the invoice, contacts the supplier and requests a credit note.
+.. The customer disputes parts of the invoice, contacts the supplier and requests a credit note and a new invoice.
+The diagram below shows the basic invoicing process with the use of this Peppol BIS profile. This process assumes that both the invoice and the credit note are exchanged electronically.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/shared-process.png" alt="shared process">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This profile covers the following invoice processes:
+P1	Invoicing of deliveries of goods and services against purchase orders, based on a contract
+P2	Invoicing deliveries of goods and services based on a contract
+P3	Invoicing the delivery of an incidental purchase order
+P4	Pre-payment
+P5	Spot payment
+P6	Payment in advance of delivery
+P7	Invoices with references to a despatch advice
+P8	Invoices with references to a despatch advice and a receiving advice
+P9	Credit notes or invoices with negative amounts, issued for a variety of reasons including the return of empty packaging</p>
+</li>
+<li>
+<p>The seller creates an invoice or credit note using UBL 2.1 and the TW-PINT CustomizationID.</p>
+</li>
+<li>
+<p>The sender validates the document against UBL syntax, PINT/BIS rules, and TW-PINT aligned rules.</p>
+</li>
+<li>
+<p>The Peppol sender Access Point transmits the document using standard Peppol transport.</p>
+</li>
+<li>
+<p>The receiver validates and processes the document. If the receiver is connected to Taiwan eGUI processing, a gateway maps the document to the required eGUI process.</p>
+</li>
+<li>
+<p>Any eGUI document number, upload status, or local archival process remains outside Peppol routing and does not change the core invoice semantics.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_invoice_functionality"><a class="anchor" href="#_1_3_invoice_functionality"></a>1.3. Invoice functionality</h3>
+<div class="paragraph">
+<p>An invoice may support functions related to a number of related (internal) business processes. This Peppol BIS shall support the following functions:
+*	Accounting
+*	Invoice verification against the contract, the purchase order and the goods and service delivered
+*	Tax reporting
+*	Auditing
+*	Payment
+In the following chapters an assessment is made of what information is needed for each of the functions listed above and whether it is in scope or out of scope for this Peppol BIS.
+Explicit support for the following functions (but not limited to) is out of scope:
+*	Inventory management
+*	Delivery processes
+*	Customs clearance
+*	Marketing
+*	Reporting</p>
+</div>
+<div class="sect3">
+<h4 id="_1_3_1_accounting"><a class="anchor" href="#_1_3_1_accounting"></a>1.3.1. Accounting</h4>
+<div class="paragraph">
+<p>Recording a business transaction into the financial accounts of an organization is one of the main objectives of the invoice. According to financial accounting best practice and TAX rules every Taxable person shall keep accounts in sufficient detail for TAX to be applied and its application checked by the tax authorities. For that reason, an invoice shall provide for the information at document and line level that enables booking on both the debit and the credit side.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_2_invoice_verification"><a class="anchor" href="#_1_3_2_invoice_verification"></a>1.3.2. Invoice verification</h4>
+<div class="paragraph">
+<p>This process forms part of the Buyer’s internal business controls. The invoice shall refer to an authentic commercial transaction. Support for invoice verification is a key function of an invoice. The invoice should provide sufficient information to look up relevant existing documentation, electronic or paper, for example, and as applicable:
+*	the relevant purchase order
+*	the contract
+*	the call for tenders, that was the basis for the contract
+*	the Buyer’s reference
+*	the confirmed receipt of the goods or services
+*	delivery information
+An invoice should also contain sufficient information that allows the received invoice to be transferred to a responsible authority, person or department, for verification and approval.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_3_auditing"><a class="anchor" href="#_1_3_3_auditing"></a>1.3.3. Auditing</h4>
+<div class="paragraph">
+<p>Companies audit themselves as means of internal control or they may be audited by external parties as part of a legal obligation. Accounting is a regular, ongoing process whereas an audit is a separate review process to ensure that the accounting has been carried out correctly. The auditing process places certain information requirements on an invoice. These requirements are mainly related to enable verification of authenticity and integrity of the accounting transaction.
+Invoices, conformant to this PEPPOL BIS support the auditing process by providing sufficient information for:
+*	identification of the relevant Buyer and Seller
+*	identification of the products and services traded, including description, value and quantity
+*	information for connecting the invoice to its payment
+*	information for connecting the invoice to relevant documents such as a contract and a purchase order</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_4_tax_reporting"><a class="anchor" href="#_1_3_4_tax_reporting"></a>1.3.4. Tax Reporting</h4>
+<div class="paragraph">
+<p>The invoice is used to carry Tax related information from the Seller to the Buyer to enable the Buyer and Seller to correctly handle Tax booking and reporting. An invoice should contain sufficient information to enable the Buyer and any auditor to determine whether the invoice is correct from a Tax point of view.
+The invoice shall allow the determination of the Tax regime, the calculation and description of the tax, in accordance with the relevant legislation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_5_payment"><a class="anchor" href="#_1_3_5_payment"></a>1.3.5. Payment</h4>
+<div class="paragraph">
+<p>An invoice represents a claim for payment. The issuance of an invoice may take place either before or after the payment is carried out. When an invoice is issued before payment it represents a request to the Buyer to pay, in which case the invoice commonly contains information that enables the Buyer, in the role of a debtor, to correctly initiate the transfer of the payment, unless that information is already agreed in prior contracts or by means of payment instructions separately lodged with the Buyer.
+If an invoice is issued after payment, such as when the order process included payment instructions or when paying with a credit card, online or telephonic purchases, the invoice may contain information about the payment made in order to facilitate invoice to payment reconciliation on the Buyer side. An invoice may be partially paid before issuing such as when a pre-payment is made to confirm an order.
+Invoices, conformant with this specification should identify the means of payment for settlement of the invoice and clearly state what payment amount is requested. They should provide necessary details to support bank transfers. Payments by means of Credit Transfer, Direct debit, and Payment Card are in scope.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_credit_notes_and_negative_invoices"><a class="anchor" href="#_1_4_credit_notes_and_negative_invoices"></a>1.4. Credit notes and negative invoices</h3>
+<div class="paragraph">
+<p>Reverting an invoice that has been issued and received can be done in two basic ways. Either by issuing a credit note or a negative invoice.
+When crediting by means of a credit note, the document type code is '381' (or its synonym), and the credit note quantities and extension/total amounts have the same sign (plus or minus) as the invoice that is being cancelled/credited. The document type code acts as an indicator that the given amounts are booked in reverse and cancel out the invoice amounts.
+When crediting by means of a negative invoice, the document type code is '380' (or its synonym), and the negative invoice quantities and extension/total amounts have the opposite sign (minus vs plus) as the invoice being cancelled/credited. It is the mathematical sign that indicates that when the amounts are booked they cancel out the original amounts. The Price Amount must always be positive.
+A credit note may include negative amounts when cancelling an invoice that may have negative line items/amounts.
+TW-PINT supports CreditNote documents using UBL 2.1. Credit notes must reference the preceding invoice where required for traceability and eGUI bridge processing. Negative invoices should not be used as a substitute for CreditNote when a CreditNote is semantically required by the business process or by local eGUI handling.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_5_local_business_process_in_taiwan"><a class="anchor" href="#_1_5_local_business_process_in_taiwan"></a>1.5. Local business process in Taiwan</h3>
+<div class="paragraph">
+<p>The local Taiwan process may include mapping to or from eGUI MIG. This specification treats the eGUI process as a bridge and compliance layer, not as a replacement for PINT semantics. TW-PINT v0.1 should therefore carry only the minimum information needed for robust mapping. eGUI invoice numbers, lottery logic, carrier logic, donation logic, and tax authority workflow states are not part of the core PINT business model in v0.1.</p>
+</div>
+<div class="sect3">
+<h4 id="_1_5_1_egui_bridge_process"><a class="anchor" href="#_1_5_1_egui_bridge_process"></a>1.5.1. eGUI bridge process</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Outbound from Taiwan: ERP/eGUI source data is mapped to TW-PINT, validated, and sent through Peppol.</p>
+</li>
+<li>
+<p>Inbound to Taiwan: PINT or TW-PINT is received, validated, and mapped to eGUI MIG where required by local operations.</p>
+</li>
+<li>
+<p>The original Peppol Invoice ID should be preserved in the local system to maintain source-document traceability.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_2_negative_invoices_and_credit_notes_in_taiwan"><a class="anchor" href="#_1_5_2_negative_invoices_and_credit_notes_in_taiwan"></a>1.5.2. Negative invoices and credit notes in Taiwan</h4>
+<div class="paragraph">
+<p>Where Taiwan eGUI practice requires linkage to an original invoice for allowance, return, or correction, the CreditNote should reference the preceding invoice using standard billing reference structures. Extension fields should not be used to replace standard preceding-invoice references.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_3_taiwan_domestic_b2b_invoice_process"><a class="anchor" href="#_1_5_3_taiwan_domestic_b2b_invoice_process"></a>1.5.3. Taiwan domestic B2B invoice process</h4>
+<div class="paragraph">
+<p>A domestic B2B invoice may be exchanged through Peppol using TW-PINT while the domestic tax reporting obligation is fulfilled through Taiwan eGUI processes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_4_export_invoice_process_using_tw_pint"><a class="anchor" href="#_1_5_4_export_invoice_process_using_tw_pint"></a>1.5.4. Export invoice process using TW-PINT</h4>
+<div class="paragraph">
+<p>For export, TW-PINT supports foreign buyer identification, zero-rated tax treatment, foreign currency, destination country, and supporting trade references.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_5_5_import_inbound_invoice_process_using_pint_specializations"><a class="anchor" href="#_1_5_5_import_inbound_invoice_process_using_pint_specializations"></a>1.5.5. Import / inbound invoice process using PINT specializations</h4>
+<div class="paragraph">
+<p>A Taiwan buyer may receive invoices from foreign sellers using PINT specializations.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_6_international_trade_scenarios"><a class="anchor" href="#_1_6_international_trade_scenarios"></a>1.6. International trade scenarios</h3>
+<div class="paragraph">
+<p>TW-PINT supports Taiwan seller to foreign buyer, foreign seller to Taiwan buyer, cross-border zero-rated transactions, foreign currency invoicing, and interoperability with JP-PINT, SG-PINT and other PINT jurisdictions.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_benefits"><a class="anchor" href="#_benefits"></a>Benefits</h2>
+<h2 id="_2_business_information"><a class="anchor" href="#_2_business_information"></a>2. Business Information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TW-PINT provides a common invoice semantic model for Taiwan B2B trade, interoperability with PINT jurisdictions, and a path to connect Taiwan eGUI with international Peppol invoice exchange.</p>
+<p>In the subchapters below you find description of selected parts of the transaction.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_parties"><a class="anchor" href="#_2_1_parties"></a>2.1. Parties</h3>
+<div class="paragraph">
+<p>The following roles may be specified. The same actor may play more than one role depending on the handling routine.
+Further details on the roles/actors can be found in the section Roles.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_1_1_seller_accountingsupplierparty"><a class="anchor" href="#_2_1_1_seller_accountingsupplierparty"></a>2.1.1. Seller (AccountingSupplierParty)</h4>
+<div class="paragraph">
+<p>Seller is mandatory information and provided in element <code>cac:AccountingSupplierParty</code></p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of seller information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:AccountingSupplierParty&gt; 
+   &lt;cac:Party&gt; 
+      &lt;cbc:EndpointID schemeID="0088"&gt; 4711967900017&lt;/cbc:EndpointID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:PartyIdentification&gt; 
+         &lt;cbc:ID schemeID="0088"&gt;4711967900017&lt;/cbc:ID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;/cac:PartyIdentification&gt; 
+      &lt;cac:PartyName&gt; 
+         &lt;cbc:Name&gt;TEN REN TEA CO., LTD.&lt;cbc:Name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:PartyName&gt;    
+      &lt;cac:PostalAddress&gt;
+         &lt;cbc:StreetName&gt;6 F., No. 107, Sec. 4, Zhongxiao E. Rd.&lt;cbc:StreetName&gt;    
+         &lt;cbc:AdditionalStreetName&gt; Da’an Dist.&lt;cbc:AdditionalStreetName&gt;  
+         &lt;cbc:CityName&gt;Taipei&lt;/cbc:CityName&gt; 
+         &lt;cbc:PostalZone&gt; 106076&lt;/cbc:PostalZone&gt; 
+         &lt;cbc:CountrySubentity&gt;Taiwan&lt;/cbc:CountrySubentity&gt; 
+         &lt;cac:AddressLine&gt;
+            &lt;cbc:Line&gt;Third address line&lt;/cbc:Line&gt; 
+         &lt;/cac:AddressLine&gt; 
+         &lt;cac:Country&gt;
+           &lt;cbc:IdentificationCode&gt;TW&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+         &lt;/cac:Country&gt;
+      &lt;/cac:PostalAddress&gt;
+      &lt;cac:PartyTaxScheme&gt;
+         &lt;cbc:CompanyID&gt; 18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:PartyTaxScheme&gt; 
+      &lt;cac:PartyLegalEntity&gt;     
+         &lt;cbc:RegistrationName&gt;天仁茶業股份有限公司&lt;/cbc:RegistrationName&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+            &lt;cbc:CompanyID&gt;18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+            &lt;cbc:CompanyLegalForm&gt;Private Limited Company&lt;/cbc:CompanyLegalForm&gt;    
+      &lt;/cac:PartyLegalEntity&gt;
+      &lt;cac:Contact&gt; <i class="conum" data-value="9"></i><b>(9)</b>
+         &lt;cbc:Name&gt;李國麟&lt;/cbc:Name&gt;
+         &lt;cbc:Telephone&gt;+8862-27765580 &lt;/cbc:Telephone&gt;    
+         &lt;cbc:ElectronicMail&gt;service@tenren.com.tw&lt;/cbc:ElectronicMail&gt;
+      &lt;/cac:Contact&gt;
+   &lt;/cac:Party&gt;
+&lt;/cac:AccountingSupplierParty&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Seller electronic address (ibt-034), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.</p>
+</div>
+<div class="paragraph">
+<p>② Seller identifier (ibt-029), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>③ Sellers trading name (ibt-028).</p>
+</div>
+<div class="paragraph">
+<p>④ Sellers country code (ibt-040).</p>
+</div>
+<div class="paragraph">
+<p>⑤ Seller tax registration ID (ibt-031).</p>
+</div>
+<div class="paragraph">
+<p>⑥ Tax scheme for the sellers tax registration. Use the appropriate code for the sellers jurisdiction, such as VAT or GST.</p>
+</div>
+<div class="paragraph">
+<p>⑦ Seller legal registrated name (ibt-027).</p>
+</div>
+<div class="paragraph">
+<p>⑧ Seller legal registration identifier (ibt-030), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>⑨ Seller contact (ibg-06).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_1_2_buyer_accountingcustomerparty"><a class="anchor" href="#_2_1_2_buyer_accountingcustomerparty"></a>2.1.2. Buyer (AccountingCustomerParty)</h4>
+<div class="paragraph">
+<p>Buyer is mandatory information and provided in element <code>cac:AccountingCustomerParty</code></p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of buyer information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AccountingCustomerParty&gt;
+   &lt;cac:Party&gt;
+      &lt;cbc:EndpointID schemeID="0088"&gt;0099299000006&lt;/cbc:EndpointID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:PartyIdentification&gt;
+         &lt;cbc:ID schemeID="0088"&gt; 0099299000006&lt;/cbc:ID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;/cac:PartyIdentification&gt;
+      &lt;cac:PartyName&gt;
+         &lt;cbc:Name&gt;Mitusi &amp; Co.Ltd.&lt;/cbc:Name&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:PartyName&gt;
+     &lt;cac:PostalAddress&gt; 
+      &lt;cbc:StreetName&gt;Bldf. 2-1 Ohtemachi 1-chome Chiyoda-ku&lt;/cbc:StreetName&gt;
+      &lt;cbc:AdditionalStreetName&gt;&lt;/cbc:AdditionalStreetName&gt;  
+      &lt;cbc:CityName&gt;Tokyo&lt;/cbc:CityName&gt;
+      &lt;cbc:PostalZone&gt;100-0004&lt;/cbc:PostalZone&gt;
+      &lt;cac:AddressLine&gt;
+         &lt;cbc:Line&gt;Third line&lt;/cbc:Line&gt;
+      &lt;/cac:AddressLine&gt;
+         &lt;cac:Country&gt;
+            &lt;cbc:IdentificationCode&gt;JP&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+         &lt;/cac:Country&gt;
+   &lt;/cac:PostalAddress&gt;
+   &lt;cac:PartyTaxScheme&gt;
+      &lt;cbc:CompanyID&gt;1010001008767 &lt;/cbc:CompanyID&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+         &lt;/cac:TaxScheme&gt; 
+      &lt;/cac:PartyTaxScheme&gt;
+      &lt;cac:PartyLegalEntity&gt; 
+         &lt;cbc:RegistrationName&gt; Mitusi &amp; Co.Ltd.&lt;/cbc:RegistrationName&gt; <i class="conum" data-value="7"></i><b>(7)</b>
+         &lt;cbc:CompanyID schemeID="0088"&gt;0099299000006&lt;/cbc:CompanyID&gt; <i class="conum" data-value="8"></i><b>(8)</b>
+      &lt;/cac:PartyLegalEntity&gt; 
+      &lt;cac:Contact&gt; <i class="conum" data-value="9"></i><b>(9)</b>
+         &lt;cbc:Name&gt;Kenichi Hori&lt;/cbc:Name&gt;
+         &lt;cbc:Telephone&gt;+81(3)3285-1111&lt;/cbc:Telephone&gt;       
+         &lt;cbc:ElectronicMail&gt;mbrm.infotkzrm@mbrm.co.jp&lt;/cbc:ElectronicMail&gt;
+      &lt;/cac:Contact&gt;
+   &lt;/cac:Party&gt;
+&lt;/cac:AccountingCustomerParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Buyer electronic address (ibt-049), mandatory, the identification scheme identifier shall be chosen from the Electronic Address Scheme (EAS) list.</p>
+</div>
+<div class="paragraph">
+<p>② Buyer identifier (ibt-046), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>③ Buyer trading name (ibt-045).</p>
+</div>
+<div class="paragraph">
+<p>④ Buyer country code (ibt-055), mandatory.</p>
+</div>
+<div class="paragraph">
+<p>⑤ Buyer tax registration ID (ibt-048).</p>
+</div>
+<div class="paragraph">
+<p>⑥ Tax scheme for the buyer tax registration. Use the appropriate code for the buyers jurisdiction, such as VAT or GST.</p>
+</div>
+<div class="paragraph">
+<p>⑦ Buyer legal registered name (ibt-044).</p>
+</div>
+<div class="paragraph">
+<p>⑧ Buyer legal registration identifier (ibt-047), if used, the identification scheme identifier shall be chosen from the entries of the list published by the ISO/IEC 6523 maintenance agency.</p>
+</div>
+<div class="paragraph">
+<p>⑨ Buyer contact (ibg-09).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_1_3_payment_receiver_payeeparty"><a class="anchor" href="#_2_1_3_payment_receiver_payeeparty"></a>2.1.3. Payment receiver (PayeeParty)</h4>
+<div class="paragraph">
+<p>Payment receiver is optional information. If this information is not supplied, the seller is the payment receiver. When payee information is sent this is indicating that a factoring situation is being documented.
+To reflect the assignment of an Invoice to a factor there is a need to:
+.	have a disclaimer (notification notice) on the Invoice that the Invoice has been assigned to a factor. The disclaimer should be given using the Invoice note (IBT-22) on document level.
+.	identify the Factor as the Payee
+.	to have the bank account changed to favour of a Factor.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of payee information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PayeeParty&gt;
+   &lt;cac:PartyIdentification&gt;
+      &lt;cbc:ID schemeID="0088"&gt;4711967900017&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;/cac:PartyIdentification&gt;
+   &lt;cac:PartyName&gt;
+      &lt;cbc:Name&gt;Payee party&lt;/cbc:Name&gt;
+   &lt;/cac:PartyName&gt;
+   &lt;cac:PartyLegalEntity&gt;
+      &lt;cbc:CompanyID schemeID="0088"&gt;4711967900017&lt;/cbc:CompanyID&gt; &lt;!--2--&gt;   
+   &lt;/cac:PartyLegalEntity&gt;
+&lt;/cac:PayeeParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① schemeID attribute is recommended for all party identifiers</p>
+</div>
+<div class="paragraph">
+<p>② schemeID attribute is recommended for party legal entity identifiers</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_1_4_seller_tax_representative_taxrepresentativeparty"><a class="anchor" href="#_2_1_4_seller_tax_representative_taxrepresentativeparty"></a>2.1.4. Seller tax representative (TaxRepresentativeParty)</h3>
+<div class="paragraph">
+<p>Tax representative party for the seller is relevant for sellers delivering goods and services in a country without having a permanent establishment in that country. In such cases information on the tax representative shall be included in the invoice.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of tax representative information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:TaxRepresentativeParty&gt;
+   &lt;cac:PartyName&gt;
+      &lt;cbc:Name&gt;TaxRepresentative Name&lt;/cbc:Name&gt;
+   &lt;/cac:PartyName&gt;
+   &lt;cac:PostalAddress&gt;
+      &lt;cbc:StreetName&gt;6 F., No. 107, Sec. 4, Zhongxiao E. Rd.&lt;cbc:StreetName&gt;    
+      &lt;cbc:AdditionalStreetName&gt; Da’an Dist.&lt;cbc:AdditionalStreetName&gt;  
+      &lt;cbc:CityName&gt;Taipei&lt;/cbc:CityName&gt; 
+      &lt;cbc:PostalZone&gt; 106076&lt;/cbc:PostalZone&gt; 
+      &lt;cbc:CountrySubentity&gt;Taiwan&lt;/cbc:CountrySubentity&gt; 
+      &lt;cac:AddressLine&gt; 
+         &lt;cbc:Line&gt;Back door&lt;/cbc:Line&gt;
+      &lt;/cac:AddressLine&gt;
+      &lt;cac:Country&gt; 
+         &lt;cbc:IdentificationCode&gt;TW&lt;/cbc:IdentificationCode&gt;
+      &lt;/cac:Country&gt;
+   &lt;/cac:PostalAddress&gt; 
+   &lt;cac:PartyTaxScheme&gt;
+      &lt;cbc:CompanyID&gt;18559415&lt;/cbc:CompanyID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;cac:TaxScheme&gt;
+      &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+   &lt;/cac:PartyTaxScheme&gt;
+&lt;/cac:TaxRepresentativeParty&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Tax identifier of seller tax representative (ibt-063)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_2_delivery_details_date_and_location"><a class="anchor" href="#_2_2_delivery_details_date_and_location"></a>2.2. Delivery Details (Date and Location)</h3>
+<div class="paragraph">
+<p>Delivery details may be given at document level.
+Place and date of delivery is recommended, and should be sent unless this does not affect the ability to ensure the correctness of the invoice.
+The delivery element contains information on name, address and delivery location identifier (<code>cac:Delivery/cac:DeliveryLocation/cbc:ID</code>) which may be used if the place of delivery is defined through an identifier. For example, GLN (Global Location Number) issued by GS1.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of delivery information</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Delivery&gt;
+   &lt;cbc:ActualDeliveryDate&gt;2017-11-01&lt;/cbc:ActualDeliveryDate&gt; 
+   &lt;cac:DeliveryLocation&gt;
+      &lt;cbc:ID schemeID="0088"&gt;7300010000001&lt;/cbc:ID&gt;
+      &lt;cac:Address&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+         &lt;cbc:StreetName&gt;Delivery street 2&lt;/cbc:StreetName&gt; 
+         &lt;cbc:AdditionalStreetName&gt;Building 56&lt;/cbc:AdditionalStreetName&gt; 
+         &lt;cbc:CityName&gt;Stockholm&lt;/cbc:CityName&gt; 
+         &lt;cbc:PostalZone&gt;21234&lt;/cbc:PostalZone&gt;
+         &lt;cac:AddressLine&gt;
+            &lt;cbc:Line&gt;Gate 15&lt;/cbc:Line&gt;
+         &lt;/cac:AddressLine&gt;
+         &lt;cac:Country&gt;
+            &lt;cbc:IdentificationCode&gt;SE&lt;/cbc:IdentificationCode&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+         &lt;/cac:Country&gt;
+      &lt;/cac:Address&gt;
+   &lt;/cac:DeliveryLocation&gt;
+   &lt;cac:DeliveryParty&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cac:PartyName&gt;    
+         &lt;cbc:Name&gt;Delivery party Name&lt;/cbc:Name&gt;
+      &lt;/cac:PartyName&gt;
+   &lt;/cac:DeliveryParty&gt;
+&lt;/cac:Delivery&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Deliver to address (ibg-15), the address to which goods and services invoiced were or are delivered.</p>
+</div>
+<div class="paragraph">
+<p>② Deliver to country code (ibt-080), mandatory</p>
+</div>
+<div class="paragraph">
+<p>③ Deliver to party name (ibt-070), the name of the party to which the goods and services are delivered.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_references_and_attachments"><a class="anchor" href="#_2_3_references_and_attachments"></a>2.3. References and attachments</h3>
+<div class="paragraph">
+<p>Support for invoice verification is a key function of an invoice. The invoice should provide sufficient information to look up relevant existing documentation, electronic or paper.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Any reference element should contain valid information, if you do not have a reference, the element should not be present in the instance document.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The invoice and credit note transactions supports the following references to existing documentation:</p>
+</div>
+<div class="sect3">
+<h4 id="_2_3_1_purchase_order_and_sales_order_reference"><a class="anchor" href="#_2_3_1_purchase_order_and_sales_order_reference"></a>2.3.1. Purchase order and sales order reference</h4>
+<div class="paragraph">
+<p>The purchase order reference is a conditional business term. If the customer has issued a purchase order should be referenced by providing its identifier in the resulting invoice, otherwise the Buyer reference should be used (see Buyer reference).</p>
+</div>
+<div class="paragraph">
+<p>If the purchase order is referenced at the invoice header level, the order reference element on line level can be used to state the relevant line numbers in the order .</p>
+</div>
+<div class="paragraph">
+<p>A sales order is issued by the seller, confirming the sale of specified products and may be provided in the invoice.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the invoice, both a purchase order and a sales order reference can be given, but be aware that an invoice instance cannot reference a sales order, without providing the corresponding purchase order reference.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example or order and sales reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:OrderReference&gt;
+   &lt;cbc:ID&gt;o-998877&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:SalesOrderID&gt;so-12343&lt;/cbc:SalesOrderID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:OrderReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Purchase order reference</p>
+</div>
+<div class="paragraph">
+<p>② Sales order reference</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_2_buyer_reference"><a class="anchor" href="#_2_3_2_buyer_reference"></a>2.3.2. Buyer reference</h4>
+<div class="paragraph">
+<p>The buyer reference, known as Your ref, is conditional. An invoice shall have either the buyer reference or the order reference (see Purchase order and sales order reference)</p>
+</div>
+<div class="paragraph">
+<p>The element is used for the reference of who ordered the products/services. Example being the name of the person ordering, employee number or a code identifying this person or department/group. Your ref is often used for internal routing at recipient, and hence it is important to fill this element with the correct values according to the need of the recipient.</p>
+</div>
+<div class="paragraph">
+<p>If neither buyer reference nor a reference to an order is supplied by the customer, the name of the person ordering or appointed for the customer can be supplied in buyer reference if known by the supplier.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When reference is provided by the customer, the correct element shall contain the provided reference.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of buyer reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:BuyerReference&gt;0150abc&lt;/cbc:BuyerReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_3_invoiced_object_identifier"><a class="anchor" href="#_2_3_3_invoiced_object_identifier"></a>2.3.3. Invoiced object identifier</h4>
+<div class="paragraph">
+<p>The invoiced object identifier is the identifier for an object on which the invoice is based, given by the Seller. Examples may be a subscription number, telephone number, meter point, vehicle, person etc., as applicable.</p>
+</div>
+<div class="paragraph">
+<p>If it is not clear to the receiver what scheme is used for the identifier, an optional scheme identifier attribute should be used, that shall be chosen from the Invoiced object identifier scheme code list.</p>
+</div>
+<div class="paragraph">
+<p>The invoiced object reference is provided by using the element cac:AdditionalDocumentReference with the document type code = 130</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of invoiced object identifier</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt;
+   &lt;cbc:ID schemeID="ABT"&gt;DR35141&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cbc:DocumentTypeCode&gt;130&lt;/cbc:DocumentTypeCode&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoice object identifier scheme is given as an attribute on the identifier. It states the type of the identifier according to code list UN/CEFACT 1153</p>
+</div>
+<div class="paragraph">
+<p>② An identifier of an object that the invoice relates to.</p>
+</div>
+<div class="paragraph">
+<p>③ A code that qualifies the identifier as an invoiced object identifier. Document type code "130" qualifies that.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_4_contract_reference"><a class="anchor" href="#_2_3_4_contract_reference"></a>2.3.4. Contract reference</h4>
+<div class="paragraph">
+<p>To reference or match an invoice to a purchase contract, the contract number could be specified like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of contract reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:ContractDocumentReference&gt;
+   &lt;cbc:ID&gt;framework no 1&lt;/cbc:ID&gt;
+&lt;/cac:ContractDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Despatch advice</p>
+</div>
+<div class="paragraph">
+<p>② Receipt advice</p>
+</div>
+<div class="paragraph">
+<p><span class="bule">Line level</span>
+When an invoice is charging items that have been delivered with separate despatches the references should be provided on the line level as follows. When the invoiced quantity of an item has been delivered by more than one despatch the invoice shall have separate lines for each despatch. When despatches are referenced on line level there shall not be a reference on document level.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of despatch and receipt advice</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cac:DespatchLineReference&gt;
+      &lt;cac:DocumentReference&gt;
+         &lt;cbc:ID&gt;despadv-3&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+      &lt;/cac:DocumentReference&gt;
+   &lt;cac:DespatchLineReference&gt;
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Despatch advice</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_6_tender_reference"><a class="anchor" href="#_2_3_6_tender_reference"></a>2.3.6. Tender reference</h4>
+<div class="paragraph">
+<p>To identify the call for tender or lot the invoice relates to, use the 'OriginatorDocumentReference'. The identifier is, in most cases, the Procurement Procedure Identifier.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of tender reference</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:OriginatorDocumentReference&gt;
+   &lt;cbc:ID&gt;ppid-123&lt;/cbc:ID&gt;
+&lt;/cac:OriginatorDocumentReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_7_project_reference"><a class="anchor" href="#_2_3_7_project_reference"></a>2.3.7. Project reference</h4>
+<div class="paragraph">
+<p>The project reference is optional to use, and is sent in an invoice in the element cac:ProjectReference/ cbc:ID. In a credit note, this element does not exist, and project reference is sent by using the element <code>cac:AdditionalDocumentReference[cbc:DocumentTypeCode='50']/cbc:ID</code>.</p>
+</div>
+<div class="paragraph">
+<p>NOTE</p>
+</div>
+<div class="paragraph">
+<p>When sending the project reference, only the cbc:ID and the <code>cbc:DocumentTypeCode</code> are allowed in the <code>cac:AdditionalDocumentReference</code> element.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of project reference in an invoice</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:ProjectReference&gt;
+   &lt;cbc:ID&gt;project333&lt;/cbc:ID&gt;
+&lt;/cac:ProjectReference&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_8_preceding_invoice_references"><a class="anchor" href="#_2_3_8_preceding_invoice_references"></a>2.3.8. Preceding invoice references</h4>
+<div class="paragraph">
+<p>A credit note or negative invoice can refer to one or more initial invoice(s). This is done in the business group BG-3 Preceding invoice reference, providing the invoice number and issue date. The issue date shall be provided in case the preceding invoice reference is not unique.</p>
+</div>
+<div class="paragraph">
+<p>In case correction applies to a large number of invoices, the invoicing period (BG-14), as necessary combined with a clarifying invoice note (IBT-22), may instead be given at document level.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_9_attachments"><a class="anchor" href="#_2_3_9_attachments"></a>2.3.9. Attachments</h4>
+<div class="paragraph">
+<p>An invoice may contain a supportive document as informative. Examples of such documents may be work reports, certificates or other documents that relate to the purchase or the invoiced items. A supportive document can be attached to the invoice in two ways: by providing a direct hyperlink through which the document can be downloaded or by embedding the document into the invoice. A compliant receiver is required to be able to receive an attached supportive document and, in case of embedded files, to convert it into a file but he is not required to handle the content of that file since it is only provided as informative.</p>
+</div>
+<div class="paragraph">
+<p>When attaching a document using an uri the hyperlink shall point directly to the file that is to be downloaded.</p>
+</div>
+<div class="paragraph">
+<p>An embedded document is contained in the invoice as binary object using base64 encoding and shall be supplemented with information about the name of the document file and a mime code indicating the type of the file. This allows the receiver to convert the binary code into a file that has the same name as the original file and allows him to associate the received file to a suitable application for viewing its content. The set of allowed codes for the file type (mime code) is limited to types that can be opened with applications that are commonly used and available.</p>
+</div>
+<div class="paragraph">
+<p>As is with other file types, when an attached file is an XML file the receiver is expected to be able to receive and convert the binary object into an XML file but the sender can not expect the receiver to view or process the content of that XML file. Any further handling of an embedded XML file attachment is optional for the receiver.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of a document attachment using URI</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt;
+   &lt;cbc:ID&gt;ts12345&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:DocumentDescription&gt;Technical specification&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:Attachment&gt; 
+      &lt;cac:ExternalReference&gt;
+         &lt;cbc:URI&gt;www.techspec.no&lt;/cbc:URI&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;/cac:ExternalReference&gt;
+   &lt;/cac:Attachment&gt;
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of an embedded document attachment</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AdditionalDocumentReference&gt; 
+   &lt;cbc:ID&gt;mr4343&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:DocumentDescription&gt;milage report&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:Attachment&gt;
+      &lt;cbc:EmbeddedDocumentBinaryObject mimeCode="text/csv" filename="milage.csv" &gt;bWlsYWdlIHJlcG9ydA==&lt;/cbc:EmbeddedDocumentBinaryObject&gt;
+   &lt;/cac:Attachment&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;/cac:AdditionalDocumentReference&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① An identifier of the supporting document (ibt-122)</p>
+</div>
+<div class="paragraph">
+<p>② A description of the supporting document (ibt-123)</p>
+</div>
+<div class="paragraph">
+<p>③ The URL (Uniform Resource Locator) that identifies where the external document is located (ibt-124)</p>
+</div>
+<div class="paragraph">
+<p>④ An attached document embedded as binary object or sent together with the invoice. (ibt-125). The file type is given with the attribute "mimeCode" (ibt-125-1) and the name of the original file is given in the attribute "filename" (ibt-125-2).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_10_reference_to_delivery_note"><a class="anchor" href="#_2_3_10_reference_to_delivery_note"></a>2.3.10. Reference to delivery note</h4>
+<div class="paragraph">
+<p>In Summarised invoicing process, the supplier sends a Delivery Note to the customer with each delivery and the buyer uses the information in the Delivery Note to verify the reception of the items. The Delivery Note is focused on providing information about the items that are being delivered. At the end of a period (usually a month) the supplier sends an invoice that summarises the items that were delivered during that period.</p>
+</div>
+<div class="paragraph">
+<p>To reference or match an invoice to a despatch or receipt advice use the following elements:</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example for summarised invoice 1</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode="H87"&gt;10&lt;/cbc:InvoicedQuantity&gt; 
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;50000&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:DocumentReference&gt;
+      &lt;cbc:ID&gt;D001-1&lt;/cbc:ID&gt; 
+   &lt;/cac:DocumentReference&gt;
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;辦公椅&lt;/cbc:Name&gt;
+      &lt;cac:ClassifiedTaxCategory&gt;
+         &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+         &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;5000&lt;/cbc:PriceAmount&gt; 
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt;
+&lt;/cac:InvoiceLine&gt;
+&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;2&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode="H87"&gt;5&lt;/cbc:InvoicedQuantity&gt; 
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;1000&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:DocumentReference&gt;
+      &lt;cbc:ID&gt;D001-2&lt;/cbc:ID&gt;
+   &lt;/cac:DocumentReference&gt;
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;影印紙（A4）&lt;/cbc:Name&gt;
+      &lt;cac:ClassifiedTaxCategory&gt;
+      &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+      &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+      &lt;cac:TaxScheme&gt;
+         &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;200&lt;/cbc:PriceAmount&gt;
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt;
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Delivery note number</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example for summarised invoice 2</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt;
+   &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+   &lt;cbc:InvoicedQuantity unitCode=”H87”&gt;1&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;3740&lt;/cbc:LineExtensionAmount&gt; 
+   &lt;cac:Item&gt;
+      &lt;cbc:Name&gt;D001&lt;/cbc:Name&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cac:ClassifiedTaxCategory&gt;
+         &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+         &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+         &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+         &lt;/cac:TaxScheme&gt;
+      &lt;/cac:ClassifiedTaxCategory&gt;
+   &lt;/cac:Item&gt;
+   &lt;cac:Price&gt;
+      &lt;cbc:PriceAmount currencyID="TWD"&gt;3740&lt;/cbc:PriceAmount&gt;
+      &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt;
+   &lt;/cac:Price&gt; 
+&lt;/cac:InvoiceLine&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoiced quantity is 1.</p>
+</div>
+<div class="paragraph">
+<p>② Delivery note number</p>
+</div>
+<div class="paragraph">
+<p>③ Item net price shall equal to the total taxable amount stated on the Delivery Note.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_4_allowances_and_charges"><a class="anchor" href="#_2_4_allowances_and_charges"></a>2.4. Allowances and Charges</h3>
+<div class="paragraph">
+<p>The Invoice and credit note transactions has elements for Allowance/charge on 3 levels.</p>
+</div>
+<div class="paragraph">
+<p>The element cac:AllowanceCharge with sub element cbc:ChargeIndicator indicates whether the instance is a charge (true) or an allowance (false).</p>
+</div>
+<div class="paragraph">
+<p>The header level</p>
+</div>
+<div class="paragraph">
+<p>Applies to the whole invoice and is included in the calculation of the invoice total amount.
+*	Several allowances and charges may be supplied
+*	Specification of TAX for allowances and charges, cac:TaxCategory with sub elements, shall be supplied
+*	The sum of all allowances and charges on the header level shall be specified in cbc:AllowanceTotalAmount and cbc:ChargeTotalAmount respectively.</p>
+</div>
+<div class="paragraph">
+<p>The line level</p>
+</div>
+<div class="paragraph">
+<p>Applies to the line level and is included in the calculation of the line amount.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Several allowances and charges may be supplied</p>
+</li>
+<li>
+<p>Specification of TAX for allowances and charges shall not be specified, as the TAX category stated for the invoice line itself, applies also to the allowances or charges of that line.</p>
+</li>
+<li>
+<p>The sum of all allowances and charges on the line level shall be taken into account, subtracted or added, when calculating the line extension amount . These line level allowances and charges shall not be calculated into the header level elements.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The line level Price element</p>
+</div>
+<div class="paragraph">
+<p>A way to inform the buyer how the price is set. Is also relevant if the seller or buyer want to post the allowance in their accounting systems. The price itself shall always be the net price, i.e. the base amount reduced with a discount (allowance).
+*	Only one occurrence of allowance (discount) is allowed.
+*	Specification of TAX for allowance shall not be specified
+*	Allowance related to Price shall not be part of any other calculations.
+*	Allowance related to Price may specify amount and the base amount.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of Allowances and Charges on the document level</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+   &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:AllowanceChargeReasonCode&gt;FC&lt;/cbc:AllowanceChargeReasonCode&gt;  
+   &lt;cbc:AllowanceChargeReason&gt;Freight service&lt;/cbc:AllowanceChargeReason&gt; 
+   &lt;cbc:MultiplierFactorNumeric&gt;2&lt;/cbc:MultiplierFactorNumeric&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;cbc:Amount currencyID=”TWD”&gt;20&lt;/cbc:Amount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+   &lt;cbc:BaseAmount currencyID="TWD"&gt;1000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+   &lt;cac:TaxCategory&gt;
+   &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+   &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+   &lt;cac:TaxScheme&gt;
+      &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt; 
+   &lt;/cac:TaxScheme&gt;
+   &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt; 
+   &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt; &lt;!--2--&gt;  
+   &lt;cbc:AllowanceChargeReasonCode&gt;65&lt;/cbc:AllowanceChargeReasonCode&gt; 
+   &lt;cbc:AllowanceChargeReason&gt;Production error discount&lt;/cbc:AllowanceChargeReason&gt;
+   &lt;cbc:Amount currencyID="TWD"&gt;10&lt;/cbc:Amount&gt;
+   &lt;cac:TaxCategory&gt; 
+      &lt;cbc:ID&gt;S&lt;/cbc:ID&gt; 
+      &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt; 
+      &lt;cac:TaxScheme&gt;
+         &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+      &lt;/cac:TaxScheme&gt;
+   &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① ChargeIndicator = true to indicate a charge</p>
+</div>
+<div class="paragraph">
+<p>② ChargeIndicator = false to indicate an allowance</p>
+</div>
+<div class="paragraph">
+<p>③ Base amount, to be used with the percentage to calculate the amount</p>
+</div>
+<div class="paragraph">
+<p>④ Charge percentage</p>
+</div>
+<div class="paragraph">
+<p>⑤ Amount=Base amount×(Percentage÷100)</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of Allowances and Charges on invoice line</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:InvoiceLine&gt; 
+   &lt;cac:AllowanceCharge&gt;
+      &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;    
+      &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;  
+      &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt; 
+      &lt;cbc:MultiplierFactorNumeric&gt;10&lt;/cbc:MultiplierFactorNumeric&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;1&lt;/cbc:Amount&gt;
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;10&lt;/cbc:BaseAmount&gt;
+   &lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+   &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;   
+   &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;    
+   &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+   &lt;cbc:Amount currencyID="TWD"&gt;101&lt;/cbc:Amount&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_5_payment_means_information"><a class="anchor" href="#_2_5_payment_means_information"></a>2.5. Payment means information</h3>
+<div class="sect3">
+<h4 id="_2_5_1_credit_transfer"><a class="anchor" href="#_2_5_1_credit_transfer"></a>2.5.1. Credit transfer</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Payment means code 30 as defined below shall be supported by all receivers of a PINT compliant invoice. This payment method acts as the common denominator for global trade.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If payment is made by credit transfer, the Payment account identifier (IBT-84) is mandatory</p>
+</div>
+<div class="paragraph">
+<p>Examples of codes for payment by credit transfer are:</p>
+</div>
+<div class="paragraph">
+<p>30 - Credit transfer</p>
+</div>
+<div class="paragraph">
+<p>UBL example of payment means info when payment is done by credit transfer</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PaymentMeans&gt;
+   &lt;cbc:PaymentMeansCode name="Credit transfer"&gt;30&lt;/cbc:PaymentMeansCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:PaymentID&gt;93274234&lt;/cbc:PaymentID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+   &lt;cac:PayeeFinancialAccount&gt; 
+      &lt;cbc:ID&gt;32423940&lt;/cbc:ID&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cbc:Name&gt;AccountName&lt;/cbc:Name&gt;
+      &lt;cac:FinancialInstitutionBranch&gt;
+          &lt;cbc:ID&gt;BIC32409&lt;/cbc:ID&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+      &lt;/cac:FinancialInstitutionBranch&gt;
+   &lt;/cac:PayeeFinancialAccount&gt;
+&lt;/cac:PaymentMeans&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Mandatory, payment means code for credit transfer</p>
+</div>
+<div class="paragraph">
+<p>② Remittance information</p>
+</div>
+<div class="paragraph">
+<p>③ Mandatory, IBAN (in case of a SEPA payment) or a national account number (BBAN)</p>
+</div>
+<div class="paragraph">
+<p>④ BIC or a national clearing cod</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_5_2_card_payment"><a class="anchor" href="#_2_5_2_card_payment"></a>2.5.2. Card Payment</h4>
+<div class="paragraph">
+<p>If the Buyer had opted to pay by using a payment card such as a credit or debit card, information on the Primary Account Number (PAN) shall be present in the invoice.
+Examples of codes for payment by card are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>48 - Bank card</p>
+</li>
+<li>
+<p>54 - Credit card</p>
+</li>
+<li>
+<p>55 - Debit card</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of payment means info when payment is done by payment card</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:PaymentMeans&gt;
+   &lt;cbc:PaymentMeansCode name="Credit card"&gt;54&lt;/cbc:PaymentMeansCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:PaymentID&gt;9387439&lt;/cbc:PaymentID&gt;
+   &lt;cac:CardAccount&gt;
+      &lt;cbc:PrimaryAccountNumberID&gt;123236&lt;/cbc:PrimaryAccountNumberID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:NetworkID&gt;VISA&lt;/cbc:NetworkID&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+      &lt;cbc:HolderName&gt;Card holders name&lt;/cbc:HolderName&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;/cac:CardAccount&gt;
+&lt;/cac:PaymentMeans&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Payment means code for credit card
+② Mandatory, shall be the last 4 to 6 digits of the payment card number
+③ Mandatory, used to identify the financial service network provider of the card. Examples are VISA, MasterCard, American Express.
+④ Card holder name</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_5_3_taiwan_payment_means"><a class="anchor" href="#_2_5_3_taiwan_payment_means"></a>2.5.3. Taiwan payment means</h4>
+<div class="paragraph">
+<p>Taiwan-specific payment methods should be represented with existing payment means codes if supported. If a local payment method cannot be represented, it should first be handled in implementation guidance before introducing any new TW-PINT rule.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_6_item_information"><a class="anchor" href="#_2_6_item_information"></a>2.6. Item information</h3>
+<div class="paragraph">
+<p>Item information follows PINT. Item name or description should be sufficient for accounting and tax review. Product identifiers and classifications may be used where applicable.</p>
+</div>
+<div class="sect3">
+<h4 id="_2_6_1_item_identifiers"><a class="anchor" href="#_2_6_1_item_identifiers"></a>2.6.1. Item identifiers</h4>
+<div class="paragraph">
+<p>In an invoice line the seller item identifier, the buyer item identifier and the standard item identifier can be provided. For sellers and buyers item identifiers, no scheme attribute is used, whilst the schemeID is mandatory for the standard item identification, and must be from the ISO 6523 ICD list.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of item identifiers</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:BuyersItemIdentification&gt;
+   &lt;cbc:ID&gt;b-13214&lt;/cbc:ID&gt;
+&lt;/cac:BuyersItemIdentification&gt;
+&lt;cac:SellersItemIdentification&gt;
+   &lt;cbc:ID&gt;97iugug876&lt;/cbc:ID&gt;
+&lt;/cac:SellersItemIdentification&gt;
+&lt;cac:StandardItemIdentification&gt;
+   &lt;cbc:ID schemeID="0160"&gt;4503994155481&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:StandardItemIdentification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① 0160 is the ICD value for a GTIN identifier</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_2_item_classification"><a class="anchor" href="#_2_6_2_item_classification"></a>2.6.2. Item classification</h4>
+<div class="paragraph">
+<p>Several different item classification codes can be provided per invoice line, and the codes must be from one of the classification schemes in code list UNCL7143.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of using CPV</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:CommodityClassification&gt;
+   &lt;cbc:ItemClassificationCode listID="STI"&gt;09348023&lt;/cbc:ItemClassificationCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:CommodityClassification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① listID must be from UNCL7143 code list, and code STI indicates this is a CPV classification.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of UNSPSC</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:CommodityClassification&gt;
+   &lt;cbc:ItemClassificationCode listID="TST" listVersionID="19.05.01"&gt;86776&lt;/cbc:ItemClassificationCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;/cac:CommodityClassification&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① listID must be from UNCL7143 code list, and code TST indicates this is a UNSPSC classification, listVersionID is optional, but can be used to specify the version of UNSPSC. NOTE, in previous versions code MP was used as temporary workaround to identify UNSPSC. In fall release 2019 it is replaced with the new 7143 code TST that is specific for UNSPSC.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_7_price_information"><a class="anchor" href="#_2_7_price_information"></a>2.7. Price information</h3>
+<div class="paragraph">
+<p>An invoice must contain information about the item net price and additional information such as gross price, item price base quantity and price discount may be added.
+For details on calculating price see Item net price (IBT-146).</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example of price with price discount</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;4000&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+   &lt;cbc:BaseQuantity unitCode="H87"&gt;1&lt;/cbc:BaseQuantity&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+   &lt;cac:AllowanceCharge&gt;
+      &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;1000&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;5000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;/cac:AllowanceCharge&gt;
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item gross price</p>
+</div>
+<div class="paragraph">
+<p>② Item price discount</p>
+</div>
+<div class="paragraph">
+<p>③ Item price base quantity</p>
+</div>
+<div class="paragraph">
+<p>④ Item net price, must be equal to Item Gross price - item price discount (if these elements are used)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_8_unit_of_measure"><a class="anchor" href="#_2_8_unit_of_measure"></a>2.8. Unit of measure</h3>
+<div class="paragraph">
+<p>Unit of measure in an invoice allows the use of codes from UNECE Recommendation No. 20 (version 11e), as well as codes from UNECE Recommendation No. 21 prefixed with an X.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H87</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Piece</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KGM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilogram</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LTR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Litre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Square metre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MTQ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cubic metre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KTM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilometre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TNE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tonne (metric ton)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KWH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kilowatt hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Day</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HUR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hour</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minute</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>table:
+  caption: Table 1. Examples of unit of measure from Recommendation No. 20
+    end: bottom</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bag</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Box</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XCT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carton</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XCY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cylinder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XBA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barrel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XPK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Package</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XPX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pallet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XRL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XSA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>table:
+  caption: Table 2. Examples of unit of measure from Recommendation No. 21, prefixed with an X
+    end: bottom</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cbc:InvoicedQuantity unitCode="H87"&gt;10&lt;/cbc:InvoicedQuantity&gt;</code>
+<code>&lt;cbc:InvoicedQuantity unitCode="XPX"&gt;10&lt;/cbc:InvoicedQuantity&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Code H87 from Recommendation no. 20
+Code PX, prefixed with an X from Recommendation no. 21</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_business_processes"><a class="anchor" href="#_1_business_processes"></a>1. Business processes</h2>
+<h2 id="_3_tax_information"><a class="anchor" href="#_3_tax_information"></a>3. Tax Information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="../business-processes.html" class="xref page">Business processes</a>.</p>
+<p>Taiwan imposes Business Tax under the Value-added and Non-value-added Business Tax Act. For most B2B transactions covered by TW-PINT, Business Tax is collected through the Uniform Invoice (GUI/eGUI) system and is represented as a consumption tax applied to the sale of goods and services.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_business_information"><a class="anchor" href="#_2_business_information"></a>2. Business information</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="../business-information.html" class="xref page">Business information</a>.</p>
+<p>TW-PINT does not redefine Taiwan tax legislation. Instead, it provides a mapping between Taiwan Business Tax information and the tax structures defined by PINT and UBL. The objective is to support cross-border interoperability while maintaining compatibility with Taiwan electronic invoice requirements.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_tax_information"><a class="anchor" href="#_3_tax_information"></a>3. Tax information</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_3_1_taiwan_business_tax"><a class="anchor" href="#_3_1_taiwan_business_tax"></a>3.1. Taiwan Business Tax</h3>
 <div class="paragraph">
-<p>See <a href="../tax-information.html" class="xref page">Tax information</a>.</p>
+<p>Business Tax is the principal indirect tax represented in TW-PINT. For the purposes of TW-PINT v0.1, only mainstream invoice scenarios supported by Taiwan electronic invoices are considered.</p>
+</div>
+<div class="paragraph">
+<p>The legal basis for Business Tax (BT) reporting remains Value-added and Non-value-added Business Tax Act and Regulations Governing the Use of Uniform Invoices. TW-PINT is an interoperability specification and does not replace statutory reporting obligations.</p>
+</div>
+<div class="sect3">
+<h4 id="_3_1_1_overview_of_taiwan_business_tax"><a class="anchor" href="#_3_1_1_overview_of_taiwan_business_tax"></a>3.1.1. Overview of Taiwan Business Tax</h4>
+<div class="paragraph">
+<p>Taiwan Business Tax distinguishes several taxation categories. The most common categories are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Taiwan Tax Category</th>
+<th class="tableblock halign-left valign-top">Tax Percentage</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable (應稅)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable transactions refers to supplies of goods or services that are subject to Taiwan Business Tax at the applicable statutory rate. For standard taxable transactions, the supplier is required to calculate, charge, and report Business Tax on the taxable amount in accordance with Taiwan tax regulations. Businesses making taxable supplies may generally deduct eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero-tax-rate (零稅率)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zero-rated transactions refers to supplies that are subject to Taiwan Business Tax but are taxed at a rate of zero percent (0%). Common examples include qualifying export goods and services as specified by Taiwan tax regulations.
+Unlike exempt transactions, zero-rated transactions remain taxable supplies under the Business Tax system. Businesses making zero-rated supplies may be entitled to deduct or claim refunds of eligible input Business Tax incurred on related purchases and expenses, subject to applicable tax laws and regulations.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax-exempt (免稅)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax-exempt transactions refer  to supplies of goods or services that are exempt from Taiwan Business Tax under applicable laws and regulations. For exempt transactions, no Business Tax is charged on the sale. In general, businesses making exempt supplies are not entitled to deduct the input Business Tax incurred on related purchases and expenses, except where otherwise provided by law.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TW-PINT v0.1 supports standard taxable transactions and zero-rated transactions. Exempt and special tax scenarios are outside the scope of this version.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_2_business_tax_rates"><a class="anchor" href="#_3_1_2_business_tax_rates"></a>3.1.2. Business Tax rates</h4>
+<div class="paragraph">
+<p>The standard Taiwan Business Tax rate is currently five percent (5%).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tax Category</th>
+<th class="tableblock halign-left valign-top">Tax Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_3_1_3_taxable_and_zero_rated_transactions"><a class="anchor" href="#_3_1_3_taxable_and_zero_rated_transactions"></a>3.1.3. Taxable and Zero-Rated Transactions</h4>
+<div class="paragraph">
+<p>Taxable transactions are represented using category S and are subject to Business Tax at the applicable rate.</p>
+</div>
+<div class="paragraph">
+<p>Zero-rated transactions are represented using category Z and include transactions that remain taxable under Taiwan law but are subject to a zero-percent rate, such as qualifying export transactions.</p>
+</div>
+<div class="paragraph">
+<p>The distinction between zero-rated and exempt transactions is important because only zero-rated transactions remain taxable under Taiwan Business Tax legislation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_4_relationship_with_uniform_invoices"><a class="anchor" href="#_3_1_4_relationship_with_uniform_invoices"></a>3.1.4. Relationship with Uniform Invoices</h4>
+<div class="paragraph">
+<p>For B2B transactions, Business Tax information is normally supported by a Uniform Invoice or electronic Uniform Invoice (eGUI).</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT supports the exchange of invoice data required to bridge to Taiwan eGUI systems, as follow tables.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Party / Identification Layer</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seller identification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SellerParty / PartyIdentification / ID + schemeID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seller Uniform Business Number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use Party ID scheme whitelist (e.g. TW:VAT, ISO6523:0195)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer identification (B2B)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer Party ID (often mandatory in CIUS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer Uniform Business Number – mandatory for B2B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory in TW-PINT B2B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Party name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PartyName / Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Company name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Party address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structured address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Address information not always complete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional; do not over-constrain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Document Identity &amp; Lifecycle</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice/ID (business document ID)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Government-issued eGUI invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keep separate; must not overload</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legal invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business-level identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legally assigned invoice number</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carried out-of-band or via Extension reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice / Credit Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice / Allowance or Credit Note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map to 380 / 381*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IssueDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issue dat (開立日期)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lifecycle status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not in core PINT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System processing status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TW-PINT Extension: LifecycleStatus</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TW-PINT does not itself constitute the legal eGUI record unless explicitly recognized by future Taiwan regulations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_5_required_tax_information"><a class="anchor" href="#_3_1_5_required_tax_information"></a>3.1.5. Required Tax Information</h4>
+<div class="paragraph">
+<p>For tax calculation and eGUI bridgeability, TW-PINT v0.1 requires at minimum:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Monetary &amp; Tax Layer</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DocumentCurrencyCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency, usually TWD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow multi-currency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Line amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LineExtensionAmount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sales amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax category</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VAT category codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taxable / Zero-rated / Exempt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common (semantic)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CIUS mapping table</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tax total</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TaxTotal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total tax amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cross-check only</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Line Item / Business Semantics</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept, header row</th>
+<th class="tableblock halign-left valign-top">PEPPOL, header row</th>
+<th class="tableblock halign-left valign-top">Taiwan eGUI, header row</th>
+<th class="tableblock halign-left valign-top">Common / Different, header row</th>
+<th class="tableblock halign-left valign-top">TW-PINT Handling, header row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Line item</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InvoiceLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice line item</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item/Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quantity / unit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UNECE unit codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simplified unit representation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relax validation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Price</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PriceAmount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unit price</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct mapping</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Where multiple tax categories are used, each category shall be represented separately in the tax breakdown.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_6_calculation_of_business_tax"><a class="anchor" href="#_3_1_6_calculation_of_business_tax"></a>3.1.6. Calculation of Business Tax</h4>
+<div class="paragraph">
+<p>The tax amount shall be calculated from the taxable amount and the applicable tax percentage.</p>
+</div>
+<div class="paragraph">
+<p>For standard taxable transactions: Tax Amount = Taxable Amount × 5%</p>
+</div>
+<div class="paragraph">
+<p>The sum of tax category amounts shall equal the document-level tax total.</p>
+</div>
+<div class="paragraph">
+<p>The sum of taxable amount and tax amount shall equal the tax-inclusive total amount, subject to the rounding rules specified in Chapter 4.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_7_foreign_currency_invoices"><a class="anchor" href="#_3_1_7_foreign_currency_invoices"></a>3.1.7.Foreign Currency Invoices</h4>
+<div class="paragraph">
+<p>TW-PINT permits invoices issued in currencies other than Taiwanese dollar (TWD).</p>
+</div>
+<div class="paragraph">
+<p>Where Taiwan tax reporting requires amounts to be expressed in TWD, conversion and reporting requirements remain governed by Taiwan tax regulations and eGUI implementation rules.</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT does not prescribe a mandatory foreign-exchange conversion methodology in v0.1.</p>
+</div>
+<div class="paragraph">
+<p>When the Invoice currency (IBT-005) is not TWD the seller may be required to Buinese Tax (BT) related amounts in TWD. This can be provided in the following way.
+The tax currency code (IBT-006) shall be given as TWD. The required amounts are given as shown in the following XML.</p>
+</div>
+<div class="paragraph">
+<p><span class="red"><em>UBL example showing BT in TWD when invoice currency is EUR</em></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:DocumentCurrencyCode&gt;EUR&lt;/cbc:DocumentCurrencyCode&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:TaxCurrencyCode&gt;TWD&lt;/cbc:TaxCurrencyCode&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;cac:AdditionalDocumentReference&gt;
+        &lt;cbc:ID&gt;TWD&lt;/cbc:ID&gt;
+        &lt;cbc:DocumentTypeCode&gt;twdtotal-excl-bt&lt;/cbc:DocumentTypeCode&gt;
+        &lt;cbc:DocumentDescription&gt;48478.26&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AdditionalDocumentReference&gt;
+&lt;cac:AdditionalDocumentReference&gt;
+        &lt;cbc:ID&gt;TWD&lt;/cbc:ID&gt;
+        &lt;cbc:DocumentTypeCode&gt;twdtotal-incl-bt&lt;/cbc:DocumentTypeCode&gt;
+        &lt;cbc:DocumentDescription&gt;50902.17&lt;/cbc:DocumentDescription&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;/cac:AdditionalDocumentReference&gt;
+&lt;!-- Code omitted for clarity --&gt;
+&lt;cac:TaxTotal&gt;
+   &lt;cbc:TaxAmount currencyID="EUR"&gt;66.25&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+   &lt;cac:TaxSubtotal&gt;
+       &lt;cbc:TaxableAmount currencyID="EUR"&gt;1325&lt;/cbc:TaxableAmount&gt;
+       &lt;cbc:TaxAmount currencyID="EUR"&gt;66.25&lt;/cbc:TaxAmount&gt;
+       &lt;cac:TaxCategory&gt;
+           &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+           &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+           &lt;cac:TaxScheme&gt;
+               &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+           &lt;/cac:TaxScheme&gt;
+       &lt;/cac:TaxCategory&gt;
+   &lt;/cac:TaxSubtotal&gt;
+&lt;/cac:TaxTotal&gt;
+&lt;cac:TaxTotal&gt;
+   &lt;cbc:TaxAmount currencyID="TWD"&gt;2423.91&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+&lt;/cac:TaxTotal&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Invoice currency as EUR (IBT-005)</p>
+</div>
+<div class="paragraph">
+<p>② Tax currency as TWD (IBT-006)</p>
+</div>
+<div class="paragraph">
+<p>③ Invoice total without BT in tax currency being BT (IBT-SG-001)</p>
+</div>
+<div class="paragraph">
+<p>④ Invoice total with BT in tax currency being BT (IBT-SG-002)</p>
+</div>
+<div class="paragraph">
+<p>⑤ BT total amount in invoice currency (IBT-110)</p>
+</div>
+<div class="paragraph">
+<p>⑥ BT total amount in tax currency being BT (IBT-111)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_8_credit_notes_and_tax_corrections"><a class="anchor" href="#_3_1_8_credit_notes_and_tax_corrections"></a>3.1.8. Credit Notes and Tax Corrections</h4>
+<div class="paragraph">
+<p>Tax adjustments shall be represented using Credit Notes and shall reference the original invoice.</p>
+</div>
+<div class="paragraph">
+<p>The processing of invoice cancellation, allowance, correction, or other eGUI-specific procedures remains the responsibility of Taiwan eGUI systems and associated gateway implementations.</p>
+</div>
+<div class="paragraph">
+<p>TW-PINT does not introduce Taiwan-specific tax correction document types.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -249,37 +1908,1302 @@
 <h2 id="_4_rules"><a class="anchor" href="#_4_rules"></a>4. Rules</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="../rules.html" class="xref page">Rules</a>.</p>
+<p>The information given in a PINT invoice must comply to a set of rules on the content of the business terms as well as the relationship between them.</p>
+</div>
+<div class="sect2">
+<h3 id="_4_1_calculations"><a class="anchor" href="#_4_1_calculations"></a>4.1. Calculations</h3>
+<div class="sect3">
+<h4 id="_4_1_1_calculation_of_totals"><a class="anchor" href="#_4_1_1_calculation_of_totals"></a>4.1.1. Calculation of totals</h4>
+<div class="paragraph">
+<p>Formulas for the calculations of totals are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Business term ID</th>
+<th class="tableblock halign-left valign-top">Term name</th>
+<th class="tableblock halign-left valign-top">Calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-106</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of invoice line net amounts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-131: Invoice line net amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-107</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of allowances on document level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-92: Document level allowance amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-108</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sum of charges on document level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-99: Document level charge amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-109</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total amount without TAX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-106: Sum of invoice line net amounts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− IBT-107: Sum of allowances on document level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-108: Sum of charges on document level</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-110</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total TAX amount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(IBT-117: TAX category tax amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-112</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice total amount with TAX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-109: Invoice total amount without TAX</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-110: Invoice total TAX amount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-115</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amount due for payment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IBT-112: Invoice total amount with TAX</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− IBT-113: Paid amount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ IBT-114: Rounding amount</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_4_1_2_ubl_syntax_calculation_formulas"><a class="anchor" href="#_4_1_2_ubl_syntax_calculation_formulas"></a>4.1.2. UBL syntax calculation formulas</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:LineExtensionAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:InvoiceLine/cbc:LineExtensionAmount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:AllowanceTotalAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:AllowanceCharge[ChargeIndicator='false']/cbc:Amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:ChargeTotalAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">∑(cac:AllowanceCharge[ChargeIndicator='true']/cbc:Amount)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:TaxExclusiveAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:LineExtensionAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">– cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:LegalMonetaryTotal/cbc:ChargeTotalAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:TaxInclusiveAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:TaxTotal/cbc:TaxAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PrepaidAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PayableRoundingAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not applicable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cbc:PayableAmount&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">− cac:LegalMonetaryTotal/cbc:PrepaidAmount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ cac:LegalMonetaryTotal/cbc:PayableRoundingAmount</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Element for rounding amount, the PayableRoundingAmount</strong></p>
+</div>
+<div class="paragraph">
+<p>It is possible to round the expected payable amount.</p>
+</div>
+<div class="paragraph">
+<p>The element <code>cac:LegalMonetaryTotal/cbc:PayableRoundingAmount</code> is used for this purpose and is specified on the header level. This value shall be added to the value in <code>cac:LegalMonetaryTotal/cbc:PayableAmount</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_1_3_calculation_on_line_level"><a class="anchor" href="#_4_1_3_calculation_on_line_level"></a>4.1.3. Calculation on line level</h4>
+<div class="paragraph">
+<p>Item net price (IBT-146)</p>
+</div>
+<div class="paragraph">
+<p>If gross price and discount exist, the Item net price has to equal with the item gross price less the item price discount.</p>
+</div>
+<div class="paragraph">
+<p>Calculation formula:</p>
+</div>
+<div class="paragraph">
+<p>Item net price=Item gross price (IBT-148)−Item price discount (IBT-147)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of item net price</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;700&lt;/cbc:PriceAmount&gt; &lt;!--3--&gt;   
+   &lt;cbc:BaseQuantity unitCode="C62"&gt;1&lt;/cbc:BaseQuantity&gt;  
+   &lt;cac:AllowanceCharge&gt; 
+      &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+      &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+      &lt;cbc:BaseAmount currencyID="TWD"&gt;800&lt;/cbc:BaseAmount&gt; &lt;!--1--&gt; 
+   &lt;/cac:AllowanceCharge&gt;
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item gross price</p>
+</div>
+<div class="paragraph">
+<p>② Item price discount</p>
+</div>
+<div class="paragraph">
+<p>③ Item price net amount=Item gross price−Item price discount</p>
+</div>
+<div class="paragraph">
+<p><strong>Invoice line net amount (IBT-131)</strong></p>
+</div>
+<div class="paragraph">
+<p>The invoice line net amount (IBT-131) is as the name implies the net amount without TAX, and inclusive of line level allowance and charges.</p>
+</div>
+<div class="paragraph">
+<p>The formula for calculating the invoice line net amount is:</p>
+</div>
+<div class="paragraph">
+<p>Item line net amount=Item net price (IBT-146)÷Item price base quantity (IBT-149 ×(Invoiced Quantity (IBT-129)) +Invoice line charge amount (IBT-141)−Invoice line allowance amount (IBT-136)</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the line net amount must be rounded to maximum decimals, please note that the different parts of the calculation must be rounded separately.</p>
+</div>
+<div class="paragraph">
+<p>I.e the result of:</p>
+</div>
+<div class="paragraph">
+<p>Item line net amount=Item net price (IBT-146)÷Item price base quantity (IBT-149×(Invoiced Quantity (IBT-129)) must be rounded to maximum decimals, and the allowance/charge amounts are also rounded separately.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of invoice line net amount where no line allowance/charge exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;cbc:LineExtensionAmount currencyID="TWD"&gt;1000&lt;/cbc:LineExtensionAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;!-- Code omitted for clarity--&gt; 
+&lt;cac:Price&gt;
+   &lt;cbc:PriceAmount currencyID="TWD"&gt;200&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+   &lt;cbc:BaseQuantity unitCode="C62"&gt;2&lt;/cbc:BaseQuantity&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item net price</p>
+</div>
+<div class="paragraph">
+<p>② Item price base quantity</p>
+</div>
+<div class="paragraph">
+<p>③ Invoiced quantity</p>
+</div>
+<div class="paragraph">
+<p>④ Invoice line net amount = (( Item net price ÷ Item price base quantity) × (Invoiced Quantity)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of invoice line net amount where line allowance and charge exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;cbc:LineExtensionAmount currencyID="TWD"&gt;900&lt;/cbc:LineExtensionAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+&lt;!-- Code omitted for clarity--&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Charge&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:MultiplierFactorNumeric&gt;1&lt;/cbc:MultiplierFactorNumeric&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;1&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:BaseAmount currencyID="TWD"&gt;100&lt;/cbc:BaseAmount&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;101&lt;/cbc:Amount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;/cac:AllowanceCharge&gt;
+&lt;!-- Code omitted for clarity--&gt;
+&lt;cac:Price&gt;
+    &lt;cbc:PriceAmount currencyID="TWD"&gt;100&lt;/cbc:PriceAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cbc:BaseQuantity unitCode="C62"&gt;1&lt;/cbc:BaseQuantity&gt;            
+&lt;/cac:Price&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Item net price</p>
+</div>
+<div class="paragraph">
+<p>② Line charge amounts</p>
+</div>
+<div class="paragraph">
+<p>③ Line allowance amount</p>
+</div>
+<div class="paragraph">
+<p>④ Invoiced quantity</p>
+</div>
+<div class="paragraph">
+<p>⑤ Invoice line net amount = (Item net price×Invoiced Quantity) + line charge amount − line allowance amount</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_1_4_calculation_of_allowancecharge_amount"><a class="anchor" href="#_4_1_4_calculation_of_allowancecharge_amount"></a>4.1.4. Calculation of allowance/charge amount</h4>
+<div class="paragraph">
+<p>Allowance and charge on document- and line level consists of elements carrying information on the allowance/charge base amount and the allowance/charge percentage. These are, if present in the invoice instance, used for calculating the allowance/charge amount.</p>
+</div>
+<div class="paragraph">
+<p>If base amount is present, the percentage shall also be present, and if percentage is present, the base amount shall also be present, and the calculation of the amount shall be:</p>
+</div>
+<div class="paragraph">
+<p>Amount=Base amount×(Percentage÷100)</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of allowances and charges where base amount and percentage exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;CG&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:MultiplierFactorNumeric&gt;20&lt;/cbc:MultiplierFactorNumeric&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:Amount currencyID="TWD"&gt;200&lt;/cbc:Amount&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;cbc:BaseAmount currencyID="TWD"&gt;1000&lt;/cbc:BaseAmount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Base amount, to be used with the percentage to calculate the amount</p>
+</div>
+<div class="paragraph">
+<p>② Charge percentage</p>
+</div>
+<div class="paragraph">
+<p>③ Base amount×(Percentage÷100)=Amount</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of allowances and charges where base amount and percentage does not exist</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReasonCode&gt;95&lt;/cbc:AllowanceChargeReasonCode&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Amount of allowance without calculations based on base amount and percentage</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_2_rounding"><a class="anchor" href="#_4_2_rounding"></a>4.2. Rounding</h3>
+<div class="sect3">
+<h4 id="_4_2_1_shared_rounding_rules"><a class="anchor" href="#_4_2_1_shared_rounding_rules"></a>4.2.1. Shared rounding rules</h4>
+<div class="paragraph">
+<p>A maximum of two digits are allowed for the following amounts in an invoice.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Document level allowance amount (ibt-092)</p>
+</li>
+<li>
+<p>Document level charge amount (ibt-099)</p>
+</li>
+<li>
+<p>Sum of allowances on document level (ibt-107)</p>
+</li>
+<li>
+<p>Sum of charges on document level (ibt-108)</p>
+</li>
+<li>
+<p>Invoice total amount without TAX (ibt-109)</p>
+</li>
+<li>
+<p>Invoice total TAX amount (ibt-110)</p>
+</li>
+<li>
+<p>Invoice total amount with TAX (ibt-112)</p>
+</li>
+<li>
+<p>Amount due for payment (ibt-115)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong class="blue">Aligned rounding</strong></p>
+</div>
+<div class="paragraph">
+<p>Tax category tax amount (ibt-117) must be amount rounded to integer.</p>
+</div>
+<div class="paragraph">
+<p>Tax category tax amount in accounting currency (ibt-190) must be amount rounded to integer.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_3_taiwan_aligned_calculations"><a class="anchor" href="#_4_3_taiwan_aligned_calculations"></a>4.3. Taiwan aligned calculations</h3>
+<div class="paragraph">
+<p>This section explains how tax is calculated in the jurisdiction as well as other rules thar are specific to the jurisdiction.</p>
+</div>
+<div class="paragraph">
+<p>4.3.1. Calculation of Business Tax</p>
+</div>
+<div class="paragraph">
+<p>Tax breakdown (ibg-23) shall be provided for each distinct combination of Tax category code and Tax rate. For each distinct combination of BT category code and BT rate the calculations are:</p>
+</div>
+<div class="paragraph">
+<p>===
+BT category taxable amount (IBT-116)= ∑(Invoice line net amounts (IBT-131))+Document level charge amount (IBT-99)−Document level allowance amount (IBT-92)
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+BT category tax amount (IBT-117)= BT category taxable amount (IBT-116)×(BT rate (IBT-119)÷100)
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+Tax category tax amount (ibt-117) shall be 0 (zero), if Tax category code (ibt-118) equals to “E” (Exempt from Tax) or “O” (Outside of scope of tax).
+===</p>
+</div>
+<div class="paragraph">
+<p>===
+Tax category tax amount (ibt-117) must be rounded to integer and the rounded result amount shall be between the floor and the ceiling.
+===</p>
+</div>
+<div class="paragraph">
+<p><strong class="red"><em>UBL example of calculations of BT Breakdown</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;true&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Cleaning&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;200&lt;/cbc:Amount&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:AllowanceCharge&gt;
+    &lt;cbc:ChargeIndicator&gt;false&lt;/cbc:ChargeIndicator&gt;
+    &lt;cbc:AllowanceChargeReason&gt;Discount&lt;/cbc:AllowanceChargeReason&gt;
+    &lt;cbc:Amount currencyID="TWD"&gt;100&lt;/cbc:Amount&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cac:TaxCategory&gt;
+        &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+        &lt;cbc:Percent&gt;10&lt;/cbc:Percent&gt;
+        &lt;cac:TaxScheme&gt;
+            &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+        &lt;/cac:TaxScheme&gt;
+    &lt;/cac:TaxCategory&gt;
+&lt;/cac:AllowanceCharge&gt;
+&lt;cac:TaxTotal&gt;
+    &lt;cbc:TaxAmount currencyID="TWD"&gt;250&lt;/cbc:TaxAmount&gt;
+    &lt;cac:TaxSubtotal&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+        &lt;cbc:TaxableAmount currencyID="TWD"&gt;5000&lt;/cbc:TaxableAmount&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+        &lt;cbc:TaxAmount currencyID="TWD"&gt;250&lt;/cbc:TaxAmount&gt; <i class="conum" data-value="5"></i><b>(5)</b>
+        &lt;cac:TaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:TaxCategory&gt;
+    &lt;/cac:TaxSubtotal&gt;
+    &lt;cac:TaxSubtotal&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+        &lt;cbc:TaxableAmount currencyID="TWD"&gt;2000&lt;/cbc:TaxableAmount&gt;
+        &lt;cbc:TaxAmount currencyID="TWD"&gt;0&lt;/cbc:TaxAmount&gt;
+        &lt;cac:TaxCategory&gt;
+            &lt;cbc:ID&gt;E&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;0&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:TaxCategory&gt;
+    &lt;/cac:TaxSubtotal&gt;
+&lt;/cac:TaxTotal&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;1&lt;/cbc:ID&gt;
+    &lt;cbc:Note&gt;Testing note on line level&lt;/cbc:Note&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;2500&lt;/cbc:LineExtensionAmount&gt;
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;2&lt;/cbc:ID&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;2500&lt;/cbc:LineExtensionAmount&gt; 
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;E&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;0&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;
+&lt;cac:InvoiceLine&gt;
+    &lt;cbc:ID&gt;3&lt;/cbc:ID&gt;
+    &lt;cbc:InvoicedQuantity unitCode="C62"&gt;10&lt;/cbc:InvoicedQuantity&gt;
+    &lt;cbc:LineExtensionAmount currencyID="TWD"&gt;900&lt;/cbc:LineExtensionAmount&gt;    
+        &lt;!-- code omitted for clarity --&gt;
+        &lt;cac:ClassifiedTaxCategory&gt;
+            &lt;cbc:ID&gt;S&lt;/cbc:ID&gt;
+            &lt;cbc:Percent&gt;5&lt;/cbc:Percent&gt;
+            &lt;cac:TaxScheme&gt;
+                &lt;cbc:ID&gt;VAT&lt;/cbc:ID&gt;
+            &lt;/cac:TaxScheme&gt;
+        &lt;/cac:ClassifiedTaxCategory&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>① Document level charge amount for category S and rate 5%</p>
+</div>
+<div class="paragraph">
+<p>② Document level allowance amount for category S and rate 5%</p>
+</div>
+<div class="paragraph">
+<p>③ BT Breakdown for category S and rate = 5%</p>
+</div>
+<div class="paragraph">
+<p>④ Taxable amount = sum of line amount (line 1 and 3), plus charge amount minus allowance amount where category = S and rate = 5%</p>
+</div>
+<div class="paragraph">
+<p>⑤ Tax Amount=Taxable amount×(BT rate÷100)</p>
+</div>
+<div class="paragraph">
+<p>⑥ BT Breakdown for category E, and rate = 0%</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_3_taiwan_aligned_calculations_2"><a class="anchor" href="#_4_3_taiwan_aligned_calculations_2"></a>4.3. Taiwan aligned calculations</h3>
+<div class="paragraph">
+<p>Taiwan-aligned calculations include Business Tax calculation, tax subtotal alignment, foreign currency and tax-currency handling, and export invoice totals.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_4_taiwan_specific_business_rules"><a class="anchor" href="#_4_4_taiwan_specific_business_rules"></a>4.4. Taiwan-specific business rules</h3>
+<div class="paragraph">
+<p>Taiwan-specific rules cover domestic seller and buyer identification, conditional handling for foreign parties, eGUI bridge data, credit notes, invoice number, tax category, and tax totals.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_technical_details"><a class="anchor" href="#_5_technical_details"></a>5. Technical details</h2>
+<h2 id="_5_technical_details"><a class="anchor" href="#_5_technical_details"></a>5. Technical Details</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See <a href="../technical-details.html" class="xref page">Technical details</a>.</p>
+<p>Following section provide technical details.</p>
+</div>
+<div class="sect2">
+<h3 id="_5_1_bis_identifiers"><a class="anchor" href="#_5_1_bis_identifiers"></a>5.1. BIS Identifiers</h3>
+<div class="paragraph">
+<p>Peppol has a defined policy that specifies how to use identifiers in both its transport infrastructure and within the documents exchanged across that infrastructure. It also introduces principles for any identifiers used in the Peppol environment. The policies that apply to this BIS are the following:</p>
+</div>
+<div class="sect3">
+<h4 id="_5_1_1_profiles_and_messages"><a class="anchor" href="#_5_1_1_profiles_and_messages"></a>5.1.1. Profiles and messages</h4>
+<div class="paragraph">
+<p>All messages contains Business process type (IBT-23) and Specification identifier (IBT-24). Business process type (IBT-23) identifies what business process a given message is part of, and Specification identifier (IBT-24) identifies the kind of message and the rules applied.</p>
+</div>
+<div class="paragraph">
+<p>Profiles are connected to one business process, and may contain multiple document types. Valid document instances shall contain corresponding Business process type (IBT-23) and Specification identifier (IBT-24).</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Specification identifier (IBT-24) is a string without spaces. The list below contains spaces in Specification identifier (IBT-24) to make them easier to read. Make sure to remove any spaces before use.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the table below you will find the values to be used as the specification identifier (IBT-24) and the business process type (IBT-23) for this profile.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element <code>cbc:CustomizationID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element <code>cbc:ProfileID</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invoice and credit note</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:peppol:pint:billing-1@tw-1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:peppol:bis:billing</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>&lt;cbc:CustomizationID&gt;urn:peppol:pint:billing-1@tw-1&lt;/cbc:CustomizationID&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cbc:ProfileID&gt;urn:peppol:bis:billing&lt;/cbc:ProfileID&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_1_2_document_type_identifier_scheme"><a class="anchor" href="#_5_1_2_document_type_identifier_scheme"></a>5.1.2. Document type identifier scheme</h4>
+<div class="paragraph">
+<p>The document type identifier must follow Peppol network requirements. This draft does not finalize document type identifiers because they require formal registration and publication decisions.</p>
 </div>
 </div>
 </div>
-</article>
-<aside class="toc sidebar" data-title="Page contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
+<div class="sect2">
+<h3 id="_5_2_datatypes"><a class="anchor" href="#_5_2_datatypes"></a>5.2. Datatypes</h3>
+<div class="paragraph">
+<p>Semantic data types are used to bridge the gap between the semantic concepts expressed by the information elements defined in the semantic model and the technical implementation. The semantic data types define the allowed value domain for the content, and any additional information components (attributes) needed in order to ensure its precise interpretation.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_2_1_primitive_types"><a class="anchor" href="#_5_2_1_primitive_types"></a>5.2.1. Primitive types</h4>
+<div class="paragraph">
+<p>Semantic data type content may be of the following primitive types. These primitive types were taken from ISO15000, Annex A.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Primitive type</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of finite-length sequences of binary digits.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time point representing a calendar day on a time scale consisting of an origin and a succession of calendar ISO8601.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A subset of the real numbers, which can be represented by decimal numerals.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A finite sequence of characters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_5_2_2_semantic_data_types"><a class="anchor" href="#_5_2_2_semantic_data_types"></a>5.2.2. Semantic data types</h4>
+<div class="paragraph">
+<p>The different semantic data types are described in the tables below, where various features such as attributes, format, and decimals as well as the basic type are defined for each semantic data type. They are based on {ISO15000}.</p>
+</div>
+<div class="paragraph">
+<p>When used in an instance of an invoice, each data element will contain data. In the below tables this is identified as the “content”. Whenever a business term is used this term shall always have content and therefore the content is always mandatory.</p>
+</div>
+<div class="paragraph">
+<p><strong>Amount</strong></p>
+</div>
+<div class="paragraph">
+<p>An amount states a numerical monetary value. The currency of the amount is defined as a separate business term.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Unit Price Amount</strong></p>
+</div>
+<div class="paragraph">
+<p>A unit price amount states a numerical monetary amount value for data elements that contain item prices that may be multiplied by item quantities. The currency of the amount is defined as a separate business term.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Unit price amount does not set restrictions on number of decimals, as contrast to the Amount type</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000.1234</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Percentage</strong>
+Percentages are given as fractions of a hundred (per cent) e.g. the value 34.78 % in percentage terms is given as 34.78.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No restriction on number of decimals for percentages.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34.7812</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Quantity</strong>
+Quantities are used to state a number of units such as for items. The code for the Unit of Measure is defined as a separate business term.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No restriction on number of decimals for quantities.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decimal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34.7812</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Code</strong>
+Codes are used to specify allowed values in elements as well as for lists of options. Code is different from Identifier in that allowed values have standardized meanings that can be known by the recipient.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Codes shall be entered exactly as shown in the selected code list of the applicable syntax.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abc123</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Indicator</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Indicators shall be used in lower case.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Default value is "false" and applies if the relevant business term is not used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Allowed values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Content</strong></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>true</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Identifier</strong>
+Identifiers (IDs) are keys that are issued by the sender or recipient of a document or by a third party.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of the attributes is specified for each information element.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abc:123-DEF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GLN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme version identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Date</strong>
+Dates shall be in accordance to the “Calendar date complete representation” as specified by {ISO8601}, format YYYY-MM-DD.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Dates shall not include timezone information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-01</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong class="red"><em>Table 3. EN 16931</em> Date. Type_</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Time</strong>
+Time shall be according to UBL allowed format.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Time may include timezone information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">Allowed forms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00 (1:30 PM)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:30.55 (30.55 sec)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00Z (UTC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13:20:00-05:00 (UTC-5)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00:00:00 (midnight)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24:00:00 (midnight)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 4. EN 16931_ Date. Type</p>
+</div>
+<div class="paragraph">
+<p><strong>Document Reference</strong>
+Document Reference Types are identifiers that were assigned to a document or document line by the Buyer, the Seller or by a third party.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abc:123-DEF</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Table 5. Document Reference Type</p>
+</div>
+<div class="paragraph">
+<p><strong>Text</strong></p>
+</div>
+<div class="paragraph">
+<p>Text is the actual wording of anything written or printed. Line breaks in the text may be present, and any line breaks should be preserved and respected by the receiver’s system</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5% allowance when paid within 30 days</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Binary object</strong></p>
+</div>
+<div class="paragraph">
+<p>Binary object can be used to describe files which are transmitted together with the Invoice. The attachment functionality is not intended for attaching a copy of the invoice in an image format (such as PDF). Attaching an invoice copy is not in compliance with this specification.</p>
+</div>
+<div class="paragraph">
+<p>Attachments shall be transmitted together with the Invoice. The binary object has two supplementary components: a Mime Code, which specifies the Mime type of the attachment and a Filename that is provided by (or on behalf of) the sender of the invoice or credit note.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Use</th>
+<th class="tableblock halign-left valign-top">Primitive Type</th>
+<th class="tableblock halign-left valign-top">EXample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Binary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QmFzZTY0IGNvbnRlbnQgZXhhbXBsZQ==</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mime Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image/jpeg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filename</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">drawing5.jpg</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A receiver of an invoice or credit note, shall accept and process attachments that are according to the Media type code list.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_ubl_schemas_and_namespaces"><a class="anchor" href="#_5_3_ubl_schemas_and_namespaces"></a>5.3. UBL schemas and namespaces</h3>
+<div class="paragraph">
+<p>The XML schemas used are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UBL Invoice 2.1, with the target namespace</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UBL CreditNote 2.1 with the target namespace</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_4_glossary"><a class="anchor" href="#_5_4_glossary"></a>5.4. Glossary</h3>
+<div class="paragraph">
+<p><strong>electronic invoice</strong> - invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing
+<strong>semantic data model</strong> - structured set of logically interrelated information elements
+<strong>information element</strong> - semantic concept that can be defined independent of any particular representation in a syntax
+<strong>structured information element</strong> - information element that can be processed automatically
+<strong>syntax</strong> - machine-readable language or dialect used to represent the information elements contained in an electronic document (e.g. an electronic invoice)
+<strong>business term</strong> - label assigned to a given information element which is used as a primary reference
+<strong>identifier</strong> - character string used to establish the identity of, and distinguish uniquely, one instance of an object within an identification scheme from all other objects within the same scheme Note 1 to entry: An identifier may be a word, number, letter, symbol, or any combination of those, depending on the identification scheme used.
+<strong>identification scheme</strong> - collection of identifiers applicable for a given type of object governed under a common set of rules
+<strong>compliant</strong> - some or all features of the invoice model are used and all rules of the invoice model are respected Note 1 to entry: Based on TOGAF definition of a compliant specification
+<strong>conformant</strong> - all rules of the invoice model are respected and some additional features not defined in the invoice model are also used
+<strong>Optional</strong> - Whether the option is used or not is the choice of the users independently from other data in the message.
+<strong>Conditional</strong> - Whether the option is used or not and in what way is dependent on other data in the message.
+<strong>Mandatory</strong> - The option must be used in all messages.
+<strong>shall</strong> - the definition is an absolute requirement of the specification.
+<strong>shall not</strong> - the definition is an absolute prohibition of the specification.
+<strong>should</strong> - there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+<strong>should not</strong> - there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+<strong>may</strong> - is truly optional.</p>
+</div>
+<div class="paragraph">
+<p>Syntax binding is maintained in <code>syntax-binding/</code>. Code lists are maintained in <code>codelists/</code>. Rules are maintained in <code>rules/</code>. Schematron is maintained in <code>schematron/</code>. Examples and test cases are maintained in <code>examples/</code> and <code>tests/</code>.</p>
+</div>
+</div>
+</div>
+</div>
   </div>
-</main>
+  <div id="footer"><div id="footer-text">TW-PINT — Peppol Specifications for Taiwan implementation of PINT</div></div>
 </div>
-<footer class="tw-footer">
-  <div class="tw-footer-inner">
-    <div>
-      <strong>TW-PINT Candidate Specification</strong><br>
-      Taiwan Jurisdiction Extension Candidate of Peppol International Invoice Transaction.
-    </div>
-    <div class="tw-footer-note">
-      Community review draft. Not an official OpenPeppol publication.
-    </div>
-  </div>
-</footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-  </body>
+<script src="../../../_/js/jquery-3.6.3.min.js"></script>
+<script src="../../../_/js/popper.min.js"></script>
+<script src="../../../_/js/bootstrap.min.js"></script>
+<script src="../../../_/js/pdk-toc.js"></script>
+<script src="../../../_/js/tw-pint-document.js"></script>
+</body>
 </html>
